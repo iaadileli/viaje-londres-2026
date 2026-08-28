@@ -9,6 +9,9 @@ Las coordenadas se piden a Nominatim y se cachean en datos-fuente/coordenadas.js
 #         cena (para la comida buena de la semana)
 
 ZONAS = {
+ 'woolwich':  ('Qué y dónde comer en Woolwich, vuestro barrio',
+               ['Desayuno de panadería', 'Comida eritrea', 'Momos nepalíes',
+                'Pub del Arsenal', 'Supermercado', 'Kebab de madrugada']),
  'este':      ('Qué y dónde comer en Brick Lane y Shoreditch',
                ['Beigel de salt beef', 'Brisket ahumado', 'Curry punyabí', 'Hamburguesa',
                 'Fish and chips', 'Bacon naan', 'Desayuno inglés']),
@@ -25,6 +28,88 @@ ZONAS = {
 }
 
 SITIOS = [
+# ------------------------------------------------------- WOOLWICH (su barrio)
+ dict(z='woolwich', n='Boulangerie Jade', s=['barato'],
+   dir='Major Draper Street, Royal Arsenal, SE18 6GD · dentro del Arsenal',
+   geo='Boulangerie Jade, Major Draper Street, Woolwich, London',
+   t='La panadería francesa del barrio, y la respuesta a «dónde desayunamos». Croissants y '
+     'pains au chocolat hechos con mantequilla de verdad, café y sitio para sentarse. Está dentro '
+     'del <b>Royal Arsenal</b>, a un par de minutos de la estación.',
+   p='Croissants recién hechos y café. Y una <i>baguette</i> para el picnic del día',
+   d='🕐 abre temprano · 💷 3–6 £ · 📞 020 8316 4361 · la mejor manera de empezar el día sin coger el tren'),
+ dict(z='woolwich', n='Blue Nile', s=['local','barato'],
+   dir='73 Woolwich New Road, SE18 6ED',
+   geo='Blue Nile, 73 Woolwich New Road, London',
+   t='Eritreo-italiano, de una familia del barrio, en una antigua salchichería de los años treinta '
+     'con los azulejos originales. Se come con <i>injera</i>, el pan esponjoso que hace de plato y '
+     'de cubierto: se arranca un trozo y se pellizca la comida con él. Está en todas las listas de '
+     'los mejores baratos de Londres y a Julia le va a divertir comer con las manos.',
+   p='Un plato combinado para compartir, con varios guisos sobre la misma <i>injera</i>. Y decid que es la primera vez: os explican cómo se come',
+   d='💷 20–25 £ los dos, y comer al mediodía sale por 5–8 £ · 📞 020 8855 0369 · <b>confirmad que sigue abierto antes de ir</b>, que es un sitio pequeño y familiar'),
+ dict(z='woolwich', n='Kailash Momo', s=['local','barato'],
+   dir='79 Woolwich New Road, SE18 6ED · dos puertas más allá',
+   geo='Kailash Momo, 79 Woolwich New Road, London',
+   t='Nepalí, especializado en <b>momos</b>: empanadillas al vapor rellenas de carne o verdura, '
+     'con una salsa de tomate y sésamo para mojar. Sitio pequeño, precios de barrio y raciones que '
+     'llenan. De lo mejor valorado de Woolwich.',
+   p='Una cesta de <b>momos al vapor</b> y otra de fritos, para comparar. El <i>thali</i> si tenéis hambre de verdad',
+   d='💷 12–18 £ por persona · pequeño: a la hora de cenar puede haber espera'),
+ dict(z='woolwich', n='Dial Arch', s=[],
+   dir='No 1 Street, Royal Arsenal, SE18 6GH',
+   geo='Dial Arch, Woolwich, London',
+   t='El pub del barrio, metido en un edificio del arsenal militar del siglo XVIII con vigas, '
+     'ladrillo visto y una terraza en la plaza. Comida de pub correcta y, el domingo, '
+     '<i>Sunday roast</i>. Es el sitio natural para la primera cerveza al llegar, porque está '
+     '<b>al lado mismo de la estación</b>.',
+   p='Una pinta en la terraza. Si es domingo, el <b>roast</b>, y mejor reservad',
+   d='🕐 todos los días · 💷 15–25 £ comer · entran niños hasta la tarde-noche'),
+ dict(z='woolwich', n='Woolwich Market', s=['barato','local'],
+   dir='Beresford Square, SE18 6JY · a 3 min de la estación',
+   geo='Beresford Square, Woolwich, London',
+   t='El mercado callejero de toda la vida, delante de la puerta monumental del arsenal. Puestos '
+     'de fruta y verdura baratísima, pescado, telas y comida para llevar. Es el barrio de verdad, '
+     'no una versión para turistas, y es donde se compra la fruta de la semana por cuatro libras.',
+   p='Fruta para el desayuno y la mochila del día. Se regatea poco, pero se compra muy barato',
+   d='🕐 de lunes a sábado, de día · 💷 muy barato · llevad algo de efectivo, aunque casi todos tienen datáfono'),
+ dict(z='woolwich', n='Lidl', s=['barato'],
+   dir='38 Macbean Street, SE18 6LW',
+   geo='Lidl, Macbean Street, London',
+   t='El supermercado más barato del barrio y el que mejor viene para llenar la nevera del '
+     'apartamento: agua, leche, fruta, embutido y algo de fiambre para los picnics.',
+   p='La compra grande del primer día. Y sus <i>croissants</i> del horno, que están bien y cuestan céntimos',
+   d='🕐 L–S 8:00–22:00 · D 10:00–16:00 · 💷 lo más barato de Woolwich'),
+ dict(z='woolwich', n='Tesco Extra', s=[],
+   dir='13 Grand Depot Road, SE18 6HQ',
+   geo='Tesco Extra, Grand Depot Road, London',
+   t='<b>El supermercado grande de la zona</b>: aquí hay de todo, incluida ropa, cosas de bebé, '
+     'pilas, adaptadores de enchufe y una <b>farmacia dentro</b>. Es el que resuelve cualquier cosa '
+     'que se os haya olvidado meter en la maleta.',
+   p='La compra semanal, y los <i>meal deal</i>: bocadillo, bolsa de patatas y bebida por unas 4 £, que es el almuerzo más barato de Londres',
+   d='🕐 abre de 6:00 a medianoche entre semana (ya no es 24 h) · 💊 con farmacia dentro'),
+ dict(z='woolwich', n='Sainsbury’s', s=[],
+   dir='25 Calderwood Street, SE18 6QW',
+   geo="Sainsbury's, Calderwood Street, London",
+   t='El otro supermercado grande, en pleno centro de Woolwich. Algo mejor que Lidl en comida '
+     'preparada y en pan; algo más caro. Ojo con el domingo, que cierra pronto.',
+   p='Comida preparada para las cenas de vuelta cansados, y su sección de <i>meal deal</i>',
+   d='🕐 L–S 8:00–21:00 · <b>D 11:00–17:00</b> · el domingo, no lo dejéis para la tarde'),
+ dict(z='woolwich', n='Creams Cafe', s=[],
+   dir='127 Powis Street, SE18 6JL',
+   geo='Creams, Powis Street, Woolwich',
+   t='Heladería y postres: gofres, tortitas, helados y batidos de colores imposibles. No es alta '
+     'cocina ni lo pretende, pero <b>abre hasta tarde</b> y es el soborno perfecto para Julia el día '
+     'que haya que andar más de la cuenta.',
+   p='Un gofre con helado para ella y un café para vosotros',
+   d='🕐 hasta tarde, también en fin de semana · 💷 5–9 £ el postre'),
+ dict(z='woolwich', n='Station Kebab House', s=['barato'],
+   dir='Vincent Road, SE18 6RF · junto a la estación',
+   geo='Station Kebab House, Vincent Road, London',
+   t='Para el día que lleguéis reventados a las once de la noche y no haya nada abierto: kebab, '
+     'pollo frito, pizza y hamburguesas, al lado de la estación. No esperéis nada más que eso, '
+     'pero soluciona la cena.',
+   p='Un <i>chicken shish</i> con ensalada, que es lo más decente de la carta',
+   d='🕐 hasta tarde, incluido el fin de semana · 💷 6–10 £ · también llevan a casa'),
+
 # ---------------------------------------------------------------- EL ESTE
  dict(z='este', n='Beigel Bake', s=['amigo','leyenda','barato'],
    dir='159 Brick Lane, E1 6SB · la puerta amarilla',

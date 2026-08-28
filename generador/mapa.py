@@ -11,11 +11,12 @@ os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 UA = 'guia-viaje-londres/1.0 (uso personal, una sola composicion)'
 ZOOM = 13
 # el recorte: entra West Norwood por abajo, Greenwich por la derecha y Notting Hill por la izquierda
-OESTE, ESTE = -0.245, 0.035
-SUR, NORTE  = 51.420, 51.553
+OESTE, ESTE = -0.245, 0.108
+SUR, NORTE  = 51.420, 51.556
 
 # zona -> (lat, lon, sección, título, subtítulo, destacada, dónde va la etiqueta)
 ZONAS = [
+ (51.4936,  0.0702, '#woolwich',   'WOOLWICH',                'vuestra casa',             True,  'arriba'),
  (51.5090, -0.1960, '#carnaval',   'Notting Hill',            'el carnaval',              False, 'arriba'),
  (51.4941, -0.1738, '#museos',     'South Kensington',        'los museos grandes',       True,  'abajo'),
  (51.5414, -0.1460, '#paseos',     'Camden',                  'canal y mercado',          False, 'arriba'),
@@ -104,13 +105,14 @@ for px, py, dest, titulo, sub, destaca, donde in puntos:
     else:                     rx = tx
     ry = min(ty, py) - 32
     rh = max(sy, py) - ry + 18
+    clase = ' casa' if titulo == 'WOOLWICH' else (' destaca' if destaca else '')
     filas.append(
       '''    <a class="m-punto%s" href="%s" aria-label="Ir a %s">
       <rect class="m-toca" x="%.0f" y="%.0f" width="%.0f" height="%.0f" rx="14"/>
       <circle cx="%.0f" cy="%.0f" r="%d"/>
       <text class="m-tit" x="%.0f" y="%.0f" text-anchor="%s">%s</text>
       <text class="m-sub" x="%.0f" y="%.0f" text-anchor="%s">%s</text>
-    </a>''' % ('' if not destaca else ' destaca', dest, escapa(titulo.replace('·', 'y')),
+    </a>''' % (clase, dest, escapa(titulo.replace('·', 'y')),
                 min(rx, px - r - 6), ry, max(ancho, 2 * r + 12), rh,
                 px, py, r, tx, ty, anclaje, escapa(titulo), tx, sy, anclaje, escapa(sub)))
 

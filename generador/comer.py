@@ -39,6 +39,9 @@ def maps(consulta):
 # ---------------------------------------------------------------- coordenadas
 # Nominatim no tiene estos tres locales; van a mano, a pie de portal (error < 50 m)
 MANUAL = {
+ 'Boulangerie Jade, Major Draper Street, Woolwich, London': [51.493300, 0.070500, 0],
+ 'Blue Nile, 73 Woolwich New Road, London':                 [51.488990, 0.067360, 0],
+ 'Station Kebab House, Vincent Road, London':               [51.489900, 0.069900, 0],
  'Poppies Fish and Chips, 6 Hanbury Street, London': [51.519930, -0.074130, 0],
  'Bleecker Burger, Old Spitalfields Market, London': [51.519650, -0.075330, 0],
  'Dishoom Shoreditch, 7 Boundary Street, London':      [51.524499, -0.076825, 0],
@@ -99,7 +102,7 @@ for zona, (titulo, platos) in ZONAS.items():
 open('generador/plantilla/comer/leyenda.html', 'w').write(LEYENDA)
 
 # ----------------------------------------------------------------- sitios.js
-ETIQUETA = {'este':'Brick Lane y Shoreditch', 'kingscross':"King's Cross", 'soho':'Soho y Covent Garden',
+ETIQUETA = {'woolwich':'Woolwich (vuestro barrio)', 'este':'Brick Lane y Shoreditch', 'kingscross':"King's Cross", 'soho':'Soho y Covent Garden',
             'sur':'Borough y la orilla sur', 'museos':'South Kensington', 'greenwich':'Greenwich'}
 js = []
 faltan = []

@@ -858,6 +858,12 @@
   html[data-tema="oscuro"] .m-tit{fill:#eef3f7;stroke:#0e161d;stroke-width:8}
   html[data-tema="oscuro"] .m-sub{fill:#b3c1cc;stroke:#0e161d;stroke-width:7}
 
+  /* la casa donde duermen, marcada aparte del resto */
+  .m-punto.casa circle{fill:#7a2f8f;stroke:#ffffff;stroke-width:5}
+  html[data-tema="oscuro"] .m-punto.casa circle{fill:#c98ada;stroke:#121a22}
+  .m-punto.casa .m-tit{font-size:29px;letter-spacing:1px;fill:#5f2472}
+  html[data-tema="oscuro"] .m-punto.casa .m-tit{fill:#e3bff0}
+
   /* cada zona del mapa es un enlace a su sección */
   a.m-punto{cursor:pointer}
   .m-toca{fill:transparent}
@@ -875,6 +881,8 @@
   .mapa-pie span{display:inline-flex;align-items:center;gap:7px}
   .m-ll{width:12px;height:12px;border-radius:50%;background:#17456e;display:inline-block}
   html[data-tema="oscuro"] .m-ll{background:#7fb2dd}
+  .m-ll.casa{background:#7a2f8f}
+  html[data-tema="oscuro"] .m-ll.casa{background:#c98ada}
   .m-ll.destaca{background:#a5452e}
   html[data-tema="oscuro"] .m-ll.destaca{background:#e08a6c}
   .m-ll.rio{width:22px;height:7px;border-radius:4px;background:#7fb0c4}
@@ -953,6 +961,7 @@
 <div style="background:#b4552d;color:#fff;padding:13px 18px;font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem;line-height:1.5"><b>📴 Copia sin conexión</b> — funciona en modo avión, y el «¿qué tengo cerca?» también: el GPS no necesita datos. La versión que se actualiza está en iaadileli.github.io/viaje-londres-2026</div>
 <nav class="sans"><div class="nav-inner"><div class="wrap">
   <a href="#ruta">Cómo usarla</a>
+  <a href="#woolwich">Vuestro barrio</a>
   <a href="#carnaval">Este finde</a>
   <a href="#tiempo">El tiempo</a>
   <a href="#nina">Con Julia</a>
@@ -978,6 +987,7 @@
   <div class="menu-panel" id="menuInfo">
     <button id="temaMenu" class="tema-en-menu">☾ Modo oscuro</button>
     <div class="cab">Sobre la marcha</div>
+    <a href="#woolwich" onclick="cerrarMenuInfo()">🏠 Woolwich, vuestro barrio</a>
     <a href="#comer" onclick="cerrarMenuInfo()">🥯 Comer (todo)</a>
     <a href="#nina" onclick="cerrarMenuInfo()">🧒 Con Julia</a>
     <a href="#paseos" onclick="cerrarMenuInfo()">🚶 Paseos y arquitectura</a>
@@ -1005,12 +1015,13 @@
   <div class="claves">
     <div class="clave"><div class="n">£0</div><div class="t">los grandes museos son gratis, todos</div></div>
     <div class="clave"><div class="n">gratis</div><div class="t">Julia, en metro y bus: no paga hasta los 11</div></div>
-    <div class="clave"><div class="n">8,90</div><div class="t">libras: tope diario de transporte, zonas 1–2</div></div>
+    <div class="clave"><div class="n">12,80</div><div class="t">libras: tope diario de transporte desde Woolwich</div></div>
     <div class="clave"><div class="n">2</div><div class="t">cosas que conviene reservar ya, y solo dos</div></div>
   </div>
 
   <h3 class="sub-h">Las seis zonas, en una línea cada una</h3>
   <ul class="lista-ver">
+    <li><b><a href="#woolwich">Woolwich, vuestro barrio</a></b> — donde dormís: qué hay a menos de diez minutos andando, cómo salir de allí y dónde está la farmacia. Empezad por aquí.</li>
     <li><b><a href="#este">Brick Lane y Shoreditch</a></b> — donde se come mejor y más barato de todo Londres. Beigels de <i>salt beef</i>, barbacoa de humo y curry. Mercados el domingo.</li>
     <li><b><a href="#kingscross">King's Cross</a></b> — los gasómetros victorianos convertidos en plazas, las fuentes donde se moja la niña y el andén 9¾. Media tarde larga.</li>
     <li><b><a href="#soho">Soho, Chinatown y Covent Garden</a></b> — la tienda de Harry Potter buena, el sushi a mitad de precio y sitios de comer por todas partes.</li>
@@ -1057,6 +1068,142 @@
   </ul>
 </section>
 
+<section id="woolwich" class="etapa-sec">
+  <div class="kicker">Donde dormís</div>
+  <h2>Woolwich, vuestro barrio</h2>
+  <span class="fechas-chip">East Carriage House · Duke of Wellington Avenue, SE18 6GJ</span>
+  <p class="intro">Habéis caído en el <strong>Royal Arsenal</strong>, que durante trescientos años
+  fue la fábrica de armas del imperio británico —cañones, pólvora y municiones para media
+  Europa— y hoy es un barrio de ladrillo georgiano junto al río, con las naves militares
+  convertidas en casas, bares y un centro cultural. Está en la <strong>zona 4</strong>, al sureste,
+  y eso suena lejos, pero <strong>la Elizabeth line os planta en el centro en veinte minutos</strong>
+  y sale un barco desde vuestra misma puerta. Y tenéis Greenwich a un cuarto de hora.</p>
+
+  <h3 class="sub-h">Todo lo que necesitáis, andando desde el portal</h3>
+  <div class="tabla-wrap">
+  <table class="tab">
+    <thead><tr><th>Qué</th><th>Dónde</th><th>A pie</th></tr></thead>
+    <tbody>
+      <tr><td><b>Panadería</b> para desayunar</td><td>Boulangerie Jade, Major Draper Street</td><td>1 min</td></tr>
+      <tr><td><b>Pub</b> y terraza</td><td>Dial Arch, No 1 Street</td><td>2 min</td></tr>
+      <tr><td><b>Barco</b> al centro y a Greenwich</td><td>Royal Arsenal Pier</td><td>2 min</td></tr>
+      <tr><td><b>Tren rápido</b> (Elizabeth line)</td><td>Woolwich station</td><td>3 min</td></tr>
+      <tr><td><b>Mercado</b> de fruta y verdura</td><td>Beresford Square</td><td>4 min</td></tr>
+      <tr><td><b>Supermercado barato</b></td><td>Lidl, Macbean Street</td><td>4 min</td></tr>
+      <tr><td><b>Farmacia</b> (hasta las 21:00)</td><td>10 Woolwich New Road</td><td>5 min</td></tr>
+      <tr><td><b>DLR</b> (a Greenwich y a la City)</td><td>Woolwich Arsenal</td><td>6 min</td></tr>
+      <tr><td><b>Postres</b> para Julia</td><td>Creams, Powis Street</td><td>7 min</td></tr>
+      <tr><td><b>Supermercado grande</b> (y farmacia dentro)</td><td>Tesco Extra, Grand Depot Road</td><td>7 min</td></tr>
+      <tr><td><b>Cena barata</b> (eritrea o nepalí)</td><td>Woolwich New Road</td><td>7 min</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="color:var(--tinta2);font-size:.9rem;margin:-6px 0 20px">Los tiempos son de verdad,
+  medidos en línea recta desde Duke of Wellington Avenue a paso normal. Nada de lo de arriba pasa
+  de diez minutos.</p>
+
+  <h3 class="sub-h">Cómo salir del barrio</h3>
+  <ul class="lista-ver">
+    <li><b>Elizabeth line</b> (la morada), desde <b>Woolwich station</b>, a tres minutos — es vuestra línea. <b>Canary Wharf en 8 minutos</b>, Liverpool Street (para <a href="#este">Brick Lane</a>) en unos 14, Tottenham Court Road (para <a href="#soho">Soho</a>) en unos 20, Bond Street y Paddington un poco más. Trenes cada pocos minutos y vagones anchos con sitio para el carrito.</li>
+    <li><b>DLR</b>, desde <b>Woolwich Arsenal</b>, a seis minutos — el metro sin conductor. Va a <a href="#greenwich">Cutty Sark (Greenwich)</a> en un cuarto de hora y sigue hasta Bank. <b>Sentad a Julia delante del todo</b>, donde iría el maquinista.</li>
+    <li><b>El barco</b>, desde <b>Royal Arsenal Pier</b>, a dos minutos — el Uber Boat sale cada 20 minutos y baja por el río hasta el centro. Se paga con la misma tarjeta contactless, va aparte del tope diario y es la forma más bonita de llegar a <a href="#sur">la Tate y el South Bank</a>. Al menos un trayecto, hacedlo.</li>
+    <li><b>El ferry de Woolwich</b> — <b>gratis</b>, y cruza el Támesis con coches y peatones hasta North Woolwich. Diez minutos de travesía que no cuestan nada y a los niños les encanta. Desde el otro lado se ve <b>la Barrera del Támesis</b>.</li>
+    <li><b>Tren normal</b> (Southeastern), desde Woolwich Arsenal, para bajar a London Bridge en unos 20 minutos.</li>
+  </ul>
+  <div class="ojo" style="background:var(--oro-suave);color:var(--tinta);border-left:3px solid var(--oro);border-radius:0 9px 9px 0;margin:6px 0 22px">
+    💷 <b>Ojo con el tope diario, que en vuestro caso no es el de todo el mundo:</b> como dormís en
+    <b>zona 4</b>, el tope de gasto al día es de <b>12,80 £</b> (el de 8,90 £ que se ve en las guías
+    es solo para quien se mueve por las zonas 1 y 2). Sigue siendo un buen trato: a partir de ahí,
+    el día es gratis. Y <b>Julia no paga</b> en nada de esto.
+  </div>
+
+  <h3 class="sub-h">Del aeropuerto a casa, el primer día</h3>
+  <ul class="lista-ver">
+    <li><b>Heathrow</b> — la <b>Elizabeth line</b>, que es la misma línea de vuestra estación: unos <b>55 minutos</b>. Suele haber que cambiar de tren dentro de la propia línea (en Paddington o Whitechapel), pero es cruzar el andén. Nada de arrastrar maletas por escaleras del metro.</li>
+    <li><b>Gatwick</b> — tren hasta <b>London Bridge</b> y allí otro a <b>Woolwich Arsenal</b>: alrededor de <b>1 hora</b> en total, con un solo cambio.</li>
+    <li><b>London City</b> — si volvéis a volar por aquí, lo tenéis <b>al otro lado del río</b>: un cuarto de hora en DLR desde Woolwich Arsenal.</li>
+    <li><b>Stansted o Luton</b> — son los más incómodos: autobús o tren hasta el centro (Liverpool Street o Farringdon) y allí la Elizabeth line hasta Woolwich. Hora y media larga.</li>
+    <li><b>Con las maletas</b>, pagad el viaje con la misma tarjeta contactless. Y en el tren de Heathrow, id al final del andén: los últimos vagones van más vacíos.</li>
+  </ul>
+
+  <h3 class="sub-h">Si algo hace falta, a cualquier hora</h3>
+  <ul class="lista-ver">
+    <li><b>🏥 Urgencias, 24 horas</b> — <b>Queen Elizabeth Hospital</b>, Stadium Road, SE18 4QH. Es el hospital del barrio, tiene urgencias abiertas siempre y está a 10 minutos en taxi o autobús. Con la <b>tarjeta sanitaria europea</b> os atienden.</li>
+    <li><b>📞 Antes de ir a urgencias, el 111</b> — teléfono gratuito del sistema de salud británico: te dicen si hace falta ir, dónde está la farmacia abierta más cercana y hasta te mandan una cita. Para una fiebre de madrugada, es la primera llamada. <b>Emergencias graves, 999.</b></li>
+    <li><b>💊 Farmacia hasta tarde</b> — <b>Woolwich Late Night Pharmacy</b>, 10 Woolwich New Road, SE18 6AB (5 min andando). Lunes a viernes 8:00–21:00, sábados 10:00–21:00, domingos 8:00–20:00. Teléfono 020 8316 7977. Hay otra <b>dentro del Tesco Extra</b>.</li>
+    <li><b>🛒 Comida a última hora</b> — el <b>Tesco Extra</b> de Grand Depot Road abre hasta medianoche entre semana (ya no es 24 h) y el <b>Lidl</b> hasta las 22:00. El domingo todo cierra antes: <b>Sainsbury’s solo hasta las 17:00</b>. Si llegáis de noche sin cenar, el kebab de la estación aguanta hasta tarde.</li>
+    <li><b>💷 Dinero y cajeros</b> — hay cajeros en Powis Street y dentro de los supermercados. <b>Usad los de los bancos</b> (Barclays, Santander, Lloyds): los cajeros independientes de las tiendas suelen cobrar comisión, y siempre que pregunten, <b>pagad en libras, no en euros</b>, que el cambio que ofrecen es malo.</li>
+    <li><b>🚕 Taxi de noche</b> — Uber y Bolt funcionan bien aquí. Los <i>black cabs</i> escasean en Woolwich a según qué horas.</li>
+  </ul>
+
+  <h3 class="sub-h">Qué hacer sin salir del barrio</h3>
+  <ul class="lista-ver">
+    <li><b>El Royal Arsenal</b>, donde dormís — pasead por él a la luz de la tarde: las naves de artillería, la explanada junto al río, los cañones que quedan de decoración. Hay paneles que cuentan qué se hacía en cada edificio.</li>
+    <li><b>Woolwich Works</b> (a 1 minuto) — el centro cultural del barrio, en la antigua fábrica de cartuchos. Café abierto todos los días, programación de conciertos y espectáculos familiares, y <b>visitas guiadas gratuitas</b> al edificio. Mirad su cartelera por si cae algo esa semana.</li>
+    <li><b>El mercado de Beresford Square</b> (4 min) — bajo la puerta monumental del arsenal, el mercado callejero de siempre. De lunes a sábado.</li>
+    <li><b>La Barrera del Támesis</b> (27 min andando por el río, o unas paradas de bus) — las diez compuertas de acero que salvan a Londres de las inundaciones desde 1982, con su centro de visitantes en Unity Way. Se ven muy bien desde el paseo del río y desde el ferry.</li>
+    <li><b>Paseo por la orilla</b> — desde el Arsenal sale un camino junto al Támesis. Enfrente se ve el aeropuerto de la City, con los aviones aterrizando casi encima del agua.</li>
+  </ul>
+
+  <h3 class="sub-h">Y a un cuarto de hora largo</h3>
+  <ul class="lista-ver">
+    <li><b>Maryon Wilson Animal Park</b> (Charlton, 20 min en bus) — <b>gratis</b>: un parque con ovejas, cabras, cerdos, gallinas y patos en medio de la ciudad. Los <b>miércoles a la una</b> hacen visita guiada gratuita en la que los niños dan de comer y tocan a los animales. Si os cuadra el miércoles, es un planazo para Julia y no cuesta nada.</li>
+    <li><b>Severndroog Castle</b> (Shooter’s Hill, 20 min en bus) — una torre gótica de 1784 escondida en un bosque antiguo, en uno de los puntos más altos de Londres. Subir a la plataforma cuesta unas 4 £ y solo abre <b>los domingos</b>; el salón de té, de jueves a domingo. El bosque de alrededor (Oxleas Wood) es de los pocos bosques milenarios que quedan en la ciudad y se pasea gratis.</li>
+    <li><b>Eltham Palace</b> (25 min) — una casa medieval de reyes a la que en los años treinta le añadieron un interior <b>art déco</b> espectacular, con baño de mármol dorado incluido. Unas 17,50 £ el adulto y 10,50 £ los niños.</li>
+    <li><b>Greenwich</b> (15 min en DLR) — que tiene <a href="#greenwich">su propia sección aquí</a>. Siendo vecinos, es vuestro plan de un día sin madrugar.</li>
+  </ul>
+
+  <div class="leyenda-sellos"><span><i style="background:#a8386b"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.4-9.1C1.2 8.5 3.1 5 6.5 5c2 0 3.5 1.1 4.4 2.4l1.1 1.5 1.1-1.5C14 6.1 15.5 5 17.5 5c3.4 0 5.3 3.5 3.9 6.9C19.5 16.3 12 21 12 21z"/></svg></i>te lo recomienda alguien que ha estado</span><span><i style="background:var(--teca)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></i>lleva décadas abierto</span><span><i style="background:var(--mar)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></i>se come por menos de 12 £</span><span><i style="background:var(--verde)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></i>donde come la gente de aquí</span></div>
+  <div class="comer">
+    <h3>Qué y dónde comer en Woolwich, vuestro barrio</h3>
+    <div class="platos">
+      <span class="plato">Desayuno de panadería</span><span class="plato">Comida eritrea</span><span class="plato">Momos nepalíes</span><span class="plato">Pub del Arsenal</span><span class="plato">Supermercado</span><span class="plato">Kebab de madrugada</span>
+    </div>
+    <ul class="sitios">
+      <li><span class="nombre">Boulangerie Jade</span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">Major Draper Street, Royal Arsenal, SE18 6GD · dentro del Arsenal</span> · La panadería francesa del barrio, y la respuesta a «dónde desayunamos». Croissants y pains au chocolat hechos con mantequilla de verdad, café y sitio para sentarse. Está dentro del <b>Royal Arsenal</b>, a un par de minutos de la estación.
+        <span class="pedir"><b>Pedid</b> Croissants recién hechos y café. Y una <i>baguette</i> para el picnic del día</span>
+        <span class="datos">🕐 abre temprano · 💷 3–6 £ · 📞 020 8316 4361 · la mejor manera de empezar el día sin coger el tren</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Boulangerie%20Jade%2C%20Major%20Draper%20Street%2C%20Woolwich%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Blue Nile</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">73 Woolwich New Road, SE18 6ED</span> · Eritreo-italiano, de una familia del barrio, en una antigua salchichería de los años treinta con los azulejos originales. Se come con <i>injera</i>, el pan esponjoso que hace de plato y de cubierto: se arranca un trozo y se pellizca la comida con él. Está en todas las listas de los mejores baratos de Londres y a Julia le va a divertir comer con las manos.
+        <span class="pedir"><b>Pedid</b> Un plato combinado para compartir, con varios guisos sobre la misma <i>injera</i>. Y decid que es la primera vez: os explican cómo se come</span>
+        <span class="datos">💷 20–25 £ los dos, y comer al mediodía sale por 5–8 £ · 📞 020 8855 0369 · <b>confirmad que sigue abierto antes de ir</b>, que es un sitio pequeño y familiar</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Blue%20Nile%2C%2073%20Woolwich%20New%20Road%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Kailash Momo</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">79 Woolwich New Road, SE18 6ED · dos puertas más allá</span> · Nepalí, especializado en <b>momos</b>: empanadillas al vapor rellenas de carne o verdura, con una salsa de tomate y sésamo para mojar. Sitio pequeño, precios de barrio y raciones que llenan. De lo mejor valorado de Woolwich.
+        <span class="pedir"><b>Pedid</b> Una cesta de <b>momos al vapor</b> y otra de fritos, para comparar. El <i>thali</i> si tenéis hambre de verdad</span>
+        <span class="datos">💷 12–18 £ por persona · pequeño: a la hora de cenar puede haber espera</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Kailash%20Momo%2C%2079%20Woolwich%20New%20Road%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Dial Arch</span> — <span class="dir">No 1 Street, Royal Arsenal, SE18 6GH</span> · El pub del barrio, metido en un edificio del arsenal militar del siglo XVIII con vigas, ladrillo visto y una terraza en la plaza. Comida de pub correcta y, el domingo, <i>Sunday roast</i>. Es el sitio natural para la primera cerveza al llegar, porque está <b>al lado mismo de la estación</b>.
+        <span class="pedir"><b>Pedid</b> Una pinta en la terraza. Si es domingo, el <b>roast</b>, y mejor reservad</span>
+        <span class="datos">🕐 todos los días · 💷 15–25 £ comer · entran niños hasta la tarde-noche</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Dial%20Arch%2C%20Woolwich%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Woolwich Market</span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">Beresford Square, SE18 6JY · a 3 min de la estación</span> · El mercado callejero de toda la vida, delante de la puerta monumental del arsenal. Puestos de fruta y verdura baratísima, pescado, telas y comida para llevar. Es el barrio de verdad, no una versión para turistas, y es donde se compra la fruta de la semana por cuatro libras.
+        <span class="pedir"><b>Pedid</b> Fruta para el desayuno y la mochila del día. Se regatea poco, pero se compra muy barato</span>
+        <span class="datos">🕐 de lunes a sábado, de día · 💷 muy barato · llevad algo de efectivo, aunque casi todos tienen datáfono</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Beresford%20Square%2C%20Woolwich%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Lidl</span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">38 Macbean Street, SE18 6LW</span> · El supermercado más barato del barrio y el que mejor viene para llenar la nevera del apartamento: agua, leche, fruta, embutido y algo de fiambre para los picnics.
+        <span class="pedir"><b>Pedid</b> La compra grande del primer día. Y sus <i>croissants</i> del horno, que están bien y cuestan céntimos</span>
+        <span class="datos">🕐 L–S 8:00–22:00 · D 10:00–16:00 · 💷 lo más barato de Woolwich</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Lidl%2C%20Macbean%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Tesco Extra</span> — <span class="dir">13 Grand Depot Road, SE18 6HQ</span> · <b>El supermercado grande de la zona</b>: aquí hay de todo, incluida ropa, cosas de bebé, pilas, adaptadores de enchufe y una <b>farmacia dentro</b>. Es el que resuelve cualquier cosa que se os haya olvidado meter en la maleta.
+        <span class="pedir"><b>Pedid</b> La compra semanal, y los <i>meal deal</i>: bocadillo, bolsa de patatas y bebida por unas 4 £, que es el almuerzo más barato de Londres</span>
+        <span class="datos">🕐 abre de 6:00 a medianoche entre semana (ya no es 24 h) · 💊 con farmacia dentro</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Tesco%20Extra%2C%20Grand%20Depot%20Road%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Sainsbury’s</span> — <span class="dir">25 Calderwood Street, SE18 6QW</span> · El otro supermercado grande, en pleno centro de Woolwich. Algo mejor que Lidl en comida preparada y en pan; algo más caro. Ojo con el domingo, que cierra pronto.
+        <span class="pedir"><b>Pedid</b> Comida preparada para las cenas de vuelta cansados, y su sección de <i>meal deal</i></span>
+        <span class="datos">🕐 L–S 8:00–21:00 · <b>D 11:00–17:00</b> · el domingo, no lo dejéis para la tarde</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Sainsbury%27s%2C%20Calderwood%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Creams Cafe</span> — <span class="dir">127 Powis Street, SE18 6JL</span> · Heladería y postres: gofres, tortitas, helados y batidos de colores imposibles. No es alta cocina ni lo pretende, pero <b>abre hasta tarde</b> y es el soborno perfecto para Julia el día que haya que andar más de la cuenta.
+        <span class="pedir"><b>Pedid</b> Un gofre con helado para ella y un café para vosotros</span>
+        <span class="datos">🕐 hasta tarde, también en fin de semana · 💷 5–9 £ el postre</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Creams%2C%20Powis%20Street%2C%20Woolwich" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Station Kebab House</span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">Vincent Road, SE18 6RF · junto a la estación</span> · Para el día que lleguéis reventados a las once de la noche y no haya nada abierto: kebab, pollo frito, pizza y hamburguesas, al lado de la estación. No esperéis nada más que eso, pero soluciona la cena.
+        <span class="pedir"><b>Pedid</b> Un <i>chicken shish</i> con ensalada, que es lo más decente de la carta</span>
+        <span class="datos">🕐 hasta tarde, incluido el fin de semana · 💷 6–10 £ · también llevan a casa</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Station%20Kebab%20House%2C%20Vincent%20Road%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+    </ul>
+  </div>
+</section>
+
 <section id="tiempo" class="etapa-sec">
   <div class="kicker">Qué meter en la maleta</div>
   <h2>El tiempo, día a día</h2>
@@ -1065,25 +1212,25 @@
   <div class="tiempo-rejilla" id="tiempoRejilla">
       <div class="t-dia mojado" data-t="2026-08-29">
         <div class="t-cuando"><b>sábado 29</b><span>de agosto</span></div>
-        <div class="t-icono" aria-hidden="true">🌦️</div>
-        <div class="t-cielo">lluvia floja</div>
+        <div class="t-icono" aria-hidden="true">🌧️</div>
+        <div class="t-cielo">lluvia</div>
         <div class="t-grados"><b>20°</b><span>17°</span></div>
         <div class="t-lluvia">💧 100%</div>
-        <div class="t-viento">💨 19 km/h</div>
+        <div class="t-viento">💨 20 km/h</div>
       </div>
       <div class="t-dia mojado" data-t="2026-08-30">
         <div class="t-cuando"><b>domingo 30</b><span>de agosto</span></div>
         <div class="t-icono" aria-hidden="true">🌦️</div>
-        <div class="t-cielo">llovizna</div>
+        <div class="t-cielo">chubascos</div>
         <div class="t-grados"><b>22°</b><span>17°</span></div>
         <div class="t-lluvia">💧 69%</div>
-        <div class="t-viento">💨 22 km/h</div>
+        <div class="t-viento">💨 21 km/h</div>
       </div>
       <div class="t-dia mojado" data-t="2026-08-31">
         <div class="t-cuando"><b>lunes 31</b><span>de agosto</span></div>
         <div class="t-icono" aria-hidden="true">🌦️</div>
         <div class="t-cielo">llovizna</div>
-        <div class="t-grados"><b>20°</b><span>15°</span></div>
+        <div class="t-grados"><b>22°</b><span>16°</span></div>
         <div class="t-lluvia">💧 69%</div>
         <div class="t-viento">💨 21 km/h</div>
       </div>
@@ -1091,48 +1238,48 @@
         <div class="t-cuando"><b>martes 1</b><span>de septiembre</span></div>
         <div class="t-icono" aria-hidden="true">☁️</div>
         <div class="t-cielo">nublado</div>
-        <div class="t-grados"><b>21°</b><span>14°</span></div>
+        <div class="t-grados"><b>22°</b><span>15°</span></div>
         <div class="t-lluvia">💧 41%</div>
-        <div class="t-viento">💨 18 km/h</div>
+        <div class="t-viento">💨 16 km/h</div>
       </div>
       <div class="t-dia" data-t="2026-09-02">
         <div class="t-cuando"><b>miércoles 2</b><span>de septiembre</span></div>
-        <div class="t-icono" aria-hidden="true">🌦️</div>
-        <div class="t-cielo">llovizna</div>
+        <div class="t-icono" aria-hidden="true">🌧️</div>
+        <div class="t-cielo">llovizna fuerte</div>
         <div class="t-grados"><b>20°</b><span>16°</span></div>
         <div class="t-lluvia">💧 27%</div>
-        <div class="t-viento">💨 20 km/h</div>
+        <div class="t-viento">💨 17 km/h</div>
       </div>
       <div class="t-dia" data-t="2026-09-03">
         <div class="t-cuando"><b>jueves 3</b><span>de septiembre</span></div>
-        <div class="t-icono" aria-hidden="true">☁️</div>
-        <div class="t-cielo">nublado</div>
-        <div class="t-grados"><b>21°</b><span>15°</span></div>
+        <div class="t-icono" aria-hidden="true">🌦️</div>
+        <div class="t-cielo">llovizna</div>
+        <div class="t-grados"><b>24°</b><span>17°</span></div>
         <div class="t-lluvia">💧 23%</div>
         <div class="t-viento">💨 18 km/h</div>
       </div>
       <div class="t-dia" data-t="2026-09-04">
         <div class="t-cuando"><b>viernes 4</b><span>de septiembre</span></div>
         <div class="t-icono" aria-hidden="true">🌦️</div>
-        <div class="t-cielo">llovizna</div>
-        <div class="t-grados"><b>24°</b><span>18°</span></div>
+        <div class="t-cielo">chubascos</div>
+        <div class="t-grados"><b>23°</b><span>18°</span></div>
         <div class="t-lluvia">💧 31%</div>
-        <div class="t-viento">💨 15 km/h</div>
+        <div class="t-viento">💨 20 km/h</div>
       </div>
       <div class="t-dia" data-t="2026-09-05">
         <div class="t-cuando"><b>sábado 5</b><span>de septiembre</span></div>
         <div class="t-icono" aria-hidden="true">🌦️</div>
         <div class="t-cielo">llovizna</div>
-        <div class="t-grados"><b>19°</b><span>16°</span></div>
+        <div class="t-grados"><b>18°</b><span>15°</span></div>
         <div class="t-lluvia">💧 20%</div>
-        <div class="t-viento">💨 11 km/h</div>
+        <div class="t-viento">💨 10 km/h</div>
       </div>
   </div>
 
   <div class="t-pie sans">
     <span id="tiempoSello">Predicción del 28 de agosto · se actualiza sola al abrir la web</span>
     <span>🌅 amanece a las 06:08 · 🌇 anochece a las 19:54</span>
-    <span>Máximas de 14° a 24° · mínimas de hasta 14°</span>
+    <span>Máximas de 15° a 24° · mínimas de hasta 15°</span>
   </div>
 
   <div class="tip"><b>Con esos números:</b> manga corta de día y <b>una chaqueta fina para la
@@ -1150,74 +1297,81 @@
   lleva a su apartado</strong>.</p>
 
   <div class="mapa-wrap">
-  <svg viewBox="0 0 1631 1244" class="mapa-svg" role="img"
+  <svg viewBox="0 0 2056 1273" class="mapa-svg" role="img"
        aria-label="Mapa de Londres con las zonas de la guía señaladas; cada una es un enlace a su apartado">
     <image class="m-base" href="img/mapa-londres.jpg" xlink:href="img/mapa-londres.jpg"
-           x="0" y="0" width="1631" height="1244" preserveAspectRatio="xMidYMid slice"/>
+           x="0" y="0" width="2056" height="1273" preserveAspectRatio="xMidYMid slice"/>
+    <a class="m-punto casa" href="#woolwich" aria-label="Ir a WOOLWICH">
+      <rect class="m-toca" x="1763" y="518" width="146" height="84" rx="14"/>
+      <circle cx="1836" cy="584" r="15"/>
+      <text class="m-tit" x="1836" y="550" text-anchor="middle">WOOLWICH</text>
+      <text class="m-sub" x="1836" y="572" text-anchor="middle">vuestra casa</text>
+    </a>
     <a class="m-punto" href="#carnaval" aria-label="Ir a Notting Hill">
-      <rect class="m-toca" x="182" y="346" width="206" height="84" rx="14"/>
-      <circle cx="285" cy="412" r="12"/>
-      <text class="m-tit" x="285" y="378" text-anchor="middle">Notting Hill</text>
-      <text class="m-sub" x="285" y="400" text-anchor="middle">el carnaval</text>
+      <rect class="m-toca" x="182" y="374" width="206" height="84" rx="14"/>
+      <circle cx="285" cy="440" r="12"/>
+      <text class="m-tit" x="285" y="406" text-anchor="middle">Notting Hill</text>
+      <text class="m-sub" x="285" y="428" text-anchor="middle">el carnaval</text>
     </a>
     <a class="m-punto destaca" href="#museos" aria-label="Ir a South Kensington">
-      <rect class="m-toca" x="282" y="519" width="266" height="118" rx="14"/>
-      <circle cx="415" cy="551" r="15"/>
-      <text class="m-tit" x="415" y="595" text-anchor="middle">South Kensington</text>
-      <text class="m-sub" x="415" y="619" text-anchor="middle">los museos grandes</text>
+      <rect class="m-toca" x="282" y="548" width="266" height="118" rx="14"/>
+      <circle cx="415" cy="580" r="15"/>
+      <text class="m-tit" x="415" y="624" text-anchor="middle">South Kensington</text>
+      <text class="m-sub" x="415" y="648" text-anchor="middle">los museos grandes</text>
     </a>
     <a class="m-punto" href="#paseos" aria-label="Ir a Camden">
-      <rect class="m-toca" x="519" y="43" width="116" height="84" rx="14"/>
-      <circle cx="577" cy="109" r="12"/>
-      <text class="m-tit" x="577" y="75" text-anchor="middle">Camden</text>
-      <text class="m-sub" x="577" y="97" text-anchor="middle">canal y mercado</text>
+      <rect class="m-toca" x="519" y="71" width="116" height="84" rx="14"/>
+      <circle cx="577" cy="137" r="12"/>
+      <text class="m-tit" x="577" y="103" text-anchor="middle">Camden</text>
+      <text class="m-sub" x="577" y="125" text-anchor="middle">canal y mercado</text>
     </a>
     <a class="m-punto destaca" href="#kingscross" aria-label="Ir a King’s Cross">
-      <rect class="m-toca" x="603" y="142" width="206" height="84" rx="14"/>
-      <circle cx="706" cy="208" r="15"/>
-      <text class="m-tit" x="706" y="174" text-anchor="middle">King’s Cross</text>
-      <text class="m-sub" x="706" y="196" text-anchor="middle">gasómetros y andén 9¾</text>
+      <rect class="m-toca" x="603" y="170" width="206" height="84" rx="14"/>
+      <circle cx="706" cy="236" r="15"/>
+      <text class="m-tit" x="706" y="202" text-anchor="middle">King’s Cross</text>
+      <text class="m-sub" x="706" y="224" text-anchor="middle">gasómetros y andén 9¾</text>
     </a>
     <a class="m-punto destaca" href="#soho" aria-label="Ir a Soho y Covent Garden">
-      <rect class="m-toca" x="507" y="344" width="326" height="118" rx="14"/>
-      <circle cx="670" cy="376" r="15"/>
-      <text class="m-tit" x="670" y="420" text-anchor="middle">Soho · Covent Garden</text>
-      <text class="m-sub" x="670" y="444" text-anchor="middle">Chinatown y Japan Centre</text>
+      <rect class="m-toca" x="507" y="372" width="326" height="118" rx="14"/>
+      <circle cx="670" cy="404" r="15"/>
+      <text class="m-tit" x="670" y="448" text-anchor="middle">Soho · Covent Garden</text>
+      <text class="m-sub" x="670" y="472" text-anchor="middle">Chinatown y Japan Centre</text>
     </a>
     <a class="m-punto destaca" href="#este" aria-label="Ir a Brick Lane y Shoreditch">
-      <rect class="m-toca" x="822" y="206" width="371" height="84" rx="14"/>
-      <circle cx="1008" cy="272" r="15"/>
-      <text class="m-tit" x="1008" y="238" text-anchor="middle">Brick Lane · Shoreditch</text>
-      <text class="m-sub" x="1008" y="260" text-anchor="middle">comer y mercados</text>
+      <rect class="m-toca" x="822" y="234" width="371" height="84" rx="14"/>
+      <circle cx="1008" cy="300" r="15"/>
+      <text class="m-tit" x="1008" y="266" text-anchor="middle">Brick Lane · Shoreditch</text>
+      <text class="m-sub" x="1008" y="288" text-anchor="middle">comer y mercados</text>
     </a>
     <a class="m-punto" href="#paseos" aria-label="Ir a la City">
-      <rect class="m-toca" x="902" y="335" width="131" height="76" rx="14"/>
-      <circle cx="920" cy="367" r="12"/>
-      <text class="m-tit" x="946" y="369" text-anchor="start">la City</text>
-      <text class="m-sub" x="946" y="393" text-anchor="start">Sky Garden y Leadenhall</text>
+      <rect class="m-toca" x="902" y="363" width="131" height="76" rx="14"/>
+      <circle cx="920" cy="395" r="12"/>
+      <text class="m-tit" x="946" y="397" text-anchor="start">la City</text>
+      <text class="m-sub" x="946" y="421" text-anchor="start">Sky Garden y Leadenhall</text>
     </a>
     <a class="m-punto destaca" href="#sur" aria-label="Ir a Borough y South Bank">
-      <rect class="m-toca" x="740" y="417" width="326" height="118" rx="14"/>
-      <circle cx="903" cy="449" r="15"/>
-      <text class="m-tit" x="903" y="493" text-anchor="middle">Borough · South Bank</text>
-      <text class="m-sub" x="903" y="517" text-anchor="middle">mercado y la Tate</text>
+      <rect class="m-toca" x="740" y="446" width="326" height="118" rx="14"/>
+      <circle cx="903" cy="478" r="15"/>
+      <text class="m-tit" x="903" y="522" text-anchor="middle">Borough · South Bank</text>
+      <text class="m-sub" x="903" y="546" text-anchor="middle">mercado y la Tate</text>
     </a>
     <a class="m-punto destaca" href="#greenwich" aria-label="Ir a Greenwich">
-      <rect class="m-toca" x="1294" y="602" width="161" height="84" rx="14"/>
-      <circle cx="1375" cy="668" r="15"/>
-      <text class="m-tit" x="1375" y="634" text-anchor="middle">Greenwich</text>
-      <text class="m-sub" x="1375" y="656" text-anchor="middle">en barco desde el centro</text>
+      <rect class="m-toca" x="1294" y="631" width="161" height="84" rx="14"/>
+      <circle cx="1375" cy="697" r="15"/>
+      <text class="m-tit" x="1375" y="663" text-anchor="middle">Greenwich</text>
+      <text class="m-sub" x="1375" y="685" text-anchor="middle">en barco desde el centro</text>
     </a>
     <a class="m-punto" href="#paseos" aria-label="Ir a West Norwood">
-      <rect class="m-toca" x="753" y="1075" width="206" height="84" rx="14"/>
-      <circle cx="856" cy="1141" r="12"/>
-      <text class="m-tit" x="856" y="1107" text-anchor="middle">West Norwood</text>
-      <text class="m-sub" x="856" y="1129" text-anchor="middle">el cementerio victoriano</text>
+      <rect class="m-toca" x="753" y="1104" width="206" height="84" rx="14"/>
+      <circle cx="856" cy="1170" r="12"/>
+      <text class="m-tit" x="856" y="1136" text-anchor="middle">West Norwood</text>
+      <text class="m-sub" x="856" y="1158" text-anchor="middle">el cementerio victoriano</text>
     </a>
   </svg>
   </div>
 
   <div class="mapa-pie sans">
+    <span><i class="m-ll casa"></i>vuestra casa</span>
     <span><i class="m-ll destaca"></i>las seis zonas de la guía</span>
     <span><i class="m-ll"></i>otros sitios que se nombran</span>
     <span class="mapa-pinchar"><b>👆 Pulsad en una zona</b> y os lleva a ella</span>
@@ -1283,7 +1437,6 @@
   <a href="#nina"><b>Young V&amp;A</b></a> de Bethnal Green, que es un museo entero pensado para
   niños de su edad, y es gratis. Encaja perfecto con esta mañana.</div>
 
-  <div class="leyenda-sellos"><span><i style="background:#a8386b"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.4-9.1C1.2 8.5 3.1 5 6.5 5c2 0 3.5 1.1 4.4 2.4l1.1 1.5 1.1-1.5C14 6.1 15.5 5 17.5 5c3.4 0 5.3 3.5 3.9 6.9C19.5 16.3 12 21 12 21z"/></svg></i>te lo recomienda alguien que ha estado</span><span><i style="background:var(--teca)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></i>lleva décadas abierto</span><span><i style="background:var(--mar)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></i>se come por menos de 12 £</span><span><i style="background:var(--verde)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></i>donde come la gente de aquí</span></div>
   <div class="comer">
     <h3>Qué y dónde comer en Brick Lane y Shoreditch</h3>
     <div class="platos">
@@ -1863,8 +2016,9 @@
   Nada de billetes, nada de Oyster, nada de abonos.</p>
 
   <ul class="lista-ver">
+    <li><b>Vuestra línea es la Elizabeth line</b> (la morada), desde <b>Woolwich station</b>, a tres minutos de casa: Canary Wharf en 8 minutos y el centro en 20. Para Greenwich, el DLR desde Woolwich Arsenal. Todo está en <a href="#woolwich">la sección del barrio</a>.</li>
     <li><b>Contactless, sin más</b> — cada uno con <b>su propia tarjeta o su móvil</b> (no se puede pasar a dos personas con la misma). Se toca al entrar y <b>también al salir</b> en metro, tren y DLR; en el autobús solo al subir. Si se olvida el toque de salida, cobran la tarifa máxima.</li>
-    <li><b>El tope diario</b> — por mucho que uséis el metro, <b>no os pueden cobrar más de 8,90 £ al día</b> en las zonas 1 y 2, que es donde vais a estar. A partir de ahí, gratis. Hay también un tope semanal si usáis siempre la misma tarjeta de lunes a domingo.</li>
+    <li><b>El tope diario</b> — por mucho que uséis el transporte, hay un máximo al día. <b>Como dormís en Woolwich, que es zona 4, el vuestro es de 12,80 £</b> (el de 8,90 £ que sale en las guías es para quien se mueve solo por las zonas 1 y 2). A partir de ese tope, el día sale gratis. Hay también un tope semanal si usáis siempre la misma tarjeta de lunes a domingo.</li>
     <li><b>Julia no paga</b> — <b>los menores de 11 años viajan gratis</b> en metro, bus, DLR, Overground y Elizabeth line yendo con un adulto que pague (hasta cuatro niños por adulto). En el autobús, gratis siempre. En los tornos, <b>que pase con vosotros por la puerta ancha</b>, sin tocar nada: si le pasáis una tarjeta le cobran tarifa de adulto.</li>
     <li><b>El autobús</b> — más barato que el metro y se ve la ciudad. <b>No aceptan efectivo</b>, solo tarjeta. Subid arriba del todo del piso de arriba, delante: para Julia es la mejor atracción gratis de Londres. Las líneas 11, 15 y 24 pasan por medio centro.</li>
     <li><b>El barco</b> — el <i>Uber Boat by Thames Clipper</i> también se paga con contactless, pero <b>va aparte del tope diario</b>. Unas 9–10 £ el trayecto, y Julia gratis.</li>
@@ -2096,7 +2250,7 @@
 </script>
 
 <script>
-const SITIOS=[{"n":"Beigel Bake","z":"159 Brick Lane, E1 6SB","e":"Brick Lane y Shoreditch","s":"leyenda","la":51.524512,"lo":-0.071753,"ap":0,"q":"Beigel%20Bake%2C%20159%20Brick%20Lane%2C%20London"},{"n":"The Beigel Shop","z":"155 Brick Lane, E1 6QL","e":"Brick Lane y Shoreditch","s":"leyenda","la":51.524365,"lo":-0.071726,"ap":0,"q":"Beigel%20Shop%2C%20155%20Brick%20Lane%2C%20London"},{"n":"Smokestak","z":"35 Sclater Street, E1 6LB","e":"Brick Lane y Shoreditch","s":"cena","la":51.523657,"lo":-0.072833,"ap":0,"q":"Smokestak%2C%2035%20Sclater%20Street%2C%20London"},{"n":"Smoking Goat","z":"64 Shoreditch High Street, E1 6JJ","e":"Brick Lane y Shoreditch","s":"amigo","la":51.524228,"lo":-0.076915,"ap":0,"q":"Smoking%20Goat%2C%2064%20Shoreditch%20High%20Street%2C%20London"},{"n":"Tayyabs","z":"83–89 Fieldgate Street, E1 1JU","e":"Brick Lane y Shoreditch","s":"local","la":51.517265,"lo":-0.063461,"ap":0,"q":"Tayyabs%2C%2083%20Fieldgate%20Street%2C%20London"},{"n":"Poppies Fish & Chips","z":"6–8 Hanbury Street, E1 6QR","e":"Brick Lane y Shoreditch","s":"","la":51.51993,"lo":-0.07413,"ap":0,"q":"Poppies%20Fish%20and%20Chips%2C%206%20Hanbury%20Street%2C%20London"},{"n":"E. Pellicci","z":"332 Bethnal Green Road, E2 0AG","e":"Brick Lane y Shoreditch","s":"leyenda","la":51.526496,"lo":-0.063379,"ap":0,"q":"E%20Pellicci%2C%20332%20Bethnal%20Green%20Road%2C%20London"},{"n":"Old Spitalfields Market","z":"Horner Square, E1 6EW","e":"Brick Lane y Shoreditch","s":"barato","la":51.5196,"lo":-0.075363,"ap":0,"q":"Old%20Spitalfields%20Market%2C%20London"},{"n":"Bleecker Burger","z":"Old Spitalfields Market, Lamb Street, E1 6EA","e":"Brick Lane y Shoreditch","s":"barato","la":51.51965,"lo":-0.07533,"ap":0,"q":"Bleecker%20Burger%2C%20Old%20Spitalfields%20Market%2C%20London"},{"n":"Dishoom Shoreditch","z":"7 Boundary Street, E2 7JE","e":"Brick Lane y Shoreditch","s":"","la":51.524499,"lo":-0.076825,"ap":0,"q":"Dishoom%20Shoreditch%2C%207%20Boundary%20Street%2C%20London"},{"n":"The Marksman","z":"254 Hackney Road, E2 7SJ","e":"Brick Lane y Shoreditch","s":"","la":51.530838,"lo":-0.069509,"ap":0,"q":"The%20Marksman%2C%20254%20Hackney%20Road%2C%20London"},{"n":"Dishoom King’s Cross","z":"5 Stable Street, N1C 4AB","e":"King's Cross","s":"","la":51.53542,"lo":-0.12638,"ap":0,"q":"Dishoom%20Kings%20Cross%2C%205%20Stable%20Street%2C%20London"},{"n":"The Lighterman","z":"3 Granary Square, N1C 4BH","e":"King's Cross","s":"","la":51.535251,"lo":-0.124407,"ap":0,"q":"The%20Lighterman%2C%20Granary%20Square%2C%20London"},{"n":"Roti King","z":"40 Doric Way, NW1 1LH","e":"King's Cross","s":"local","la":51.529004,"lo":-0.132048,"ap":0,"q":"Roti%20King%2C%2040%20Doric%20Way%2C%20London"},{"n":"Casa Pastor y los puestos de Coal Drops Yard","z":"Coal Drops Yard, N1C 4DQ","e":"King's Cross","s":"","la":51.535798,"lo":-0.126666,"ap":0,"q":"Coal%20Drops%20Yard%2C%20London"},{"n":"Japan Centre","z":"35b Panton Street, SW1Y 4EA","e":"Soho y Covent Garden","s":"barato","la":51.509714,"lo":-0.131519,"ap":0,"q":"Japan%20Centre%2C%2035b%20Panton%20Street%2C%20London"},{"n":"Bao Soho","z":"53 Lexington Street, W1F 9AS","e":"Soho y Covent Garden","s":"","la":51.513216,"lo":-0.13653,"ap":0,"q":"Bao%20Soho%2C%2053%20Lexington%20Street%2C%20London"},{"n":"Dumplings’ Legend","z":"15–16 Gerrard Street, W1D 6JE","e":"Soho y Covent Garden","s":"barato","la":51.511734,"lo":-0.131466,"ap":0,"q":"Dumplings%20Legend%2C%2015%20Gerrard%20Street%2C%20London"},{"n":"Flat Iron","z":"17–18 Henrietta Street, WC2E 8QH (Covent Garden) y varios más","e":"Soho y Covent Garden","s":"barato","la":51.510807,"lo":-0.123989,"ap":0,"q":"Flat%20Iron%2C%2017%20Henrietta%20Street%2C%20London"},{"n":"Bar Italia","z":"22 Frith Street, W1D 4RF","e":"Soho y Covent Garden","s":"leyenda","la":51.513421,"lo":-0.131235,"ap":0,"q":"Bar%20Italia%2C%2022%20Frith%20Street%2C%20London"},{"n":"Regency Cafe","z":"17–19 Regency Street, SW1P 4BY","e":"Soho y Covent Garden","s":"leyenda","la":51.494002,"lo":-0.132095,"ap":0,"q":"Regency%20Cafe%2C%2017%20Regency%20Street%2C%20London"},{"n":"Borough Market","z":"8 Southwark Street, SE1 1TL","e":"Borough y la orilla sur","s":"barato","la":51.505581,"lo":-0.090198,"ap":0,"q":"Borough%20Market%2C%20London"},{"n":"Padella","z":"6 Southwark Street, SE1 1TQ","e":"Borough y la orilla sur","s":"barato","la":51.505138,"lo":-0.089912,"ap":0,"q":"Padella%2C%206%20Southwark%20Street%2C%20London"},{"n":"Maltby Street Market","z":"Ropewalk, SE1 3PA","e":"Borough y la orilla sur","s":"barato","la":51.499258,"lo":-0.075624,"ap":0,"q":"Maltby%20Street%20Market%2C%20Ropewalk%2C%20London"},{"n":"The George Inn","z":"75–77 Borough High Street, SE1 1NH","e":"Borough y la orilla sur","s":"leyenda","la":51.504161,"lo":-0.089932,"ap":0,"q":"The%20George%20Inn%2C%20Borough%20High%20Street%2C%20London"},{"n":"Las Refreshment Rooms del V&A","z":"Victoria and Albert Museum, Cromwell Road, SW7 2RL","e":"South Kensington","s":"leyenda","la":51.496884,"lo":-0.171637,"ap":0,"q":"Victoria%20and%20Albert%20Museum%2C%20Cromwell%20Road%2C%20London"},{"n":"Japan House","z":"101–111 Kensington High Street, W8 5SA","e":"South Kensington","s":"","la":51.50135,"lo":-0.191682,"ap":0,"q":"Japan%20House%20London%2C%20101%20Kensington%20High%20Street%2C%20London"},{"n":"Picnic en Kensington Gardens","z":"Comprad en el Whole Foods de Kensington High Street, W8 5SE","e":"South Kensington","s":"barato","la":51.506646,"lo":-0.180389,"ap":0,"q":"Kensington%20Gardens%2C%20London"},{"n":"Goddards at Greenwich","z":"22 King William Walk, SE10 9HU","e":"Greenwich","s":"leyenda","la":51.481372,"lo":-0.008391,"ap":0,"q":"Goddards%20at%20Greenwich%2C%2022%20King%20William%20Walk%2C%20London"},{"n":"Greenwich Market","z":"5B Greenwich Market, SE10 9HZ","e":"Greenwich","s":"barato","la":51.481583,"lo":-0.009045,"ap":0,"q":"Greenwich%20Market%2C%20London"},{"n":"The Trafalgar Tavern","z":"Park Row, SE10 9NW","e":"Greenwich","s":"leyenda","la":51.484594,"lo":-0.004169,"ap":0,"q":"Trafalgar%20Tavern%2C%20Park%20Row%2C%20London"}];
+const SITIOS=[{"n":"Boulangerie Jade","z":"Major Draper Street, Royal Arsenal, SE18 6GD","e":"Woolwich (vuestro barrio)","s":"barato","la":51.4933,"lo":0.0705,"ap":0,"q":"Boulangerie%20Jade%2C%20Major%20Draper%20Street%2C%20Woolwich%2C%20London"},{"n":"Blue Nile","z":"73 Woolwich New Road, SE18 6ED","e":"Woolwich (vuestro barrio)","s":"local","la":51.48899,"lo":0.06736,"ap":0,"q":"Blue%20Nile%2C%2073%20Woolwich%20New%20Road%2C%20London"},{"n":"Kailash Momo","z":"79 Woolwich New Road, SE18 6ED","e":"Woolwich (vuestro barrio)","s":"local","la":51.488991,"lo":0.06736,"ap":0,"q":"Kailash%20Momo%2C%2079%20Woolwich%20New%20Road%2C%20London"},{"n":"Dial Arch","z":"No 1 Street, Royal Arsenal, SE18 6GH","e":"Woolwich (vuestro barrio)","s":"","la":51.49257,"lo":0.06996,"ap":0,"q":"Dial%20Arch%2C%20Woolwich%2C%20London"},{"n":"Woolwich Market","z":"Beresford Square, SE18 6JY","e":"Woolwich (vuestro barrio)","s":"barato","la":51.491031,"lo":0.068995,"ap":0,"q":"Beresford%20Square%2C%20Woolwich%2C%20London"},{"n":"Lidl","z":"38 Macbean Street, SE18 6LW","e":"Woolwich (vuestro barrio)","s":"barato","la":51.492653,"lo":0.066009,"ap":0,"q":"Lidl%2C%20Macbean%20Street%2C%20London"},{"n":"Tesco Extra","z":"13 Grand Depot Road, SE18 6HQ","e":"Woolwich (vuestro barrio)","s":"","la":51.489268,"lo":0.066274,"ap":0,"q":"Tesco%20Extra%2C%20Grand%20Depot%20Road%2C%20London"},{"n":"Sainsbury’s","z":"25 Calderwood Street, SE18 6QW","e":"Woolwich (vuestro barrio)","s":"","la":51.491,"lo":0.063714,"ap":0,"q":"Sainsbury%27s%2C%20Calderwood%20Street%2C%20London"},{"n":"Creams Cafe","z":"127 Powis Street, SE18 6JL","e":"Woolwich (vuestro barrio)","s":"","la":51.492253,"lo":0.063347,"ap":0,"q":"Creams%2C%20Powis%20Street%2C%20Woolwich"},{"n":"Station Kebab House","z":"Vincent Road, SE18 6RF","e":"Woolwich (vuestro barrio)","s":"barato","la":51.4899,"lo":0.0699,"ap":0,"q":"Station%20Kebab%20House%2C%20Vincent%20Road%2C%20London"},{"n":"Beigel Bake","z":"159 Brick Lane, E1 6SB","e":"Brick Lane y Shoreditch","s":"leyenda","la":51.524512,"lo":-0.071753,"ap":0,"q":"Beigel%20Bake%2C%20159%20Brick%20Lane%2C%20London"},{"n":"The Beigel Shop","z":"155 Brick Lane, E1 6QL","e":"Brick Lane y Shoreditch","s":"leyenda","la":51.524365,"lo":-0.071726,"ap":0,"q":"Beigel%20Shop%2C%20155%20Brick%20Lane%2C%20London"},{"n":"Smokestak","z":"35 Sclater Street, E1 6LB","e":"Brick Lane y Shoreditch","s":"cena","la":51.523657,"lo":-0.072833,"ap":0,"q":"Smokestak%2C%2035%20Sclater%20Street%2C%20London"},{"n":"Smoking Goat","z":"64 Shoreditch High Street, E1 6JJ","e":"Brick Lane y Shoreditch","s":"amigo","la":51.524228,"lo":-0.076915,"ap":0,"q":"Smoking%20Goat%2C%2064%20Shoreditch%20High%20Street%2C%20London"},{"n":"Tayyabs","z":"83–89 Fieldgate Street, E1 1JU","e":"Brick Lane y Shoreditch","s":"local","la":51.517265,"lo":-0.063461,"ap":0,"q":"Tayyabs%2C%2083%20Fieldgate%20Street%2C%20London"},{"n":"Poppies Fish & Chips","z":"6–8 Hanbury Street, E1 6QR","e":"Brick Lane y Shoreditch","s":"","la":51.51993,"lo":-0.07413,"ap":0,"q":"Poppies%20Fish%20and%20Chips%2C%206%20Hanbury%20Street%2C%20London"},{"n":"E. Pellicci","z":"332 Bethnal Green Road, E2 0AG","e":"Brick Lane y Shoreditch","s":"leyenda","la":51.526496,"lo":-0.063379,"ap":0,"q":"E%20Pellicci%2C%20332%20Bethnal%20Green%20Road%2C%20London"},{"n":"Old Spitalfields Market","z":"Horner Square, E1 6EW","e":"Brick Lane y Shoreditch","s":"barato","la":51.5196,"lo":-0.075363,"ap":0,"q":"Old%20Spitalfields%20Market%2C%20London"},{"n":"Bleecker Burger","z":"Old Spitalfields Market, Lamb Street, E1 6EA","e":"Brick Lane y Shoreditch","s":"barato","la":51.51965,"lo":-0.07533,"ap":0,"q":"Bleecker%20Burger%2C%20Old%20Spitalfields%20Market%2C%20London"},{"n":"Dishoom Shoreditch","z":"7 Boundary Street, E2 7JE","e":"Brick Lane y Shoreditch","s":"","la":51.524499,"lo":-0.076825,"ap":0,"q":"Dishoom%20Shoreditch%2C%207%20Boundary%20Street%2C%20London"},{"n":"The Marksman","z":"254 Hackney Road, E2 7SJ","e":"Brick Lane y Shoreditch","s":"","la":51.530838,"lo":-0.069509,"ap":0,"q":"The%20Marksman%2C%20254%20Hackney%20Road%2C%20London"},{"n":"Dishoom King’s Cross","z":"5 Stable Street, N1C 4AB","e":"King's Cross","s":"","la":51.53542,"lo":-0.12638,"ap":0,"q":"Dishoom%20Kings%20Cross%2C%205%20Stable%20Street%2C%20London"},{"n":"The Lighterman","z":"3 Granary Square, N1C 4BH","e":"King's Cross","s":"","la":51.535251,"lo":-0.124407,"ap":0,"q":"The%20Lighterman%2C%20Granary%20Square%2C%20London"},{"n":"Roti King","z":"40 Doric Way, NW1 1LH","e":"King's Cross","s":"local","la":51.529004,"lo":-0.132048,"ap":0,"q":"Roti%20King%2C%2040%20Doric%20Way%2C%20London"},{"n":"Casa Pastor y los puestos de Coal Drops Yard","z":"Coal Drops Yard, N1C 4DQ","e":"King's Cross","s":"","la":51.535798,"lo":-0.126666,"ap":0,"q":"Coal%20Drops%20Yard%2C%20London"},{"n":"Japan Centre","z":"35b Panton Street, SW1Y 4EA","e":"Soho y Covent Garden","s":"barato","la":51.509714,"lo":-0.131519,"ap":0,"q":"Japan%20Centre%2C%2035b%20Panton%20Street%2C%20London"},{"n":"Bao Soho","z":"53 Lexington Street, W1F 9AS","e":"Soho y Covent Garden","s":"","la":51.513216,"lo":-0.13653,"ap":0,"q":"Bao%20Soho%2C%2053%20Lexington%20Street%2C%20London"},{"n":"Dumplings’ Legend","z":"15–16 Gerrard Street, W1D 6JE","e":"Soho y Covent Garden","s":"barato","la":51.511734,"lo":-0.131466,"ap":0,"q":"Dumplings%20Legend%2C%2015%20Gerrard%20Street%2C%20London"},{"n":"Flat Iron","z":"17–18 Henrietta Street, WC2E 8QH (Covent Garden) y varios más","e":"Soho y Covent Garden","s":"barato","la":51.510807,"lo":-0.123989,"ap":0,"q":"Flat%20Iron%2C%2017%20Henrietta%20Street%2C%20London"},{"n":"Bar Italia","z":"22 Frith Street, W1D 4RF","e":"Soho y Covent Garden","s":"leyenda","la":51.513421,"lo":-0.131235,"ap":0,"q":"Bar%20Italia%2C%2022%20Frith%20Street%2C%20London"},{"n":"Regency Cafe","z":"17–19 Regency Street, SW1P 4BY","e":"Soho y Covent Garden","s":"leyenda","la":51.494002,"lo":-0.132095,"ap":0,"q":"Regency%20Cafe%2C%2017%20Regency%20Street%2C%20London"},{"n":"Borough Market","z":"8 Southwark Street, SE1 1TL","e":"Borough y la orilla sur","s":"barato","la":51.505581,"lo":-0.090198,"ap":0,"q":"Borough%20Market%2C%20London"},{"n":"Padella","z":"6 Southwark Street, SE1 1TQ","e":"Borough y la orilla sur","s":"barato","la":51.505138,"lo":-0.089912,"ap":0,"q":"Padella%2C%206%20Southwark%20Street%2C%20London"},{"n":"Maltby Street Market","z":"Ropewalk, SE1 3PA","e":"Borough y la orilla sur","s":"barato","la":51.499258,"lo":-0.075624,"ap":0,"q":"Maltby%20Street%20Market%2C%20Ropewalk%2C%20London"},{"n":"The George Inn","z":"75–77 Borough High Street, SE1 1NH","e":"Borough y la orilla sur","s":"leyenda","la":51.504161,"lo":-0.089932,"ap":0,"q":"The%20George%20Inn%2C%20Borough%20High%20Street%2C%20London"},{"n":"Las Refreshment Rooms del V&A","z":"Victoria and Albert Museum, Cromwell Road, SW7 2RL","e":"South Kensington","s":"leyenda","la":51.496884,"lo":-0.171637,"ap":0,"q":"Victoria%20and%20Albert%20Museum%2C%20Cromwell%20Road%2C%20London"},{"n":"Japan House","z":"101–111 Kensington High Street, W8 5SA","e":"South Kensington","s":"","la":51.50135,"lo":-0.191682,"ap":0,"q":"Japan%20House%20London%2C%20101%20Kensington%20High%20Street%2C%20London"},{"n":"Picnic en Kensington Gardens","z":"Comprad en el Whole Foods de Kensington High Street, W8 5SE","e":"South Kensington","s":"barato","la":51.506646,"lo":-0.180389,"ap":0,"q":"Kensington%20Gardens%2C%20London"},{"n":"Goddards at Greenwich","z":"22 King William Walk, SE10 9HU","e":"Greenwich","s":"leyenda","la":51.481372,"lo":-0.008391,"ap":0,"q":"Goddards%20at%20Greenwich%2C%2022%20King%20William%20Walk%2C%20London"},{"n":"Greenwich Market","z":"5B Greenwich Market, SE10 9HZ","e":"Greenwich","s":"barato","la":51.481583,"lo":-0.009045,"ap":0,"q":"Greenwich%20Market%2C%20London"},{"n":"The Trafalgar Tavern","z":"Park Row, SE10 9NW","e":"Greenwich","s":"leyenda","la":51.484594,"lo":-0.004169,"ap":0,"q":"Trafalgar%20Tavern%2C%20Park%20Row%2C%20London"}];
 </script>
 <script>
 /* ---------- AVISO DE VERSIÓN NUEVA ---------- */
