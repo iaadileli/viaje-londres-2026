@@ -1,0 +1,25 @@
+{
+  "name": "Londres · una semana",
+  "short_name": "Londres",
+  "description": "Dónde comer, qué hacer con la niña, paseos y lo poco que hay que reservar.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fbf9f5",
+  "theme_color": "#17456e",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "img/icono-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/icono-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

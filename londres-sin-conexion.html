@@ -1,0 +1,2571 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[SIN CONEXIÓN] Londres · una semana</title>
+<meta name="description" content="Guía de una semana en Londres: dónde comer de verdad (los beigels de salt beef de Brick Lane, la barbacoa de Shoreditch, el sushi rebajado del Japan Centre), qué hacer con una niña de seis años, paseos y arquitectura, y lo poco que hay que reservar.">
+<meta name="theme-color" content="#17456e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icono-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Londres">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎡</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Londres · una semana">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://iaadileli.github.io/viaje-londres-2026/">
+<meta property="og:title" content="Londres · una semana, a vuestro aire">
+<meta property="og:description" content="Comer bien y barato, qué hacer con la niña, paseos y arquitectura. Sin día a día: cogéis lo que os apetezca cada mañana.">
+<meta property="og:image" content="https://iaadileli.github.io/viaje-londres-2026/img/portada.jpg">
+<meta property="og:image:secure_url" content="https://iaadileli.github.io/viaje-londres-2026/img/portada.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Londres">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Londres · una semana, a vuestro aire">
+<meta name="twitter:description" content="Dónde comer, qué hacer con la niña, paseos y lo poco que hay que reservar.">
+<meta name="twitter:image" content="https://iaadileli.github.io/viaje-londres-2026/img/portada.jpg">
+<style>
+  :root{
+    --crema:#fbf8f2; --tinta:#26282b; --tinta2:#5f6b70;
+    --oro:#14607f; --oro-suave:#d8e8ef; --teca:#b4552d;
+    --verde:#5c7a52; --mar:#2f8ca6; --linea:#e2e0d6;
+    --card:#ffffff; --sombra:0 2px 14px rgba(20,60,80,.09);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--crema);color:var(--tinta);line-height:1.65}
+  .sans{font-family:-apple-system,'Segoe UI',Roboto,Ubuntu,sans-serif}
+
+  /* ---------- HERO ---------- */
+  header.hero{position:relative;min-height:58vh;display:flex;align-items:flex-end;
+    background:linear-gradient(180deg,rgba(8,30,45,.22),rgba(8,30,45,.62)),url('img/nerja-balcon-europa.jpg') center/cover no-repeat;color:#fff}
+  .hero-inner{max-width:1050px;margin:0 auto;padding:60px 24px 48px;width:100%}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:normal;letter-spacing:.5px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+  .hero .fechas{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.02rem;letter-spacing:1.5px;text-transform:uppercase;opacity:.95;margin-top:10px}
+  .hero .sub{margin-top:14px;font-style:italic;font-size:1.15rem;max-width:640px;opacity:.95}
+
+  /* ---------- NAV ---------- */
+  nav{position:sticky;top:0;z-index:50;background:rgba(250,246,239,.96);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--linea)}
+  .nav-inner{position:relative;max-width:1050px;margin:0 auto;display:flex;align-items:center;padding:0 16px 0 24px}
+  nav .wrap{flex:1 1 auto;min-width:0;display:flex;gap:4px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+  nav a{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.85rem;color:var(--tinta2);
+    text-decoration:none;padding:12px 10px;border-bottom:3px solid transparent}
+  nav a:hover{color:var(--oro);border-bottom-color:var(--oro)}
+  .menu-btn{flex:0 0 auto;margin-left:12px;z-index:52;background:var(--oro);color:#fff;border:none;
+    border-radius:9px;padding:8px 13px;font-size:.95rem;cursor:pointer;display:inline-flex;align-items:center;
+    gap:8px;box-shadow:0 2px 8px rgba(20,60,80,.20);font-family:-apple-system,'Segoe UI',sans-serif;font-weight:600}
+  .menu-btn:hover{background:var(--teca)}
+  .menu-btn .bars{font-size:1.05rem;line-height:1}
+  .menu-panel{position:absolute;right:16px;top:50px;z-index:51;background:var(--card);border:1px solid var(--linea);
+    border-radius:12px;box-shadow:0 10px 28px rgba(20,60,80,.22);padding:8px;min-width:210px;
+    display:none;flex-direction:column}
+  .menu-panel.abierto{display:flex}
+  .tema-en-menu{display:none;width:100%;background:none;border:1px solid var(--linea);
+    border-radius:9px;padding:9px;font-size:.9rem;color:var(--tinta2);cursor:pointer;margin-bottom:8px;
+    font-family:-apple-system,'Segoe UI',sans-serif}
+  @media(max-width:430px){.tema-en-menu{display:block}}
+  .menu-panel .cab2{margin-top:10px;padding-top:10px;border-top:1px solid var(--linea)}
+  .menu-panel .cab{font-size:.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--oro);padding:6px 14px 6px}
+  .menu-panel a{padding:11px 14px;border-radius:8px;color:var(--tinta);text-decoration:none;font-size:.95rem;
+    border-bottom:none;display:flex;align-items:center;gap:10px}
+  .menu-panel a:hover{background:var(--oro-suave);color:var(--teca);border-bottom:none}
+
+  main{max-width:1050px;margin:0 auto;padding:0 24px}
+
+  /* ---------- RESUMEN / TIMELINE ---------- */
+  .resumen{padding:56px 0 20px}
+  h2{font-size:2rem;font-weight:normal;color:var(--teca);margin-bottom:6px}
+  .kicker{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.78rem;letter-spacing:3px;
+    text-transform:uppercase;color:var(--oro);margin-bottom:8px}
+  .timeline{margin:30px 0 10px;border-left:3px solid var(--oro-suave);padding-left:0;list-style:none}
+  .timeline li{position:relative;padding:10px 0 10px 28px}
+  .timeline li::before{content:'';position:absolute;left:-8.5px;top:20px;width:14px;height:14px;
+    border-radius:50%;background:var(--oro);border:3px solid var(--crema)}
+  .timeline .etapa{font-family:-apple-system,'Segoe UI',sans-serif;font-weight:600;font-size:1.05rem}
+  .timeline .det{color:var(--tinta2);font-size:.95rem}
+  .timeline .tr{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.82rem;color:var(--mar);
+    padding:2px 0 2px 28px;font-style:normal}
+  .timeline .tr::before{display:none}
+  .timeline li.tr-li{padding:2px 0 2px 28px}
+  .timeline li.tr-li::before{content:'🚆';background:none;border:none;left:-10px;top:4px;font-size:.85rem;color:var(--mar)}
+  .timeline li.tr-li.coche::before{content:'🚗'}
+  .timeline li.tr-li.barco::before{content:'⛵'}
+
+  .claves{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:34px 0}
+  .clave{background:var(--card);border:1px solid var(--linea);border-radius:12px;padding:18px;box-shadow:var(--sombra)}
+  .clave .n{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.5rem;font-weight:700;color:var(--teca)}
+  .clave .t{font-size:.9rem;color:var(--tinta2)}
+
+  /* ---------- MAPA ---------- */
+  .mapa-wrap{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:26px;align-items:start;margin:24px 0 10px}
+  .mapa-svg svg{width:100%;height:auto;display:block;margin:0 auto;
+    background:#e9f1f4;border-radius:16px;border:1px solid var(--linea)}
+  .leyenda{background:var(--card);border:1px solid var(--linea);border-radius:14px;padding:20px 22px;box-shadow:var(--sombra)}
+  .leyenda h4{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.95rem;color:var(--teca);margin-bottom:12px}
+  .leyenda .lg{display:flex;align-items:flex-start;gap:10px;font-family:-apple-system,'Segoe UI',sans-serif;
+    font-size:.88rem;margin-bottom:11px;color:#3a4247}
+  .leyenda .lg .ic{font-size:1.05rem;line-height:1.3}
+  .leyenda .vuelos{margin-top:14px;padding-top:14px;border-top:1px dashed var(--linea);
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.82rem;color:var(--tinta2)}
+  .leyenda .vuelos b{color:var(--mar)}
+  @media(max-width:760px){.mapa-wrap{grid-template-columns:1fr}}
+
+  /* ---------- ETAPAS ---------- */
+  section.etapa-sec{padding:44px 0 18px;border-top:1px solid var(--linea)}
+  .banner{position:relative;border-radius:16px;overflow:hidden;margin:20px 0 26px;box-shadow:var(--sombra)}
+  .banner img{width:100%;height:340px;object-fit:cover;display:block}
+  .banner .pie{position:absolute;bottom:0;left:0;right:0;padding:30px 22px 14px;
+    background:linear-gradient(transparent,rgba(6,26,38,.72));color:#fff;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.85rem}
+  .fechas-chip{display:inline-block;font-family:-apple-system,'Segoe UI',sans-serif;font-size:.82rem;
+    background:var(--oro-suave);color:var(--teca);border-radius:999px;padding:4px 14px;
+    letter-spacing:.5px;margin:4px 0 12px;font-weight:600}
+  .intro{font-size:1.08rem;max-width:760px;margin-bottom:22px}
+
+  .dias{display:grid;gap:14px;margin:10px 0 24px}
+  .dia{background:var(--card);border:1px solid var(--linea);border-left:5px solid var(--oro);
+    border-radius:12px;padding:18px 20px;box-shadow:var(--sombra)}
+  .dia h4{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.95rem;color:var(--teca);margin-bottom:6px}
+  .dia h4 .fecha{color:var(--oro);font-weight:400;margin-left:6px;font-size:.85rem}
+  .dia p{font-size:.98rem;color:#3a4247}
+  .dia .tip{margin-top:8px;font-size:.88rem;color:var(--verde);font-style:italic}
+
+  .comer{background:#f4f9fb;border:1px solid #cfe2ea;border-radius:14px;padding:22px 24px;margin:6px 0 26px}
+  .comer h3{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1rem;color:var(--teca);
+    letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
+  .comer h3::before{content:'🐟 '}
+  .comer-fotos{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:0 0 16px}
+  .comer-fotos figure{border-radius:10px;overflow:hidden;box-shadow:var(--sombra);background:#eee}
+  .comer-fotos img{width:100%;height:130px;object-fit:cover;display:block}
+  .comer-fotos figcaption{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.8rem;
+    color:var(--tinta2);padding:6px 9px;background:#fff;text-align:center}
+  .platos{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+  .plato{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.85rem;background:#fff;
+    border:1px solid #e5d3a8;border-radius:999px;padding:5px 13px;color:#7a5a10}
+  .comer p{font-size:.93rem;color:var(--tinta2)}
+
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 24px}
+  .duo figure{border-radius:12px;overflow:hidden;box-shadow:var(--sombra);background:#eee}
+  .duo img{width:100%;height:230px;object-fit:cover;display:block}
+  .duo figcaption{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.8rem;color:var(--tinta2);
+    padding:8px 12px;background:var(--card)}
+  @media(max-width:640px){.duo{grid-template-columns:1fr}.banner img{height:230px}}
+
+  /* ---------- BARRIOS ---------- */
+  .barrios-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:24px 0}
+  .bcard{background:var(--card);border:1px solid var(--linea);border-top:4px solid var(--teca);
+    border-radius:12px;padding:20px;box-shadow:var(--sombra)}
+  .bcard h4{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.05rem;color:var(--teca);margin-bottom:8px}
+  .bcard .barrio{font-family:-apple-system,'Segoe UI',sans-serif;font-weight:700;color:var(--oro);
+    font-size:.95rem;margin-bottom:8px}
+  .bcard p{font-size:.93rem;color:#3a4247}
+  .excel-nota{background:#f4f9fb;border:1px solid #cfe2ea;border-radius:12px;padding:16px 20px;
+    margin:20px 0 8px;font-size:.95rem;color:#5c4a22}
+
+  /* ---------- TABLA HOTELES ---------- */
+  .tabla-wrap{overflow-x:auto;margin:22px 0 8px;border:1px solid var(--linea);border-radius:14px;box-shadow:var(--sombra);-webkit-overflow-scrolling:touch}
+  table.hoteles{border-collapse:collapse;width:100%;min-width:860px;background:var(--card);
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem}
+  table.hoteles thead th{background:var(--teca);color:#fff;text-align:left;padding:12px 14px;
+    font-size:.78rem;letter-spacing:.6px;text-transform:uppercase;white-space:nowrap}
+  table.hoteles td{padding:11px 14px;border-top:1px solid var(--linea);vertical-align:top;color:#3a4247}
+  table.hoteles tr.grupo td{background:var(--oro-suave);color:var(--teca);font-weight:700;
+    font-size:.86rem;letter-spacing:.2px}
+  table.hoteles a.hotel{display:inline-block;color:var(--mar);font-weight:600;text-decoration:none;border-bottom:1px dotted var(--mar)}
+  table.hoteles a.hotel:hover{color:var(--teca);border-bottom-color:var(--teca)}
+  table.hoteles a.booking{display:inline-flex;align-items:center;gap:4px;margin-top:7px;font-size:.81rem;
+    color:#0a53c4;text-decoration:none;background:#eaf1fc;border:1px solid #cfe0f7;border-radius:7px;
+    padding:3px 9px;font-weight:600;white-space:nowrap}
+  table.hoteles a.booking:hover{background:#d9e6fb;border-color:#a9c8f0}
+  table.clima{min-width:640px}
+  table.clima .clima-fecha{font-size:.79rem;opacity:.75}
+  table.clima .clima-t{white-space:nowrap;font-weight:700}
+  table.clima .t-max{color:#b4531f}
+  table.clima .t-min{color:#2f6f9e}
+  table.clima .clima-ll,table.clima .clima-rec{font-size:.86rem;white-space:nowrap}
+  ul.lista-practica{margin:12px 0 0;padding-left:20px;line-height:1.65}
+  ul.lista-practica li{margin-bottom:9px}
+  .zona-cell{color:var(--tinta2);font-size:.85rem;white-space:normal;max-width:150px}
+  .gama-cell{white-space:nowrap;color:var(--tinta2);font-size:.85rem}
+  .precio-cell{white-space:nowrap;font-weight:700;color:var(--tinta)}
+  .estrellas{color:var(--oro);white-space:nowrap;font-size:1rem;letter-spacing:1px}
+  .estrellas .vacia{color:#dccfb5}
+  .porque-cell{max-width:270px;font-size:.85rem}
+  .chars{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+  .char{font-size:.8rem;background:#f3ede0;border:1px solid #e7dcc3;border-radius:999px;
+    padding:2px 8px;color:#6b5f4f;white-space:nowrap}
+  table.hoteles tr.nuevo td{background:#f5eefc;border-top:1px solid #e3d2f5}
+  table.hoteles tr.nuevo td:first-child{box-shadow:inset 4px 0 0 #7c4dbe}
+  table.hoteles tr.nuevo .char{background:#efe4fb;border-color:#dcc7f2;color:#5b3690}
+  .tag-nuevo{display:inline-block;margin-top:7px;margin-left:6px;font-size:.79rem;font-weight:700;
+    letter-spacing:.5px;text-transform:uppercase;background:#7c4dbe;color:#fff;border-radius:6px;padding:2px 7px}
+  .leyenda-hoteles .lc.morado{background:#f5eefc;border-color:#dcc7f2;color:#5b3690;font-weight:600}
+  .leyenda-hoteles{background:#f4f9fb;border:1px solid #cfe2ea;border-radius:12px;padding:16px 20px;
+    margin:6px 0 16px;font-size:.88rem;color:#5c4a22}
+  .leyenda-hoteles .leg-chars{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .leyenda-hoteles .lc{font-size:.78rem;background:#fff;border:1px solid #e7dcc3;border-radius:999px;padding:3px 10px;color:#6b5f4f}
+
+  /* ---------- PRESUPUESTO ---------- */
+  .presu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:24px 0 18px}
+  .pline{background:var(--card);border:1px solid var(--linea);border-radius:12px;padding:16px 18px;box-shadow:var(--sombra)}
+  .pline .cat{font-family:-apple-system,'Segoe UI',sans-serif;font-weight:600;font-size:.95rem;color:var(--teca);margin-bottom:4px}
+  .pline .cat .ic{margin-right:6px}
+  .pline .imp{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.25rem;font-weight:700;color:var(--tinta)}
+  .pline .nota{font-size:.85rem;color:var(--tinta2);margin-top:4px}
+  .totales{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:8px 0 18px}
+  .total{border-radius:14px;padding:22px;color:#fff;box-shadow:var(--sombra)}
+  .total.t1{background:linear-gradient(135deg,#6b8f7a,#3d6b52)}
+  .total.t2{background:linear-gradient(135deg,#d69a2e,#946307)}
+  .total.t3{background:linear-gradient(135deg,#a5623f,#8a4a2b)}
+  .total .lbl{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;opacity:.92}
+  .total .val{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.9rem;font-weight:700;margin:6px 0 2px}
+  .total .pp{font-size:.85rem;opacity:.92;font-family:-apple-system,'Segoe UI',sans-serif}
+  .presu-nota{font-size:.9rem;color:var(--tinta2);font-style:italic;margin-top:6px}
+
+  .sitios{list-style:none;margin:6px 0 12px}
+  .sitios li{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem;color:#3a4247;
+    padding:9px 0;border-top:1px dashed #e5d3a8}
+  .sitios li:first-child{border-top:none}
+  .sitios .nombre{font-weight:700;color:var(--teca)}
+  .sitios .dir{color:var(--tinta2);font-size:.83rem}
+  .sitios a{color:var(--mar);text-decoration:none;border-bottom:1px dotted var(--mar);font-size:.83rem}
+  .sitios a:hover{color:var(--teca);border-bottom-color:var(--teca)}
+
+  /* fichas de comida: qué pedir, horario y sellos */
+  .sitios li{line-height:1.5}
+  .sitios .pedir{display:block;margin-top:6px;padding:7px 11px;background:#fdf6e7;
+    border-left:3px solid var(--oro);border-radius:0 7px 7px 0;font-size:.87rem;color:#5c4a24}
+  .sitios .pedir b{color:var(--teca);text-transform:uppercase;font-size:.81rem;letter-spacing:.8px;margin-right:5px}
+  .sitios .datos{display:block;margin-top:5px;font-size:.8rem;color:var(--tinta2)}
+  .sitios .sello{display:inline-grid;place-items:center;width:18px;height:18px;
+    border-radius:50%;margin-left:6px;vertical-align:-3px;color:#fff;cursor:help}
+  .sitios .sello svg{width:10px;height:10px;display:block}
+  .sitios .sello.leyenda{background:var(--teca)}
+  .sitios .sello.estrella{background:#b31b34}
+  .sitios .sello.bib{background:#b31b34}
+  .sitios .sello.local{background:var(--verde)}
+  .sitios .sello.barato{background:var(--mar)}
+  .sitios .sello.cena{background:#6b4a8a}
+  .sitios .sello.amigo{background:#a8386b}
+  .sitios a.reservar{color:#6b4a8a;border-bottom-color:#6b4a8a;font-weight:600;margin-left:9px}
+  .sitios a.reservar:hover{color:#4e3566;border-bottom-color:#4e3566}
+  .leyenda-sellos{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.78rem;color:var(--tinta2);
+    display:flex;gap:16px;flex-wrap:wrap;margin:2px 0 10px}
+  .leyenda-sellos span{display:inline-flex;align-items:center;gap:5px}
+  .leyenda-sellos i{width:16px;height:16px;border-radius:50%;display:inline-grid;place-items:center;
+    font-style:normal;color:#fff;flex:0 0 auto}
+  .leyenda-sellos i svg{width:9px;height:9px;display:block}
+
+  .trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:8px 0 24px}
+  .trio figure{border-radius:12px;overflow:hidden;box-shadow:var(--sombra);background:#eee}
+  .trio img{width:100%;height:180px;object-fit:cover;display:block}
+  .trio figcaption{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.78rem;color:var(--tinta2);
+    padding:8px 11px;background:var(--card)}
+
+  table.tab{border-collapse:collapse;width:100%;min-width:640px;background:var(--card);
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem}
+  table.tab thead th{background:var(--teca);color:#fff;text-align:left;padding:12px 14px;
+    font-size:.78rem;letter-spacing:.6px;text-transform:uppercase;white-space:nowrap}
+  table.tab td{padding:11px 14px;border-top:1px solid var(--linea);vertical-align:top;color:#3a4247}
+  table.tab td b{color:var(--tinta)}
+
+  .btn-guardar{display:inline-flex;align-items:center;gap:9px;background:#fff;color:#2f5f47;border:none;
+    border-radius:10px;padding:13px 22px;font-family:-apple-system,'Segoe UI',sans-serif;font-size:1rem;
+    font-weight:700;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+  .btn-guardar:hover{background:#eef6f1}
+  .btn-guardar[disabled]{opacity:.65;cursor:default}
+  .btn-zip{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;
+    border:1.5px solid rgba(255,255,255,.6);border-radius:10px;padding:12px 20px;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.95rem;font-weight:600}
+  .btn-zip:hover{background:rgba(255,255,255,.14)}
+  .botonera{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:16px 0 6px}
+  .estado-offline{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.92rem;margin-top:10px;min-height:1.3em}
+
+  img.fallo{display:none}
+  figure.sinfoto{min-height:120px;display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,#f3e3c3,#e8d0a0);color:#8a6a20;font-family:sans-serif;font-size:.9rem}
+
+  /* ---------- ELEFANTES ---------- */
+  .destacado{background:linear-gradient(135deg,#31543f,#3d6b52);color:#f3efe4;border-radius:18px;
+    padding:34px 30px;margin:30px 0;box-shadow:var(--sombra)}
+  .destacado h3{font-size:1.6rem;font-weight:normal;margin-bottom:12px}
+  .destacado p{margin-bottom:12px;font-size:1rem}
+  .destacado ul{margin:10px 0 10px 22px;font-size:.97rem}
+  .destacado li{margin-bottom:6px}
+  .destacado .ojo{background:rgba(255,255,255,.12);border-radius:10px;padding:12px 16px;
+    font-size:.9rem;font-family:-apple-system,'Segoe UI',sans-serif;margin-top:14px}
+
+  /* ---------- PRÁCTICO ---------- */
+  .practico{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;margin:24px 0 40px}
+  .pcard{background:var(--card);border:1px solid var(--linea);border-radius:14px;padding:22px;box-shadow:var(--sombra)}
+  .pcard h4{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.95rem;color:var(--teca);margin-bottom:10px}
+  .pcard ul{margin-left:18px;font-size:.92rem;color:#3a4247}
+  .pcard li{margin-bottom:7px}
+
+  footer{border-top:1px solid var(--linea);padding:30px 24px 50px;text-align:center;
+    color:var(--tinta2);font-size:.85rem;font-style:italic}
+
+  .pcard li.aviso{background:#fdf3e3;border-left:3px solid var(--oro);border-radius:0 8px 8px 0;
+    padding:11px 14px;margin:-4px 0 12px -8px;list-style:none}
+  .pcard li.aviso a{color:var(--teca);font-weight:600}
+
+  /* ---------- AUDIOGUÍA ---------- */
+  /* bloque grande: sólo el de "para el avión" */
+  .audioguia{background:linear-gradient(180deg,#fffdf8,#fdf7ea);border:1px solid var(--oro-suave);
+    border-radius:14px;padding:18px 20px;margin:22px 0 6px;box-shadow:var(--sombra)}
+  .audioguia .cab{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.78rem;letter-spacing:1.6px;
+    text-transform:uppercase;color:var(--oro);font-weight:700;display:flex;align-items:center;
+    gap:8px;flex-wrap:wrap;margin-bottom:4px}
+  .audioguia .expl{font-size:.93rem;color:var(--tinta2);font-style:italic;margin-bottom:12px}
+
+  /* bloque dentro de la pastilla de cada día */
+  .audios-dia{margin-top:13px;padding-top:11px;border-top:1px dashed var(--linea)}
+  .audios-dia .tit{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.8rem;letter-spacing:1.4px;
+    text-transform:uppercase;color:var(--oro);font-weight:700;margin-bottom:7px;display:flex;
+    align-items:center;gap:6px}
+  .audios-dia .tit svg{width:15px;height:15px;flex:0 0 auto}
+
+  .pistas{display:flex;flex-direction:column;gap:6px}
+  .pista{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:var(--card);
+    border:1px solid var(--linea);border-radius:10px;padding:9px 12px;cursor:pointer;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.92rem;color:var(--tinta);
+    transition:border-color .15s,transform .1s}
+  .pista:hover{border-color:var(--oro);transform:translateX(2px)}
+  .pista .ico{flex:0 0 auto;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;
+    border:1.5px solid currentColor}
+  .pista .ico svg{width:19px;height:19px;display:block}
+  /* cada tipo, con su color y su icono */
+  .pista.k-capsula .ico{color:var(--oro);background:#fdf6e7}
+  .pista.k-guia    .ico{color:var(--verde);background:#f1f8f3}
+  .pista.k-fondo   .ico{color:var(--mar);background:#eef5f8}
+  .pista.sonando{border-color:var(--verde);background:#f4faf6}
+  .pista.sonando .ico{color:#fff;background:var(--verde);border-color:var(--verde)}
+  .pista .txt{flex:1 1 auto;min-width:0}
+  .pista .nom{display:block;line-height:1.35}
+  .pista .meta{display:block;font-size:.82rem;color:var(--tinta2);margin-top:1px}
+
+  .btn-bajar{margin-top:14px;width:100%;background:none;border:1px dashed var(--oro);color:var(--oro);
+    border-radius:10px;padding:9px;font-family:-apple-system,'Segoe UI',sans-serif;font-size:.86rem;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+  .btn-bajar svg{width:16px;height:16px;flex:0 0 auto}
+  .btn-bajar:hover{background:var(--oro);color:#fff;border-style:solid}
+  .btn-bajar[disabled]{opacity:.7;cursor:default;border-style:solid}
+  .bajar-etapa{margin:20px 0 4px}
+
+  /* ---------- REPRODUCTOR FLOTANTE ---------- */
+  #player{position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(43,38,32,.97);
+    backdrop-filter:blur(8px);color:#fff;transform:translateY(105%);transition:transform .25s ease;
+    box-shadow:0 -4px 20px rgba(0,0,0,.25);font-family:-apple-system,'Segoe UI',sans-serif}
+  #player.visible{transform:translateY(0)}
+  .pl-inner{max-width:1050px;margin:0 auto;padding:11px 16px 13px;display:flex;align-items:center;gap:13px}
+  .pl-play{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:var(--oro);color:#fff;
+    border:none;font-size:1.1rem;cursor:pointer;display:grid;place-items:center}
+  .pl-mid{flex:1 1 auto;min-width:0}
+  .pl-tit{font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pl-barra{margin-top:7px;height:5px;background:rgba(255,255,255,.22);border-radius:4px;cursor:pointer;position:relative}
+  .pl-prog{height:100%;background:var(--oro);border-radius:4px;width:0}
+  .pl-t{font-size:.81rem;opacity:.75;margin-top:4px;display:flex;justify-content:space-between}
+  .pl-x{flex:0 0 auto;background:none;border:none;color:#fff;opacity:.6;font-size:1.3rem;cursor:pointer;padding:4px 8px}
+  .pl-x:hover{opacity:1}
+  .pl-vel{flex:0 0 auto;background:rgba(255,255,255,.14);border:none;color:#fff;border-radius:7px;
+    padding:6px 9px;font-size:.78rem;cursor:pointer}
+  @media(max-width:560px){
+    .pl-inner{gap:10px;padding:9px 12px 11px}
+    .pl-play{width:42px;height:42px}
+    .audioguia{padding:15px 14px}
+  }
+
+  /* ---------- HOY: el bloque de uso diario ---------- */
+  #hoy{max-width:1050px;margin:0 auto;padding:0 24px}
+  .hoy-caja{background:linear-gradient(135deg,#2f4f3d,#3d6b52);color:#f4f0e6;border-radius:18px;
+    padding:24px 26px;margin:24px 0 8px;box-shadow:0 4px 22px rgba(40,60,45,.22);
+    font-family:-apple-system,'Segoe UI',Roboto,sans-serif}
+  .hoy-cab{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:3px}
+  .hoy-eti{font-size:.8rem;letter-spacing:2px;text-transform:uppercase;opacity:.85;font-weight:700}
+  .hoy-fecha{font-size:.85rem;opacity:.8;margin-left:auto}
+  .hoy-caja h2{font-family:Georgia,serif;font-size:1.7rem;font-weight:normal;margin:2px 0 10px;color:#fff}
+  .hoy-plan{font-size:.98rem;line-height:1.6;opacity:.96}
+  .hoy-plan b,.hoy-plan strong{color:#ffe1a8}
+  .hoy-tip{background:rgba(255,255,255,.14);border-left:3px solid #ffe1a8;border-radius:0 9px 9px 0;
+    padding:10px 13px;margin:2px 0 10px;font-size:.89rem;line-height:1.55}
+  .hoy-tip b{color:#ffe1a8}
+  .hoy-mad{border-left-color:#9fd4e8}
+  .hoy-mad .mad-cab{color:#9fd4e8;margin-bottom:5px}
+  .hoy-mad .mad-zona{border-top-color:rgba(255,255,255,.2);color:#dfe9ef}
+  .hoy-rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:16px}
+  .hoy-tarjeta{background:rgba(255,255,255,.12);border-radius:12px;padding:13px 15px}
+  .hoy-tarjeta h4{font-size:.8rem;letter-spacing:1.4px;text-transform:uppercase;opacity:.8;margin-bottom:7px}
+  .hoy-tarjeta a{color:#ffe1a8;text-decoration:none;border-bottom:1px dotted rgba(255,225,168,.5)}
+  .hoy-tarjeta ul{list-style:none;font-size:.9rem;line-height:1.75}
+  .hoy-audio{display:flex;align-items:center;gap:9px;width:100%;text-align:left;background:rgba(255,255,255,.14);
+    border:none;border-radius:9px;padding:8px 11px;color:#fff;cursor:pointer;font-size:.88rem;
+    font-family:inherit;margin-bottom:6px}
+  .hoy-audio:hover{background:rgba(255,255,255,.24)}
+  .hoy-audio .ic{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.9);
+    color:#2f4f3d;display:grid;place-items:center;font-size:.8rem;padding-left:2px}
+  .hoy-audio .du{margin-left:auto;opacity:.7;font-size:.78rem}
+  .hoy-pie{margin-top:15px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .hoy-btn{background:#ffe1a8;color:#2f4f3d;border:none;border-radius:9px;padding:9px 15px;
+    font-weight:600;font-size:.88rem;cursor:pointer;text-decoration:none;display:inline-block}
+  .hoy-btn.ghost{background:rgba(255,255,255,.16);color:#fff}
+  .hoy-nav{display:flex;gap:6px;margin-left:auto}
+  .hoy-nav button{background:rgba(255,255,255,.16);color:#fff;border:none;border-radius:8px;
+    width:34px;height:34px;font-size:1rem;cursor:pointer}
+  .hoy-nav button:hover{background:rgba(255,255,255,.3)}
+  .hoy-cuenta{background:linear-gradient(135deg,#8a4a2b,#a85a33)}
+  @media(max-width:560px){
+    #hoy{padding:0 14px}
+    .hoy-caja{padding:18px 16px;border-radius:14px}
+    .hoy-caja h2{font-size:1.4rem}
+  }
+
+  /* ---------- BUSCADOR ---------- */
+  .buscador{position:relative;flex:0 0 auto;margin-left:8px;min-width:0}
+  .buscador input{width:150px;min-width:0;border:1px solid var(--linea);background:var(--card);
+    border-radius:9px;padding:8px 11px 8px 30px;font-size:16px;
+    font-family:-apple-system,'Segoe UI',sans-serif;color:var(--tinta);transition:width .2s}
+  .buscador input:focus{outline:none;border-color:var(--oro);width:210px}
+  .buscador .lupa{position:absolute;left:9px;top:50%;transform:translateY(-50%);opacity:.5;font-size:.85rem;
+    pointer-events:none}
+  .resultados{position:absolute;right:0;top:calc(100% + 6px);width:min(88vw,360px);max-height:60vh;
+    overflow-y:auto;background:var(--card);border:1px solid var(--linea);border-radius:12px;
+    box-shadow:0 8px 28px rgba(20,60,80,.20);display:none;z-index:70}
+  .resultados.abierto{display:block}
+  .resultados a{display:block;padding:10px 14px;border-bottom:1px solid var(--linea);text-decoration:none;
+    color:var(--tinta);font-size:.88rem;border-left:3px solid transparent}
+  .resultados a:hover{background:#fdf6e7;border-left-color:var(--oro)}
+  .resultados a small{display:block;color:var(--tinta2);font-size:.78rem;margin-top:2px}
+  .resultados .vacio{padding:14px;color:var(--tinta2);font-size:.86rem;text-align:center}
+
+  /* ---------- VOLVER ARRIBA ---------- */
+  #arriba{position:fixed;right:16px;bottom:16px;z-index:75;width:46px;height:46px;border-radius:50%;
+    background:var(--teca);color:#fff;border:none;font-size:1.15rem;cursor:pointer;opacity:0;
+    pointer-events:none;transition:opacity .2s,transform .2s;box-shadow:0 3px 14px rgba(0,0,0,.25)}
+  #arriba.visible{opacity:.92;pointer-events:auto}
+  #arriba:hover{opacity:1;transform:translateY(-2px)}
+  #player.visible ~ #arriba{bottom:92px}
+
+  /* ---------- MODO OSCURO ---------- */
+  .tema-btn{flex:0 0 auto;background:none;border:1px solid var(--linea);border-radius:9px;
+    width:36px;height:36px;font-size:.95rem;cursor:pointer;margin-left:8px;color:var(--tinta2)}
+  .tema-btn:hover{border-color:var(--oro);color:var(--oro)}
+  html[data-tema="oscuro"]{
+    --crema:#101619; --tinta:#e6eaec; --tinta2:#9aa8ae;
+    --oro:#5fb4d4; --oro-suave:#16323f; --teca:#e08a5e;
+    --verde:#8bb07c; --mar:#63b3d0; --linea:#263237;
+    --card:#182126; --sombra:0 2px 14px rgba(0,0,0,.4);
+  }
+  html[data-tema="oscuro"] body{background:var(--crema);color:var(--tinta)}
+  html[data-tema="oscuro"] nav{background:rgba(16,22,25,.96)}
+  html[data-tema="oscuro"] .sitios li{color:var(--tinta);border-top-color:var(--linea)}
+  html[data-tema="oscuro"] .sitios .pedir{background:#2a2114;color:#e8d5ac;border-left-color:var(--oro)}
+  html[data-tema="oscuro"] .pcard li.aviso{background:#2a2114}
+  html[data-tema="oscuro"] .audioguia{background:linear-gradient(180deg,#211c16,#1b1711);
+    border-color:var(--linea)}
+  html[data-tema="oscuro"] .pista{background:var(--card);color:var(--tinta)}
+  html[data-tema="oscuro"] .pista.k-capsula .ico{background:#2a2114}
+  html[data-tema="oscuro"] .pista.k-guia .ico{background:#1c2b21}
+  html[data-tema="oscuro"] .pista.k-fondo .ico{background:#152530}
+  html[data-tema="oscuro"] .resultados a:hover{background:#2a2114}
+  html[data-tema="oscuro"] img{filter:brightness(.86)}
+
+  /* ---------- MARCAR COMO PROBADO ---------- */
+  .marcar{display:inline-block;margin-left:8px;background:none;border:1px solid var(--linea);
+    border-radius:20px;padding:3px 10px;font-size:.78rem;color:var(--tinta2);cursor:pointer;
+    font-family:-apple-system,'Segoe UI',sans-serif;vertical-align:1px}
+  .marcar:hover{border-color:var(--verde);color:var(--verde)}
+  .sitios li.hecho{opacity:.62}
+  .sitios li.hecho .nombre{text-decoration:line-through;text-decoration-thickness:1px}
+  .sitios li.hecho .marcar{background:var(--verde);border-color:var(--verde);color:#fff;opacity:1}
+  .contador-probados{font-size:.82rem;color:var(--verde);font-weight:600;margin:2px 0 8px}
+
+  /* ---------- FRASES EN TAILANDÉS ---------- */
+  .ojo-genero{background:#fdf6e7;border-left:3px solid var(--oro);border-radius:0 9px 9px 0;
+    padding:12px 15px;margin:14px 0 20px;font-size:.9rem;
+    font-family:-apple-system,'Segoe UI',sans-serif;color:#5c4a24}
+  .grupo-frases{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.76rem;letter-spacing:1.8px;
+    text-transform:uppercase;color:var(--oro);font-weight:700;margin:26px 0 8px}
+  .frases{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:9px}
+  .frases li{display:flex;align-items:flex-start;gap:11px;background:var(--card);border:1px solid var(--linea);
+    border-radius:12px;padding:12px 13px;box-shadow:var(--sombra)}
+  .fr-play,.fr-ver{flex:0 0 auto;width:36px;height:36px;border-radius:50%;border:1.5px solid var(--oro);
+    background:none;color:var(--oro);cursor:pointer;font-size:.85rem;display:grid;place-items:center;
+    padding-left:2px}
+  .fr-ver{border-color:var(--linea);color:var(--tinta2);padding-left:0;align-self:center}
+  .fr-play:hover,.fr-ver:hover{background:var(--oro);color:#fff;border-color:var(--oro)}
+  .fr-play.sonando{background:var(--verde);border-color:var(--verde);color:#fff}
+  .fr-txt{flex:1 1 auto;min-width:0;font-family:-apple-system,'Segoe UI',sans-serif}
+  .fr-es{display:block;font-size:.94rem;color:var(--tinta);font-weight:600;line-height:1.35}
+  .fr-th{display:block;font-size:1.12rem;color:var(--teca);margin-top:3px;line-height:1.5}
+  .fr-fon{display:block;font-size:.85rem;color:var(--tinta2);font-style:italic;margin-top:1px}
+  .fr-nota{display:block;font-size:.8rem;color:var(--tinta2);margin-top:5px;
+    padding-top:5px;border-top:1px dashed var(--linea)}
+
+  /* pantalla para enseñar la frase */
+  #enseñar{position:fixed;inset:0;z-index:120;background:#fff;display:none;
+    flex-direction:column;align-items:center;justify-content:center;padding:26px;text-align:center}
+  #enseñar.abierto{display:flex}
+  #enseñar .th{font-size:clamp(2rem,9vw,4rem);color:#111;line-height:1.6;font-weight:600}
+  #enseñar .es{font-size:1rem;color:#666;margin-top:26px;font-family:-apple-system,'Segoe UI',sans-serif}
+  #enseñar .fon{font-size:.95rem;color:#999;font-style:italic;margin-top:5px;
+    font-family:-apple-system,'Segoe UI',sans-serif}
+  #enseñar .cerrar{position:absolute;top:16px;right:16px;background:#eee;border:none;border-radius:50%;
+    width:44px;height:44px;font-size:1.2rem;cursor:pointer;color:#333}
+  #enseñar .oir{margin-top:30px;background:#946307;color:#fff;border:none;border-radius:10px;
+    padding:13px 24px;font-size:1rem;cursor:pointer;font-family:-apple-system,'Segoe UI',sans-serif}
+
+  /* ---------- POR SI ACASO ---------- */
+  .urgencias{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:11px;margin:18px 0 24px}
+  .urg{display:block;background:var(--card);border:1px solid var(--linea);border-left:4px solid var(--teca);
+    border-radius:12px;padding:14px 16px;text-decoration:none;box-shadow:var(--sombra);
+    font-family:-apple-system,'Segoe UI',sans-serif}
+  .urg:hover{border-left-color:var(--oro);transform:translateY(-1px)}
+  .urg-fuerte{border-left-color:#b31b34;background:linear-gradient(135deg,#fff,#fff5f5)}
+  .urg .num{display:block;font-size:1.9rem;font-weight:700;color:var(--teca);letter-spacing:1px;line-height:1.1}
+  .urg-fuerte .num{color:#b31b34}
+  .urg .que{display:block;font-size:.95rem;color:var(--tinta);font-weight:600;margin-top:2px}
+  .urg .det{display:block;font-size:.8rem;color:var(--tinta2);margin-top:3px;line-height:1.4}
+  .pcard li.rellenar{border-bottom:1px dashed var(--linea);padding-bottom:6px;margin-bottom:6px;
+    color:var(--tinta2)}
+  .pcard li.rellenar b{color:var(--tinta2);letter-spacing:1px}
+  html[data-tema="oscuro"] .urg{background:var(--card)}
+  html[data-tema="oscuro"] .urg-fuerte{background:linear-gradient(135deg,#2a1a1a,#211c16)}
+
+  /* ---------- ACCESO A HOY Y CONVERSOR ---------- */
+  #irhoy{position:fixed;right:16px;bottom:70px;z-index:75;background:var(--verde);color:#fff;border:none;
+    border-radius:22px;padding:11px 17px;font-size:.86rem;font-weight:700;cursor:pointer;opacity:0;
+    pointer-events:none;transition:opacity .2s,transform .2s;box-shadow:0 3px 14px rgba(0,0,0,.25);
+    font-family:-apple-system,'Segoe UI',sans-serif;letter-spacing:.5px}
+  #irhoy.visible{opacity:.95;pointer-events:auto}
+  #irhoy:hover{opacity:1;transform:translateY(-2px)}
+  #player.visible ~ #irhoy{bottom:146px}
+  #conversor{font-family:-apple-system,'Segoe UI',sans-serif;margin-top:6px}
+  .conv-fila{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .conv-fila input{width:120px;border:1px solid var(--linea);border-radius:9px;padding:11px 12px;
+    font-size:1.15rem;background:var(--card);color:var(--tinta);font-weight:600}
+  .conv-fila input:focus{outline:none;border-color:var(--oro)}
+  .conv-uni{font-size:1.2rem;color:var(--tinta2)}
+  .conv-igual{color:var(--tinta2);margin:0 3px}
+  .conv-fila output{font-size:1.35rem;font-weight:700;color:var(--verde)}
+  .conv-tabla{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}
+  .conv-tabla span{background:var(--card);border:1px solid var(--linea);border-radius:9px;padding:7px 11px;
+    font-size:.83rem;color:var(--tinta2)}
+  .conv-tabla b{display:block;color:var(--tinta);font-size:.92rem}
+  .conv-tipo{display:block;margin-top:14px;font-size:.83rem;color:var(--tinta2)}
+  .conv-tipo input{width:64px;border:1px solid var(--linea);border-radius:7px;padding:4px 7px;
+    background:var(--card);color:var(--tinta);font-size:.86rem}
+  .conv-tipo span{display:block;margin-top:3px;font-style:italic;opacity:.85}
+
+  /* ---------- ACCESO RÁPIDO ---------- */
+  #rapido{position:fixed;right:16px;bottom:16px;z-index:78;display:flex;flex-direction:column;
+    align-items:flex-end;gap:9px;opacity:0;pointer-events:none;transition:opacity .2s}
+  #rapido.visible{opacity:1;pointer-events:auto}
+  .rap-btn{width:52px;height:52px;border-radius:50%;background:var(--teca);color:#fff;border:none;
+    font-size:1.25rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.28);display:grid;place-items:center}
+  .rap-btn:hover{background:var(--oro)}
+  .rap-lista{display:flex;flex-direction:column;align-items:flex-end;gap:8px;
+    max-height:0;overflow:hidden;transition:max-height .22s ease,opacity .2s;opacity:0}
+  #rapido.abierto .rap-lista{max-height:260px;opacity:1}
+  .rap-item{display:flex;align-items:center;gap:9px;background:none;border:none;cursor:pointer;padding:0}
+  .rap-t{background:rgba(43,38,32,.92);color:#fff;font-size:.83rem;padding:6px 11px;border-radius:8px;
+    font-family:-apple-system,'Segoe UI',sans-serif;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+  .rap-ic{width:44px;height:44px;border-radius:50%;background:var(--card);border:1px solid var(--linea);
+    display:grid;place-items:center;font-size:1.05rem;box-shadow:0 3px 12px rgba(0,0,0,.18)}
+  .rap-item:hover .rap-ic{background:var(--oro-suave);border-color:var(--oro)}
+  #player.visible ~ #rapido{bottom:92px}
+
+  /* ---------- ETAPAS: desplegable en el móvil, barra en el ordenador ---------- */
+  .etapas-sel{display:none;flex:1 1 auto;min-width:0;border:1px solid var(--linea);border-radius:9px;
+    background:var(--card);color:var(--tinta);padding:9px 10px;font-size:.9rem;margin:6px 0;
+    font-family:-apple-system,'Segoe UI',sans-serif}
+  @media(max-width:760px){
+    nav .wrap{display:none}
+    /* La barra pasa a dos filas: arriba lo que se usa a diario y, debajo,
+       el desplegable de etapas a todo lo ancho. Si no, en un móvil estrecho
+       se apelotonan cinco controles en la misma línea. */
+    .nav-inner{flex-wrap:wrap;padding-bottom:8px}
+    .etapas-sel{display:block;order:10;flex-basis:100%;width:100%;margin:0}
+    .buscador{flex:1 1 auto}
+    .buscador input{width:100%}
+    .buscador input:focus{width:100%}
+  }
+
+  /* ---------- BOTÓN HOY, SIEMPRE A LA VISTA ---------- */
+  .btn-hoy{flex:0 0 auto;display:inline-flex;align-items:center;gap:7px;background:var(--verde);
+    color:#fff;border-radius:9px;padding:8px 14px 8px 11px;font-size:.92rem;font-weight:700;
+    text-decoration:none;margin-right:12px;box-shadow:0 2px 8px rgba(45,80,60,.22);
+    font-family:-apple-system,'Segoe UI',sans-serif;letter-spacing:.3px;white-space:nowrap}
+  .btn-hoy:hover{background:#2f5540;color:#fff}
+  .btn-hoy svg{width:17px;height:17px;flex:0 0 auto}
+  @media(max-width:560px){
+    .btn-hoy{padding:8px 10px;font-size:.86rem;margin-right:6px}
+    .btn-hoy svg{width:15px;height:15px}
+    .nav-inner{padding:0 8px;gap:0}
+    .menu-btn{margin-left:6px;padding:8px 10px;font-size:.86rem}
+    .menu-btn .bars{display:none}
+    .buscador{flex:1 1 60px;margin-left:6px}
+    .buscador input{width:100%}
+    .tema-btn{width:34px;height:34px;margin-left:6px}
+  }
+  /* en pantallas de móvil estrechas el tema se va al menú: es lo que menos se usa */
+  @media(max-width:430px){
+    .tema-btn{display:none}
+    .btn-hoy span{font-size:.85rem}
+  }
+
+  /* ---------- HOTEL YA RESERVADO ---------- */
+  tr.reservado{background:linear-gradient(90deg,#eef7f1,#f7fbf8)}
+  tr.reservado td{border-left:none}
+  tr.reservado td:first-child{border-left:4px solid var(--verde)}
+  .sello-reserva{display:inline-block;background:var(--verde);color:#fff;font-size:.72rem;
+    font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:3px 9px;border-radius:20px;
+    font-family:-apple-system,'Segoe UI',sans-serif;margin-bottom:4px}
+  tr.reservado .precio-cell{color:var(--verde);font-weight:700;text-transform:uppercase;font-size:.8rem}
+  html[data-tema="oscuro"] tr.reservado{background:linear-gradient(90deg,#1b2a21,#1a231d)}
+
+  /* ---------- PLAN DE MADRUGADOR ---------- */
+  .madrugador{background:linear-gradient(135deg,#f3f7fb,#fbfcfe);border:1px solid #dbe6f0;
+    border-left:3px solid var(--mar);border-radius:0 12px 12px 0;padding:13px 16px;margin:12px 0 4px;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem;line-height:1.6;color:#2c3a44}
+  .mad-cab{display:flex;align-items:center;gap:7px;font-size:.72rem;letter-spacing:1.4px;
+    text-transform:uppercase;color:var(--mar);font-weight:700;margin-bottom:7px}
+  .mad-cab svg{width:16px;height:16px;flex:0 0 auto}
+  .madrugador p{margin:0 0 7px}
+  .madrugador p:last-child{margin-bottom:0}
+  .mad-zona{padding-top:7px;border-top:1px dashed #dbe6f0;font-size:.87rem;color:#4a5a66}
+  .mad-zona b{color:var(--mar)}
+  html[data-tema="oscuro"] .madrugador{background:linear-gradient(135deg,#16212a,#1a1f24);border-color:#25333d}
+  html[data-tema="oscuro"] .madrugador,html[data-tema="oscuro"] .mad-zona{color:#c3d2dc}
+
+  /* ---------- LOS PLATOS, UNO A UNO ---------- */
+  .filtro-platos{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 18px}
+  .fp{background:var(--card);border:1px solid var(--linea);border-radius:20px;padding:7px 15px;
+    font-size:.86rem;color:var(--tinta2);cursor:pointer;font-family:inherit}
+  .fp:hover{border-color:var(--oro);color:var(--oro)}
+  .fp.activo{background:var(--oro);border-color:var(--oro);color:#fff;font-weight:600}
+  .platos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+  .plato-card{background:var(--card);border:1px solid var(--linea);border-radius:14px;overflow:hidden;
+    box-shadow:var(--sombra);display:flex;flex-direction:column}
+  .plato-card img{width:100%;height:170px;object-fit:cover;display:block;background:#efe7d8}
+  .plato-card img.fallo{display:none}
+  .plato-card.sinfoto{border-style:dashed}
+  .pc-txt{padding:14px 15px 15px;font-family:-apple-system,'Segoe UI',sans-serif;flex:1 1 auto;
+    display:flex;flex-direction:column}
+  .pc-txt h4{font-family:Georgia,serif;font-size:1.12rem;font-weight:normal;color:var(--teca);
+    line-height:1.3;margin-bottom:2px}
+  .pc-th{font-size:.92rem;color:var(--tinta2);margin-left:4px}
+  .pc-fon{font-size:.82rem;color:var(--tinta2);font-style:italic;margin-bottom:8px}
+  .pc-fon b{font-style:normal;color:var(--verde)}
+  .pc-txt p{font-size:.89rem;line-height:1.55;color:var(--tinta);margin-bottom:9px;flex:1 1 auto}
+  .pc-donde{font-size:.84rem;line-height:1.5;background:#fdf6e7;border-radius:8px;padding:8px 11px;
+    color:#5c4a24}
+  .pc-donde b{color:var(--teca);text-transform:uppercase;font-size:.7rem;letter-spacing:.8px;
+    display:block;margin-bottom:2px}
+  .pc-etapa{font-size:.74rem;color:var(--tinta2);text-transform:uppercase;letter-spacing:1px;
+    margin-top:9px;padding-top:8px;border-top:1px dashed var(--linea)}
+  .plato-card.oculto{display:none}
+  html[data-tema="oscuro"] .pc-donde{background:#2a2114;color:#e8d5ac}
+  @media(max-width:560px){
+    .platos-grid{grid-template-columns:1fr;gap:13px}
+    .plato-card img{height:190px}
+  }
+
+  /* ---------- ¿QUÉ TENGO CERCA? ---------- */
+  #cerca{position:fixed;inset:0;z-index:130;background:rgba(20,15,8,.55);display:none;
+    align-items:flex-end;justify-content:center;backdrop-filter:blur(3px)}
+  #cerca.abierto{display:flex}
+  .cerca-caja{background:var(--crema);width:100%;max-width:560px;max-height:82vh;overflow-y:auto;
+    border-radius:18px 18px 0 0;padding:22px 20px 26px;position:relative;
+    font-family:-apple-system,'Segoe UI',sans-serif;box-shadow:0 -6px 30px rgba(0,0,0,.3)}
+  .cerca-caja h3{font-family:Georgia,serif;font-size:1.45rem;font-weight:normal;color:var(--teca);margin-bottom:4px}
+  .cerca-x{position:absolute;top:14px;right:14px;background:var(--card);border:1px solid var(--linea);
+    border-radius:50%;width:36px;height:36px;font-size:1rem;cursor:pointer;color:var(--tinta2)}
+  .cerca-estado{font-size:.92rem;color:var(--tinta2);margin-bottom:14px;line-height:1.5}
+  .cerca-estado b{color:var(--teca)}
+  .cerca-item{display:flex;align-items:flex-start;gap:12px;padding:11px 12px;background:var(--card);
+    border:1px solid var(--linea);border-radius:11px;margin-bottom:7px;text-decoration:none;color:var(--tinta)}
+  .cerca-item:hover{border-color:var(--oro)}
+  .cerca-d.aprox{color:var(--tinta2);font-weight:600;font-size:.8rem}
+  .cerca-d{flex:0 0 auto;min-width:62px;font-weight:700;color:var(--verde);font-size:.9rem;
+    padding-top:1px;text-align:right}
+  .cerca-n{flex:1 1 auto;font-size:.95rem;line-height:1.35}
+  .cerca-n small{display:block;color:var(--tinta2);font-size:.8rem;margin-top:2px;font-weight:400}
+  .cerca-sello{display:inline-block;font-size:.68rem;text-transform:uppercase;letter-spacing:.5px;
+    padding:2px 7px;border-radius:20px;margin-left:6px;vertical-align:1px;color:#fff}
+  .cerca-sello.k-leyenda{background:var(--teca)} .cerca-sello.k-bib{background:#b31b34}
+  .cerca-sello.k-local{background:var(--verde)} .cerca-sello.k-barato{background:var(--mar)}
+  .cerca-sello.k-cena{background:#6b4a8a}
+  .btn-cerca{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;margin:16px 0 4px;
+    background:var(--verde);color:#fff;border:none;border-radius:12px;padding:14px;font-size:1rem;
+    font-weight:700;cursor:pointer;font-family:-apple-system,'Segoe UI',sans-serif;
+    box-shadow:0 3px 12px rgba(45,80,60,.25)}
+  .btn-cerca:hover{background:#2f5540}
+  .btn-cerca svg{width:20px;height:20px}
+  @media(min-width:640px){#cerca{align-items:center} .cerca-caja{border-radius:18px}}
+
+  /* ---------- ÍNDICE DE COMIDA ---------- */
+  .bajo-boton{font-size:.86rem;color:var(--tinta2);text-align:center;margin:-2px 0 22px;
+    font-family:-apple-system,'Segoe UI',sans-serif}
+  .comida-puertas{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:13px;margin-bottom:26px}
+  .cp{display:block;background:var(--card);border:1px solid var(--linea);border-left:4px solid var(--oro);
+    border-radius:0 14px 14px 0;padding:18px 20px;text-decoration:none;box-shadow:var(--sombra);
+    font-family:-apple-system,'Segoe UI',sans-serif;transition:transform .12s}
+  .cp:hover{transform:translateX(3px);border-left-color:var(--teca)}
+  .cp-ic{font-size:1.7rem;display:block;margin-bottom:6px}
+  .cp b{display:block;font-family:Georgia,serif;font-size:1.16rem;font-weight:normal;color:var(--teca);
+    margin-bottom:5px}
+  .cp span:last-child{display:block;font-size:.88rem;color:var(--tinta2);line-height:1.5}
+  .ir-titulo{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.76rem;letter-spacing:1.8px;
+    text-transform:uppercase;color:var(--oro);font-weight:700;margin-bottom:10px}
+  .ir-etapas{display:flex;flex-wrap:wrap;gap:8px}
+  .ir-etapa{display:inline-flex;align-items:baseline;gap:7px;background:var(--card);
+    border:1px solid var(--linea);border-radius:22px;padding:8px 15px;text-decoration:none;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem;color:var(--tinta)}
+  .ir-etapa:hover{border-color:var(--oro);color:var(--teca)}
+  .ir-etapa span{font-size:.8rem;color:var(--tinta2)}
+
+  /* ---------- AVISO DE VERSIÓN NUEVA ---------- */
+  #nuevaVersion{position:fixed;left:50%;bottom:20px;transform:translate(-50%,140%);z-index:200;
+    background:var(--teca);color:#fff;border-radius:30px;padding:10px 12px 10px 20px;display:flex;
+    align-items:center;gap:12px;box-shadow:0 6px 24px rgba(0,0,0,.3);transition:transform .3s ease;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem;max-width:92vw}
+  #nuevaVersion.visible{transform:translate(-50%,0)}
+  #nvOk{background:#fff;color:var(--teca);border:none;border-radius:20px;padding:7px 15px;
+    font-weight:700;font-size:.86rem;cursor:pointer;white-space:nowrap;font-family:inherit}
+  #nvNo{background:none;border:none;color:#fff;opacity:.7;font-size:1rem;cursor:pointer;padding:2px 4px}
+  #nvNo:hover{opacity:1}
+
+  /* ---------- LOS TIMOS ---------- */
+  .pcard-ancho{grid-column:1/-1}
+  .p-intro{font-size:.93rem;color:var(--tinta2);margin-bottom:12px;line-height:1.55}
+  .timos{margin:0 0 4px 0;padding-left:0;list-style:none;counter-reset:t}
+  .timos li{position:relative;padding:11px 0 11px 40px;border-top:1px dashed var(--linea);
+    font-size:.92rem;line-height:1.6;counter-increment:t}
+  .timos li:first-child{border-top:none}
+  .timos li::before{content:counter(t);position:absolute;left:0;top:12px;width:26px;height:26px;
+    border-radius:50%;background:#b31b34;color:#fff;display:grid;place-items:center;font-size:.82rem;
+    font-weight:700}
+  .timos b{color:var(--teca)}
+  .timos em{color:var(--verde);font-style:normal;font-weight:600}
+  .timos-fin{margin-top:14px;background:#fdf6e7;border-left:3px solid var(--oro);border-radius:0 9px 9px 0;
+    padding:12px 15px;font-size:.9rem;line-height:1.6;color:#5c4a24}
+  html[data-tema="oscuro"] .timos-fin{background:#2a2114;color:#e8d5ac}
+  /* ---------- AÑADIDOS NERJA: listas de "lo que hay que ver" ---------- */
+  .sub-h{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1rem;color:var(--teca);
+    letter-spacing:1px;text-transform:uppercase;margin:30px 0 14px}
+  .lista-ver{list-style:none;display:grid;gap:10px;margin:0 0 24px}
+  .lista-ver li{background:var(--card);border:1px solid var(--linea);border-radius:11px;
+    padding:13px 16px 13px 40px;position:relative;font-size:.97rem;color:#3a4247;box-shadow:var(--sombra)}
+  .lista-ver li::before{content:'';position:absolute;left:17px;top:20px;width:8px;height:8px;
+    border-radius:50%;background:var(--oro)}
+  .lista-ver li b{color:var(--tinta)}
+  html[data-tema="oscuro"] .lista-ver li{color:var(--tinta)}
+</style>
+<style>
+  /* ================== LONDRES: paleta y piezas propias ================== */
+  :root{
+    --crema:#fbf9f5; --tinta:#23262a; --tinta2:#5e666e;
+    --oro:#17456e; --oro-suave:#dde6f0; --teca:#a5452e;
+    --verde:#4e6b4a; --mar:#2f7a8c; --linea:#e3dfd6;
+    --card:#ffffff; --sombra:0 2px 14px rgba(20,40,70,.09);
+  }
+  html[data-tema="oscuro"]{
+    --crema:#12161a; --tinta:#e7eaee; --tinta2:#9aa4ae;
+    --oro:#7fb2dd; --oro-suave:#182a3a; --teca:#e08a6c;
+    --verde:#8fb086; --mar:#6fb0c2; --linea:#26303a;
+    --card:#181e24; --sombra:0 2px 14px rgba(0,0,0,.4);
+  }
+
+  /* el hero, con la foto de Londres */
+  header.hero{background:linear-gradient(180deg,rgba(10,20,35,.28),rgba(10,20,35,.68)),
+    url('img/portada-hero.jpg') center/cover no-repeat}
+
+  /* los bloques de fondo claro también en modo oscuro (si no, texto claro sobre fondo claro) */
+  html[data-tema="oscuro"] .comer,
+  html[data-tema="oscuro"] .excel-nota,
+  html[data-tema="oscuro"] .leyenda-hoteles{background:#141c22;border-color:#26333c}
+  html[data-tema="oscuro"] .cerca-invita{background:#141c22;border-color:#26333c}
+  .comer h3::before{content:'🍽️ '}
+
+  /* secciones de aviso: la del carnaval y la de lo que hay que reservar */
+  .aviso-sec{background:linear-gradient(135deg,#fdf3ec,#fbf7ef);border:1px solid #f0d9c6;
+    border-radius:16px;padding:26px 26px 8px;margin:34px 0 10px}
+  html[data-tema="oscuro"] .aviso-sec{background:linear-gradient(135deg,#221a16,#1b1f24);border-color:#3a2a20}
+  .aviso-sec > .kicker{color:var(--teca)}
+
+  /* mapa esquemático */
+  .mapa-wrap{display:block;margin:22px 0 14px;overflow-x:auto}
+  .mapa-svg{width:100%;min-width:560px;height:auto;display:block;border-radius:14px;
+    background:var(--card);box-shadow:var(--sombra)}
+  .m-punto circle{fill:var(--oro)}
+  .m-punto.destaca circle{fill:var(--teca)}
+  .m-punto text{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:15px;font-weight:600;
+    fill:var(--tinta);text-anchor:middle}
+  .m-punto .m-sub{font-size:12px;font-weight:400;fill:var(--tinta2)}
+  .m-rio{font-family:Georgia,serif;font-style:italic;font-size:16px;fill:var(--mar);text-anchor:middle}
+
+  /* la invitación al «qué tengo cerca» */
+  .cerca-invita{background:#f4f9fb;border:1px solid #cfe2ea;border-radius:12px;
+    padding:14px 18px;margin:20px 0 6px;font-size:.93rem;color:var(--tinta2);line-height:1.6}
+  .cerca-invita b{color:var(--tinta)}
+  .cerca-btn{display:inline-block;margin-left:8px;margin-top:8px;background:var(--oro);color:#fff;
+    border:none;border-radius:9px;padding:9px 16px;font-size:.9rem;font-weight:600;cursor:pointer;
+    font-family:-apple-system,'Segoe UI',sans-serif}
+  .cerca-btn:hover{background:var(--teca)}
+  .cerca-sello.k-amigo{background:#a8386b}
+
+  /* el botón de guardar sin conexión */
+  .offline-caja{margin:18px 0 6px}
+  .offline-btn{background:var(--oro);color:#fff;border:none;border-radius:10px;padding:13px 22px;
+    font-size:1rem;font-weight:600;cursor:pointer;font-family:-apple-system,'Segoe UI',sans-serif;
+    box-shadow:0 2px 10px rgba(20,40,70,.18)}
+  .offline-btn:hover{background:var(--teca)}
+  .offline-btn[disabled]{opacity:.6;cursor:default}
+  .offline-estado{margin-top:10px;font-family:-apple-system,'Segoe UI',sans-serif;
+    font-size:.9rem;color:var(--tinta2)}
+
+  /* el sello «lleva décadas abierto» heredaba la caja .leyenda del mapa (padding,
+     borde y sombra) y salía como un botón enorme: aquí se le devuelve su tamaño */
+  .sitios .sello.leyenda{padding:0;border:none;box-shadow:none;background:var(--teca)}
+  .leyenda-sellos i{padding:0;border:none;box-shadow:none}
+
+  /* créditos de fotos en el pie */
+  .creditos{margin-top:16px;font-family:-apple-system,'Segoe UI',sans-serif;font-size:.82rem}
+  .creditos summary{cursor:pointer;color:var(--tinta2)}
+  .creditos ul{margin:10px 0 6px 18px;line-height:1.7}
+  .creditos a{color:var(--mar)}
+
+  @media(max-width:560px){
+    .aviso-sec{padding:20px 16px 4px;border-radius:12px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="fechas">Una semana en Londres · desde el sábado 29 de agosto</div>
+    <h1>Londres, a vuestro aire</h1>
+    <p class="sub">Nada de día a día. Aquí hay sitios donde comer bien sin arruinarse, cosas que
+    hacer con la niña y paseos para las tardes. Cada mañana miráis, elegís y ya está.</p>
+  </div>
+</header>
+
+<div style="background:#b4552d;color:#fff;padding:13px 18px;font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem;line-height:1.5"><b>📴 Copia sin conexión</b> — funciona en modo avión, y el «¿qué tengo cerca?» también: el GPS no necesita datos. La versión que se actualiza está en iaadileli.github.io/viaje-londres-2026</div>
+<nav class="sans"><div class="nav-inner"><div class="wrap">
+  <a href="#ruta">Cómo usarla</a>
+  <a href="#carnaval">Este finde</a>
+  <a href="#nina">Con la niña</a>
+  <a href="#comer">Comer</a>
+  <a href="#este">Brick Lane</a>
+  <a href="#kingscross">King's Cross</a>
+  <a href="#soho">Soho</a>
+  <a href="#sur">Borough</a>
+  <a href="#museos">Museos</a>
+  <a href="#greenwich">Greenwich</a>
+  <a href="#paseos">Paseos</a>
+  <a href="#mapa">Mapa</a>
+</div>
+  <div class="buscador sans">
+    <span class="lupa">🔍</span>
+    <input id="buscar" type="search" placeholder="Buscar…" aria-label="Buscar en la guía" autocomplete="off">
+    <div class="resultados" id="resultados"></div>
+  </div>
+  <button id="tema" class="tema-btn sans" aria-label="Cambiar a modo oscuro">☾</button>
+  <button id="menuBtn" class="menu-btn" onclick="toggleMenuInfo(event)" aria-label="Menú de información práctica" aria-expanded="false">
+    <span class="bars">☰</span><span>Info</span>
+  </button>
+  <div class="menu-panel" id="menuInfo">
+    <button id="temaMenu" class="tema-en-menu">☾ Modo oscuro</button>
+    <div class="cab">Sobre la marcha</div>
+    <a href="#comer" onclick="cerrarMenuInfo()">🥯 Comer (todo)</a>
+    <a href="#nina" onclick="cerrarMenuInfo()">🧒 Con la niña</a>
+    <a href="#paseos" onclick="cerrarMenuInfo()">🚶 Paseos y arquitectura</a>
+    <a href="#lluvia" onclick="cerrarMenuInfo()">🌧️ Si llueve</a>
+    <div class="cab cab2">Antes de salir</div>
+    <a href="#entradas" onclick="cerrarMenuInfo()">🎟️ Lo poco que hay que reservar</a>
+    <a href="#transporte" onclick="cerrarMenuInfo()">🚇 Metro, bus y pagar</a>
+    <a href="#practico" onclick="cerrarMenuInfo()">🧭 Guía práctica</a>
+    <a href="#offline" onclick="cerrarMenuInfo()">📥 Guardarla en el móvil</a>
+  </div>
+</div></nav>
+
+<main>
+
+<section class="resumen" id="ruta">
+  <div class="kicker">Cómo se usa esto</div>
+  <h2>Una semana, sin agenda</h2>
+  <p class="intro">Esta guía no os dice qué hacer el martes. Londres no funciona así: se tarda
+  media hora en cruzarla, llueve cuando quiere y con una niña de seis años los planes duran lo
+  que duran. Lo que hay aquí son <strong>seis zonas</strong>, y cada zona trae sus cosas que ver,
+  sus paseos y <strong>dónde comer allí mismo</strong>. Elegís una por día, o dos si caen cerca,
+  y os sobra tiempo.</p>
+
+  <div class="claves">
+    <div class="clave"><div class="n">£0</div><div class="t">los grandes museos son gratis, todos</div></div>
+    <div class="clave"><div class="n">gratis</div><div class="t">la niña, en metro y bus, hasta los 11</div></div>
+    <div class="clave"><div class="n">8,90</div><div class="t">libras: tope diario de transporte, zonas 1–2</div></div>
+    <div class="clave"><div class="n">2</div><div class="t">cosas que conviene reservar ya, y solo dos</div></div>
+  </div>
+
+  <h3 class="sub-h">Las seis zonas, en una línea cada una</h3>
+  <ul class="lista-ver">
+    <li><b><a href="#este">Brick Lane y Shoreditch</a></b> — donde se come mejor y más barato de todo Londres. Beigels de <i>salt beef</i>, barbacoa de humo y curry. Mercados el domingo.</li>
+    <li><b><a href="#kingscross">King's Cross</a></b> — los gasómetros victorianos convertidos en plazas, las fuentes donde se moja la niña y el andén 9¾. Media tarde larga.</li>
+    <li><b><a href="#soho">Soho, Chinatown y Covent Garden</a></b> — la tienda de Harry Potter buena, el sushi a mitad de precio y sitios de comer por todas partes.</li>
+    <li><b><a href="#sur">Borough y la orilla sur</a></b> — el mercado de comida, la Tate, el paseo del río y el mejor <i>grilled cheese</i> del país.</li>
+    <li><b><a href="#museos">South Kensington</a></b> — dinosaurios, ciencia con botones y el parque con el barco pirata. El plan seguro si llueve.</li>
+    <li><b><a href="#greenwich">Greenwich y el río</a></b> — se va en barco, hay un velero, un parque en cuesta y el meridiano. El día completo más fácil con niños.</li>
+  </ul>
+  <p class="intro" style="margin-top:18px">Y aparte, dos cosas que no son zona: <a href="#nina"><b>lo de la niña</b></a>,
+  todo junto en una sección, y <a href="#paseos"><b>los paseos</b></a>, para cuando queráis andar sin destino.</p>
+</section>
+
+<section id="carnaval" class="etapa-sec aviso-sec">
+  <div class="kicker">Justo el fin de semana que llegáis</div>
+  <h2>El Carnaval de Notting Hill</h2>
+  <span class="fechas-chip">Sábado 29, domingo 30 y lunes 31 de agosto</span>
+  <p class="intro">Llegáis en el fin de semana más grande del año en Londres: el
+  <strong>Notting Hill Carnival cumple 60 años</strong> y toma el oeste de la ciudad tres días.
+  Es gratis, es el mayor carnaval de calle de Europa y son <strong>alrededor de un millón de
+  personas</strong>. Con una niña de seis años eso se puede hacer, pero solo un día y con un plan.</p>
+
+  <div class="dias">
+    <div class="dia"><h4>Domingo 30 · el día de los niños <span class="fecha">este es el vuestro, si vais</span></h4>
+      <p>El domingo es el <strong>Children's Day</strong>: el desfile lo abren las escuelas y las
+      comparsas infantiles, y el ambiente es de familia. El lunes 31 es el desfile grande de
+      adultos, y ese ya es otra cosa: más gente, más alcohol y más apretura.</p>
+      <div class="tip"><b>Cómo hacerlo con la niña:</b> ir <b>a mediodía</b> (el desfile arranca
+      sobre las 10:30 y lo mejor para niños es de 11 a 14), colocarse en la <b>parte norte del
+      recorrido</b> —Ladbroke Grove hacia arriba, más ancha— y <b>marcharse antes de las cinco</b>,
+      que es cuando el ambiente cambia. Protección para los oídos: los sound systems suenan de
+      verdad. Y una foto del móvil con vuestro teléfono escrito en el bolsillo de la niña.</div></div>
+    <div class="dia"><h4>Si preferís no meteros <span class="fecha">y es perfectamente razonable</span></h4>
+      <p>No pasa nada: el resto de la ciudad se queda medio vacía esos días, que es una ventaja.
+      El <strong>domingo por la mañana</strong> tenéis el <a href="#este">mercado de flores de
+      Columbia Road</a> en el este, que es lo contrario del carnaval: calle estrecha, gente
+      comprando plantas y voceando precios. Y los museos del <a href="#museos">South Kensington</a>
+      estarán más tranquilos de lo normal.</p></div>
+  </div>
+
+  <ul class="lista-ver">
+    <li><b>No cojáis el metro en las paradas del carnaval</b> — Notting Hill Gate, Ladbroke Grove y Westbourne Park cierran o se colapsan. Transport for London manda bajar en <b>Paddington</b> y subir andando (20 min).</li>
+    <li><b>El lunes 31 es festivo</b> (bank holiday) — museos abiertos, muchas tiendas con horario corto y el metro más lleno de lo normal.</li>
+    <li><b>Ni coche ni bici</b> por toda la zona oeste esos tres días: hay cortes de calles desde el viernes.</li>
+    <li><b>Se come de puestos</b> — jerk chicken, cabra guisada, roti, plátano frito. Efectivo encima, aunque casi todos ya llevan datáfono.</li>
+  </ul>
+</section>
+
+<section id="mapa" class="etapa-sec">
+  <div class="kicker">Para hacerse el mapa mental</div>
+  <h2>Dónde está cada cosa</h2>
+  <p class="intro">Londres se entiende con el río. Todo lo que os interesa está a un lado o al otro
+  del Támesis y, salvo Greenwich, dentro de las zonas 1 y 2: <strong>de punta a punta son 30 o 40
+  minutos de metro</strong>. Este mapa no es a escala, es para situarse.</p>
+
+  <div class="mapa-wrap">
+  <svg viewBox="0 0 900 520" class="mapa-svg" role="img" aria-label="Mapa esquemático de Londres con las zonas de la guía">
+    <rect x="0" y="0" width="900" height="520" fill="var(--oro-suave)" opacity=".28"/>
+    <path d="M-10 300 C 120 340, 240 292, 340 318 C 430 342, 500 296, 590 318 C 660 335, 690 392, 762 388 C 830 384, 870 344, 910 336"
+          fill="none" stroke="var(--mar)" stroke-width="26" stroke-linecap="round" opacity=".45"/>
+    <text x="118" y="352" class="m-rio">El Támesis</text>
+
+    <g class="m-punto"><circle cx="120" cy="176" r="9"/><text x="120" y="158">Notting Hill</text><text x="120" y="200" class="m-sub">el carnaval</text></g>
+    <g class="m-punto"><circle cx="168" cy="268" r="9"/><text x="168" y="250">South Kensington</text><text x="168" y="292" class="m-sub">los museos grandes</text></g>
+    <g class="m-punto"><circle cx="300" cy="86" r="9"/><text x="300" y="68">Camden</text><text x="300" y="110" class="m-sub">canal y mercado</text></g>
+    <g class="m-punto destaca"><circle cx="424" cy="132" r="11"/><text x="424" y="112">King's Cross</text><text x="424" y="156" class="m-sub">gasómetros y andén 9¾</text></g>
+    <g class="m-punto destaca"><circle cx="392" cy="238" r="11"/><text x="392" y="218">Soho · Covent Garden</text><text x="392" y="262" class="m-sub">Chinatown y Japan Centre</text></g>
+    <g class="m-punto destaca"><circle cx="628" cy="196" r="11"/><text x="628" y="176">Brick Lane · Shoreditch</text><text x="628" y="220" class="m-sub">comer y mercados</text></g>
+    <g class="m-punto destaca"><circle cx="470" cy="352" r="11"/><text x="470" y="334">Borough · South Bank</text><text x="470" y="376" class="m-sub">mercado y la Tate</text></g>
+    <g class="m-punto"><circle cx="700" cy="286" r="9"/><text x="700" y="268">la City</text><text x="700" y="310" class="m-sub">Sky Garden</text></g>
+    <g class="m-punto destaca"><circle cx="812" cy="418" r="11"/><text x="812" y="400">Greenwich</text><text x="812" y="442" class="m-sub">en barco desde el centro</text></g>
+    <g class="m-punto"><circle cx="452" cy="478" r="9"/><text x="452" y="460">West Norwood</text><text x="452" y="502" class="m-sub">el cementerio victoriano</text></g>
+  </svg>
+  </div>
+
+  <div class="tip"><b>La regla que os ahorra tiempo:</b> si dos planes están en zonas distintas,
+  no los juntéis el mismo día. Un museo del oeste por la mañana y una cena en el este por la noche
+  suena bien y son cuarenta minutos de metro en medio, con la niña cansada. Mejor una zona por día
+  y andar mucho dentro de ella.</div>
+
+  <div class="cerca-invita sans">
+    <b>📍 ¿Y qué tengo cerca ahora mismo?</b> Abajo del todo hay un botón que usa el GPS del móvil
+    y os ordena por distancia todos los sitios de comer de esta guía. Sirve para el momento
+    «son las dos, tenemos hambre y estamos aquí».
+  </div>
+</section>
+
+<section id="este" class="etapa-sec">
+  <div class="kicker">El East End</div>
+  <h2>Brick Lane, Spitalfields y Shoreditch</h2>
+  <span class="fechas-chip">Medio día largo · el domingo es el mejor día</span>
+  <div class="banner">
+    <img loading="lazy" decoding="async" src="img/brick-lane.jpg" alt="Brick Lane, en el East End de Londres" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+    <div class="pie">Brick Lane: media calle de curry, media de bagels, y las paredes pintadas enteras</div>
+  </div>
+  <p class="intro">Si en toda la semana solo hacéis una zona bien, que sea esta. Es el barrio donde
+  fue cayendo todo el que llegaba a Londres: hugonotes franceses en el XVII, judíos del este de
+  Europa en el XIX, bangladesíes en el XX. Cada oleada dejó su comida, y por eso <strong>aquí se
+  come mejor y más barato que en el centro</strong>. Ahora encima es la zona del arte callejero y
+  de los mercados. Se recorre entera andando.</p>
+
+  <div class="dias">
+    <div class="dia"><h4>El paseo, en orden <span class="fecha">unas tres horas, parando</span></h4>
+      <p>Empezad en <strong>Old Spitalfields Market</strong> (metro Liverpool Street), que es
+      mercado cubierto con puestos de comida y tenderetes. Salís por <strong>Brushfield Street</strong>
+      con la iglesia de Hawksmoor enfrente, cruzáis a <strong>Brick Lane</strong> y la subís entera:
+      primero la parte de los curries con sus carteles de neón, luego los <strong>murales</strong>
+      —meteos por Hanbury Street y Fournier Street a mirar fachadas— y al final del todo, donde
+      la calle se junta con Bethnal Green Road, <strong>las dos panaderías de beigels</strong>. De
+      ahí, si quedan piernas, <strong>Arnold Circus</strong>, cinco minutos al norte: una plaza
+      circular con un quiosco de música encima de una colina hecha con los escombros del barrio de
+      chabolas que había antes. Fue la primera vivienda social del mundo, en 1900.</p>
+      <div class="tip">El <b>domingo</b> es el día: abren a la vez el mercado de Brick Lane, el de
+      Spitalfields y el <b>mercado de flores de Columbia Road</b> (8:00–15:00, a diez minutos
+      andando). Columbia Road hay que verlo aunque no compréis nada: es una calle estrecha llena
+      hasta arriba de plantas y con los vendedores vociferando precios. <b>Id antes de las 11</b> o
+      no se anda.</div></div>
+  </div>
+
+  <h3 class="sub-h">Lo que hay que ver mientras se pasea</h3>
+  <ul class="lista-ver">
+    <li><b>Los murales</b> — no hay que buscarlos, están por todas partes. Los más fotografiados: la grulla enorme de ROA en Hanbury Street y lo que haya ese mes en las persianas de Fournier Street. Cambian solos cada pocas semanas.</li>
+    <li><b>Old Spitalfields Market</b> — Horner Square, E1 6EW. Abierto todos los días (10:00–18:00, jueves de antigüedades, domingo el más grande). Mitad ropa y artesanía, mitad puestos de comida.</li>
+    <li><b>Christ Church Spitalfields</b> — la iglesia blanca de Nicholas Hawksmoor, de 1729, con un pórtico desproporcionado a propósito. Se entra gratis.</li>
+    <li><b>Fournier Street</b> — casas de tejedores hugonotes del XVIII, con los ventanales enormes del taller en el último piso para aprovechar la luz. Están intactas.</li>
+    <li><b>La Gran Mezquita de Brick Lane</b> — el mismo edificio fue capilla hugonota, sinagoga y ahora mezquita. Todo el barrio en una fachada.</li>
+    <li><b>Columbia Road</b> — solo los domingos por la mañana, y solo eso.</li>
+    <li><b>Boxpark y Shoreditch High Street</b> — la parte moderna, contenedores apilados con bares. Sirve para tomar algo, no para venir a propósito.</li>
+  </ul>
+
+  <div class="tip"><b>Con la niña:</b> a quince minutos andando hacia el norte está el
+  <a href="#nina"><b>Young V&amp;A</b></a> de Bethnal Green, que es un museo entero pensado para
+  niños de su edad, y es gratis. Encaja perfecto con esta mañana.</div>
+
+  <div class="leyenda-sellos"><span><i style="background:#a8386b"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.4-9.1C1.2 8.5 3.1 5 6.5 5c2 0 3.5 1.1 4.4 2.4l1.1 1.5 1.1-1.5C14 6.1 15.5 5 17.5 5c3.4 0 5.3 3.5 3.9 6.9C19.5 16.3 12 21 12 21z"/></svg></i>te lo recomienda alguien que ha estado</span><span><i style="background:var(--teca)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></i>lleva décadas abierto</span><span><i style="background:var(--mar)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></i>se come por menos de 12 £</span><span><i style="background:var(--verde)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></i>donde come la gente de aquí</span></div>
+  <div class="comer">
+    <h3>Qué y dónde comer en Brick Lane y Shoreditch</h3>
+    <div class="platos">
+      <span class="plato">Beigel de salt beef</span><span class="plato">Brisket ahumado</span><span class="plato">Curry punyabí</span><span class="plato">Fish and chips</span><span class="plato">Bacon naan</span><span class="plato">Desayuno inglés</span>
+    </div>
+    <ul class="sitios">
+      <li><span class="nombre">Beigel Bake</span><span class="sello amigo" title="te lo recomienda alguien que ha estado"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.4-9.1C1.2 8.5 3.1 5 6.5 5c2 0 3.5 1.1 4.4 2.4l1.1 1.5 1.1-1.5C14 6.1 15.5 5 17.5 5c3.4 0 5.3 3.5 3.9 6.9C19.5 16.3 12 21 12 21z"/></svg></span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">159 Brick Lane, E1 6SB · la puerta amarilla</span> · El sitio. Una panadería estrecha con luz de fluorescente, abierta <b>24 horas los 365 días</b> desde 1974, donde siempre hay cola y siempre va rápido. Piden a gritos el pedido, cortan el <i>salt beef</i> a cuchillo delante de vosotros y os lo meten en un beigel hervido. Es de las pocas cosas que quedan del Londres judío del East End.
+        <span class="pedir"><b>Pedid</b> Un <b>salt beef beigel with mustard and pickle</b>. Si no queréis mostaza inglesa, decidlo: pica de verdad</span>
+        <span class="datos">🕐 abierto 24 h · 💷 unas 8–9 £ el beigel de carne, y menos de 2 £ los de queso · efectivo y tarjeta</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Beigel%20Bake%2C%20159%20Brick%20Lane%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">The Beigel Shop</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">155 Brick Lane, E1 6QL · la puerta blanca, dos portales antes</span> · La de al lado, la rival de toda la vida. Presume de ser la primera panadería de beigels de Brick Lane y las dos familias fueron la misma. Los londinenses se pelean por cuál es mejor y la respuesta honesta es que están igual de buenas.
+        <span class="pedir"><b>Pedid</b> Lo mismo que en la otra, para poder opinar. O el beigel de <b>arenque</b>, que allí no siempre hay</span>
+        <span class="datos">🕐 24 h · 💷 igual de barato · si en una hay veinte de cola y en la otra cinco, la respuesta es fácil</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Beigel%20Shop%2C%20155%20Brick%20Lane%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Smokestak</span><span class="sello amigo" title="te lo recomienda alguien que ha estado"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.4-9.1C1.2 8.5 3.1 5 6.5 5c2 0 3.5 1.1 4.4 2.4l1.1 1.5 1.1-1.5C14 6.1 15.5 5 17.5 5c3.4 0 5.3 3.5 3.9 6.9C19.5 16.3 12 21 12 21z"/></svg></span><span class="sello cena" title="la comida buena de la semana"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 3v8a3 3 0 0 0 6 0V3M10 11v10M17 3c-1.5 2-2 4-2 6.5 0 1.5.7 2.5 2 2.5v9"/></svg></span> — <span class="dir">35 Sclater Street, E1 6LB · a dos calles de Brick Lane</span> · Barbacoa en un arco de ferrocarril: paredes negras, mucho humo y <b>brisket ahumado doce o quince horas sobre leña de roble</b>. Empezó siendo un puesto de mercado. Es la comida más seria de esta lista y aun así se come con las manos.
+        <span class="pedir"><b>Pedid</b> El <b>brisket bun</b> con encurtidos si vais con prisa, o el brisket entero para compartir. Las costillas ahumadas nunca fallan</span>
+        <span class="datos">🕐 L–V 12:00–15:00 y 17:30–23:00 · S 12:00–23:00 · D 12:00–21:00 · 💷 unas 30–40 £ por persona · reservan, pero guardan mesas para quien llega sin reserva</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Smokestak%2C%2035%20Sclater%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Smoking Goat</span><span class="sello amigo" title="te lo recomienda alguien que ha estado"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.4-9.1C1.2 8.5 3.1 5 6.5 5c2 0 3.5 1.1 4.4 2.4l1.1 1.5 1.1-1.5C14 6.1 15.5 5 17.5 5c3.4 0 5.3 3.5 3.9 6.9C19.5 16.3 12 21 12 21z"/></svg></span> — <span class="dir">64 Shoreditch High Street, E1 6JJ</span> · Tailandés del norte, de la comida que allí se pide para acompañar la bebida: picante, ahumado y para compartir. Cocina sobre brasa, carta corta que cambia y música alta. Nada que ver con el pad thai de siempre, y por eso merece la pena.
+        <span class="pedir"><b>Pedid</b> La <b>chuleta de cerdo a la brasa</b> y una ensalada de las picantes. Avisad de que la niña come, que aquí pica en serio</span>
+        <span class="datos">🕐 L–S 12:00–23:00 · D 12:00–22:00 · 💷 unas 25–35 £ por persona · sin reserva salvo grupos: se llega y se espera</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Smoking%20Goat%2C%2064%20Shoreditch%20High%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Tayyabs</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">83–89 Fieldgate Street, E1 1JU · Whitechapel, 15 min andando</span> · Punyabí desde 1972 y siempre lleno de gente del barrio. Las <b>chuletillas de cordero llegan a la mesa chisporroteando</b> en su plancha. Es ruidoso, rápido y muy barato para lo que dan. Aquí es donde va a comer curry quien vive en Londres, no a los restaurantes con neones de Brick Lane.
+        <span class="pedir"><b>Pedid</b> Las <b>lamb chops</b> sí o sí, un karahi para compartir y pan naan. <b>Traeos vuestra cerveza</b>: no venden alcohol pero dejan traerlo</span>
+        <span class="datos">🕐 todos los días 12:00–23:30 · 💷 unas 20 £ por persona · reservad o id a las 18:00: a las 20:00 hay cola en la calle</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Tayyabs%2C%2083%20Fieldgate%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Poppies Fish & Chips</span> — <span class="dir">6–8 Hanbury Street, E1 6QR · junto a Brick Lane</span> · Para quitarse la espina del fish and chips sin acabar en una freiduría triste. Decorado de los años cincuenta, camareras con pañuelo y el pescado frito al momento. Turístico, sí, pero está bueno.
+        <span class="pedir"><b>Pedid</b> <b>Cod and chips</b> con puré de guisantes (<i>mushy peas</i>) y vinagre de malta por encima. Es lo que hace la gente de aquí</span>
+        <span class="datos">🕐 todos los días hasta las 23:00 · 💷 unas 18–22 £ el plato de bacalao · hacen para llevar y sale más barato</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Poppies%20Fish%20and%20Chips%2C%206%20Hanbury%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">E. Pellicci</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">332 Bethnal Green Road, E2 0AG</span> · Una cafetería italiana de 1900 que sigue llevando la misma familia, con el interior de marquetería de los años cuarenta <b>protegido por patrimonio</b>: no se puede tocar ni una moldura. Sirven desayuno inglés y pasta, te tratan como si te conocieran de siempre y no cabe casi nadie. Es de las cosas más auténticas que vais a ver esta semana.
+        <span class="pedir"><b>Pedid</b> El <b>full English breakfast</b> por la mañana, o unas lasañas si es mediodía</span>
+        <span class="datos">🕐 L–S 7:00–16:00, cerrado domingos · 💷 8–12 £ · solo mesas compartidas, se hace cola en la acera</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=E%20Pellicci%2C%20332%20Bethnal%20Green%20Road%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Old Spitalfields Market</span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">Horner Square, E1 6EW</span> · El mercado cubierto. En la parte de <b>The Kitchens</b> hay una docena de puestos de cocinas de medio mundo —kothu roti de Sri Lanka, fideos chinos estirados a mano, sándwiches— y mesas comunes. Es la solución cuando cada uno quiere una cosa distinta, que con niños pasa siempre.
+        <span class="pedir"><b>Pedid</b> Cada uno lo suyo y a la misma mesa. El puesto de <b>Crunch</b>, de sándwiches de brioche, es el que tiene más cola y se la merece</span>
+        <span class="datos">🕐 todos los días, en general 10:00–18:00 · 💷 8–14 £ el plato · el domingo es el día grande</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Old%20Spitalfields%20Market%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Dishoom Shoreditch</span> — <span class="dir">7 Boundary Street, E2 7JE</span> · Recrea los viejos cafés iraníes de Bombay y lo hace muy bien: ventiladores, mármol y retratos en las paredes. Es una cadena y está lleno de turistas, pero se come bien y no es caro. El desayuno es lo mejor que tienen.
+        <span class="pedir"><b>Pedid</b> El <b>bacon naan roll</b> del desayuno y el <b>black daal</b>, que llevan cociendo 24 horas</span>
+        <span class="datos">🕐 desde las 8:00 entre semana · 💷 20–25 £ por persona · no reservan mesas pequeñas a la hora punta: id pronto o dad el móvil y esperad en un bar</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Dishoom%20Shoreditch%2C%207%20Boundary%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">The Marksman</span> — <span class="dir">254 Hackney Road, E2 7SJ</span> · Un pub de barrio con la cocina muy por encima de lo que aparenta. Vais si os coincide un <b>domingo</b>: el <i>Sunday roast</i> —asado, patatas al horno y una torta de Yorkshire del tamaño de un plato— es una comida de domingo inglesa como debe ser.
+        <span class="pedir"><b>Pedid</b> El <b>roast</b> del domingo. Y el bollo de ternera y anchoa si está en la carta</span>
+        <span class="datos">🕐 el roast solo domingos y hasta que se acaba (sobre las 16:00) · 💷 25–30 £ · <b>reservad</b> para el domingo</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=The%20Marksman%2C%20254%20Hackney%20Road%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="kingscross" class="etapa-sec">
+  <div class="kicker">Lo que era una ruina y ahora es lo mejor de Londres</div>
+  <h2>King’s Cross y los gasómetros</h2>
+  <span class="fechas-chip">Media tarde · y de aquí sale el andén 9¾</span>
+  <div class="banner">
+    <img loading="lazy" decoding="async" src="img/gasholder.jpg" alt="Los gasómetros victorianos de King's Cross" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+    <div class="pie">Gasholder Park: la estructura de hierro de un gasómetro victoriano, vacía, con un jardín dentro</div>
+  </div>
+  <p class="intro">Esta es la zona de arquitectura que hay que ver. Durante ciento cincuenta años
+  aquí se descargaba el carbón que quemaba Londres, y hasta hace veinte era un descampado
+  peligroso. Lo han rehecho entero <strong>sin tirar nada</strong>: los almacenes, los muelles del
+  carbón y los esqueletos de hierro de los <strong>gasómetros</strong> siguen ahí, vacíos por
+  dentro, con plazas y jardines metidos dentro de ellos. Es industrial victoriano puro, se ve en
+  una tarde y no se paga nada.</p>
+
+  <div class="dias">
+    <div class="dia"><h4>El recorrido, que es corto <span class="fecha">hora y media sin correr</span></h4>
+      <p>Se sale de la estación de <strong>King’s Cross</strong> por detrás y en cinco minutos se
+      está en <strong>Granary Square</strong>: una plaza enorme junto al canal con
+      <strong>1.080 chorros de agua</strong> en el suelo que suben y bajan solos, iluminados al
+      anochecer. De ahí, a la izquierda, están los <strong>Coal Drops Yard</strong>, los muelles
+      donde caía el carbón de los vagones, con dos naves largas de ladrillo unidas por un tejado
+      ondulado que se dobla en el aire. Siguiendo el canal doscientos metros se llega a
+      <strong>Gasholder Park</strong>: el armazón circular de un gasómetro de 1850, desmontado
+      pieza a pieza, restaurado y vuelto a montar aquí con un jardín circular dentro. Al lado están
+      los otros tres, convertidos en edificios de viviendas.</p>
+      <div class="tip">Volved al anochecer si podéis: encienden las fuentes con luces de colores y
+      el anillo de luz del gasómetro. Y desde Granary Square se puede bajar al camino de sirga del
+      <b>Regent’s Canal</b>, que va sin coches hasta Camden en tres cuartos de hora andando.</div></div>
+  </div>
+
+  <h3 class="sub-h">Qué hay exactamente</h3>
+  <ul class="lista-ver">
+    <li><b>Las fuentes de Granary Square</b> — gratis y todo el día. En cuanto hace algo de sol se llenan de niños en bañador. <b>Llevad ropa de recambio para la niña</b>, porque se va a mojar seguro.</li>
+    <li><b>Coal Drops Yard</b> — tiendas y sitios de comer bajo los arcos de ladrillo de 1850. El tejado nuevo es de Thomas Heatherwick, el del autobús rojo de Londres nuevo.</li>
+    <li><b>Gasholder Park</b> — el armazón de hierro colado con el jardín dentro. Suena raro y es precioso: los niños corren en círculo y los adultos miran hacia arriba.</li>
+    <li><b>Coal Drops y el canal</b> — hay una escalinata de césped que baja al agua y pasan las barcazas. Buen sitio para sentarse con un helado.</li>
+    <li><b>La estación de St Pancras</b>, al lado — el edificio neogótico rojo de 1868 con el techo de hierro y cristal más grande de su época. Se entra libremente: subid a la galería de arriba a ver los trenes a París.</li>
+    <li><b>La biblioteca británica</b>, enfrente — se entra gratis y en una sala se exponen la Carta Magna, cuadernos de Leonardo y letras manuscritas de los Beatles. Media hora bien empleada.</li>
+  </ul>
+
+  <div class="tip"><b>El andén 9¾ está aquí</b>, dentro de la estación de King’s Cross, con el
+  carrito metido en la pared. Todo lo de Harry Potter, junto y con horarios, está en la
+  <a href="#nina"><b>sección de la niña</b></a>.</div>
+
+  <div class="comer">
+    <h3>Qué y dónde comer en King’s Cross</h3>
+    <div class="platos">
+      <span class="plato">Desayuno indio</span><span class="plato">Roti canai</span><span class="plato">Brunch</span><span class="plato">Tacos</span>
+    </div>
+    <ul class="sitios">
+      <li><span class="nombre">Dishoom King’s Cross</span> — <span class="dir">5 Stable Street, N1C 4AB · en Coal Drops Yard</span> · El mismo de Shoreditch pero en un almacén ferroviario de tres plantas, que es el más bonito de todos. Si desayunáis aquí a las 8:30 entráis sin cola y de paso veis el edificio.
+        <span class="pedir"><b>Pedid</b> <b>Bacon naan roll</b> y un chai. Y pedid que os enseñen la planta de arriba</span>
+        <span class="datos">🕐 desayunos desde las 8:00 · 💷 20–25 £ · a mediodía y por la noche hay espera larga</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Dishoom%20Kings%20Cross%2C%205%20Stable%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">The Lighterman</span> — <span class="dir">3 Granary Square, N1C 4BH</span> · Un ventanal enorme sobre el canal y una terraza escalonada mirando a las fuentes. La comida es de pub correcto, sin más, pero <b>la niña puede estar jugando en las fuentes mientras vosotros os tomáis algo sentados</b> viéndola. Por eso está aquí.
+        <span class="pedir"><b>Pedid</b> Algo de picar y una caña en la terraza de arriba, que es la que ve la plaza entera</span>
+        <span class="datos">🕐 todos los días · 💷 15–25 £ · en cuanto sale el sol no hay una mesa libre fuera</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=The%20Lighterman%2C%20Granary%20Square%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Roti King</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">40 Doric Way, NW1 1LH · en el sótano, junto a Euston</span> · Un sótano sin ninguna gracia donde se come <b>roti canai</b> malayo por seis o siete libras: una torta hojaldrada que estiran a mano y golpean contra la plancha, con un cuenco de curry para mojar. Cola en la escalera casi siempre. De lo más barato y lo más bueno de Londres.
+        <span class="pedir"><b>Pedid</b> <b>Roti canai</b> para mojar y un <i>nasi lemak</i> si tenéis hambre de verdad</span>
+        <span class="datos">🕐 12:00–15:00 y 17:30–22:00 · 💷 7–12 £ por persona · no reservan y no aceptan grupos grandes</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Roti%20King%2C%2040%20Doric%20Way%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Casa Pastor y los puestos de Coal Drops Yard</span> — <span class="dir">Coal Drops Yard, N1C 4DQ</span> · En los antiguos muelles del carbón hay una fila de sitios de comer con terraza. Casa Pastor hace tacos al pastor de trompo. Es la parada natural cuando se acaba el paseo por las plazas de King’s Cross.
+        <span class="pedir"><b>Pedid</b> Tacos al pastor, y de postre un helado en la misma plaza</span>
+        <span class="datos">🕐 todo el día · 💷 15–25 £ · hay mesas fuera y sitio para que los niños corran</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Coal%20Drops%20Yard%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="soho" class="etapa-sec">
+  <div class="kicker">El centro, que se anda entero</div>
+  <h2>Soho, Chinatown y Covent Garden</h2>
+  <span class="fechas-chip">Una tarde y una noche · aquí se cena barato</span>
+  <div class="banner">
+    <img loading="lazy" decoding="async" src="img/chinatown.jpg" alt="Los faroles de Chinatown en el Soho de Londres" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+    <div class="pie">Gerrard Street: Chinatown está pegado a Soho, y los dos se recorren andando</div>
+  </div>
+  <p class="intro">Todo esto es un cuadrado de un kilómetro de lado en el que caben el barrio chino,
+  los teatros, las tiendas raras y la mejor cena barata de Londres. No hay nada que «visitar»: se
+  callejea. Va bien para una tarde, y encaja perfecto con
+  <a href="#entradas"><b>el British Museum en su nocturno del viernes</b></a>, que está a diez
+  minutos andando.</p>
+
+  <div class="dias">
+    <div class="dia"><h4>La jugada del sushi rebajado <span class="fecha">a partir de las ocho de la tarde</span></h4>
+      <p>En <strong>Panton Street 35b</strong>, entre Piccadilly Circus y Leicester Square, está el
+      <strong>Japan Centre</strong>: un supermercado japonés grande con neveras de sushi, bentos,
+      katsu curry, ensalada de algas y arroz hechos allí mismo cada día. <strong>Lo que queda sin
+      vender se rebaja a la mitad al final del día</strong>, y como cierran a las 21:30 de lunes a
+      sábado, las pegatinas rojas empiezan a salir <strong>alrededor de las ocho</strong>. El
+      domingo cierran a las 20:00, así que ese día hay que estar allí sobre las 18:30.</p>
+      <div class="tip">Se cena por cinco o seis libras por barba y de sobra. Con la comida en la
+      bolsa, se sube andando a <b>Trafalgar Square</b> (cinco minutos) y se cena en los escalones
+      de la National Gallery con los leones al lado. A la niña le va a hacer más gracia eso que
+      cualquier restaurante.</div></div>
+  </div>
+
+  <h3 class="sub-h">Lo que merece la pena mirar</h3>
+  <ul class="lista-ver">
+    <li><b>Chinatown</b> — Gerrard Street y alrededores, con los arcos y los faroles. Panaderías con bollos al vapor, escaparates de patos colgados y supermercados enormes. Muy vistoso al anochecer.</li>
+    <li><b>Neal’s Yard</b> — un patio diminuto escondido entre Covent Garden y Seven Dials, con las fachadas pintadas de colores. Se entra por un callejón que no parece nada. Es la foto que todo el mundo se hace.</li>
+    <li><b>Seven Dials</b> — siete calles que salen de una columna con relojes de sol. Tiendas pequeñas, buena zona para pasear sin rumbo.</li>
+    <li><b>Covent Garden</b> — el mercado cubierto con los artistas de calle, que actúan en el patio bajo la plaza. Hay malabaristas y músicos toda la tarde y a los niños les tiene ahí clavados media hora.</li>
+    <li><b>La tienda de Harry Potter buena</b> — <a href="#nina">House of MinaLima</a>, en Wardour Street 157, a cinco minutos. Gratis y muy superior a las oficiales.</li>
+    <li><b>Denmark Street</b> — la calle de las tiendas de guitarras desde los años cincuenta, donde grabaron los Stones y los Sex Pistols.</li>
+    <li><b>Soho Square y St Anne’s</b> — para sentarse cinco minutos cuando la niña se plante.</li>
+  </ul>
+
+  <div class="tip"><b>Un aviso:</b> en Leicester Square y alrededor de Piccadilly hay restaurantes
+  con carta plastificada y fotos de la comida. Ahí no. Todo lo que os interesa está una calle o dos
+  más adentro, en el <a href="#comer">bloque de comer</a>.</div>
+
+  <div class="comer">
+    <h3>Qué y dónde comer en Soho, Chinatown y Covent Garden</h3>
+    <div class="platos">
+      <span class="plato">Sushi rebajado</span><span class="plato">Bao al vapor</span><span class="plato">Dim sum</span><span class="plato">Filete a precio fijo</span><span class="plato">Café italiano</span>
+    </div>
+    <ul class="sitios">
+      <li><span class="nombre">Japan Centre</span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span><span class="sello amigo" title="te lo recomienda alguien que ha estado"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.4-9.1C1.2 8.5 3.1 5 6.5 5c2 0 3.5 1.1 4.4 2.4l1.1 1.5 1.1-1.5C14 6.1 15.5 5 17.5 5c3.4 0 5.3 3.5 3.9 6.9C19.5 16.3 12 21 12 21z"/></svg></span> — <span class="dir">35b Panton Street, SW1Y 4EA · entre Piccadilly Circus y Leicester Square</span> · Supermercado japonés con barra de comida hecha al momento y, sobre todo, <b>unas neveras de sushi, bentos, ensaladas de algas y arroz que a última hora del día se rebajan a la mitad</b>. Es la mejor cena barata del centro de Londres, y sale por lo que cuesta un bocadillo.
+        <span class="pedir"><b>Pedid</b> Presentarse <b>a partir de las 20:00</b> y coger lo que tenga la pegatina roja: sushi, katsu curry, gyozas y ensalada de wakame. Se cena en un banco de Trafalgar o en el hotel</span>
+        <span class="datos">🕐 tienda L–S 10:00–21:30, D 11:00–20:00 · 🔻 <b>las rebajas del 50 % empiezan alrededor de las 20:00</b>, cuando queda hora y media para cerrar; <b>el domingo, sobre las 18:30</b>, porque cierran antes. Cuanto más tarde, más barato y menos queda</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Japan%20Centre%2C%2035b%20Panton%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Bao Soho</span> — <span class="dir">53 Lexington Street, W1F 9AS</span> · Once taburetes y una carta de cuatro cosas: bollos taiwaneses al vapor, blancos y esponjosos, rellenos de panceta guisada. Se come en veinte minutos y se sale contento.
+        <span class="pedir"><b>Pedid</b> El <b>classic bao</b> de cerdo y el de <i>fried chicken</i>. Uno por barba y otro más de propina</span>
+        <span class="datos">🕐 mediodía y noche · 💷 12–18 £ · no reservan: se apunta uno en la lista de la puerta</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Bao%20Soho%2C%2053%20Lexington%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Dumplings’ Legend</span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">15–16 Gerrard Street, W1D 6JE · en Chinatown</span> · En plena calle de los faroles rojos, con los cocineros plegando empanadillas detrás de un cristal a la vista de todos. Los <b>xiao long bao</b> —las que llevan sopa dentro— son el motivo para entrar, y a los niños les encanta ver cómo las hacen.
+        <span class="pedir"><b>Pedid</b> <b>Xiao long bao</b> de cerdo. Se muerde un poquito por arriba, se sorbe el caldo y luego se come. Explicádselo a la niña o se quema</span>
+        <span class="datos">🕐 todos los días hasta tarde · 💷 15–20 £ por persona · las cestas son para compartir</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Dumplings%20Legend%2C%2015%20Gerrard%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Flat Iron</span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">17–18 Henrietta Street, WC2E 8QH (Covent Garden) y varios más</span> · Una sola cosa en la carta: un filete de <i>flat iron</i> con ensalada por un precio fijo de algo más de quince libras. Al final te traen un cucurucho de helado gratis. Es la forma más barata de cenar carne decente en el centro.
+        <span class="pedir"><b>Pedid</b> El filete, <i>medium rare</i>, y unas patatas fritas con grasa de vaca para compartir</span>
+        <span class="datos">🕐 todos los días · 💷 unas 15–20 £ por persona · no reservan, se apunta uno y te avisan al móvil</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Flat%20Iron%2C%2017%20Henrietta%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Bar Italia</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span> — <span class="dir">22 Frith Street, W1D 4RF</span> · Abierto desde 1949 y casi siempre. Barra de mármol, cafetera de las de verdad y las paredes llenas de fotos de boxeadores italianos. Es el sitio para un café de pie a las once de la noche.
+        <span class="pedir"><b>Pedid</b> Un <b>espresso</b> en la barra. Ojo, aquí el café sí se parece al de casa</span>
+        <span class="datos">🕐 hasta la madrugada · 💷 3–5 £ · en la acera, viendo pasar el Soho</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Bar%20Italia%2C%2022%20Frith%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Regency Cafe</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">17–19 Regency Street, SW1P 4BY · Westminster</span> · Una <i>caff</i> de 1946 con la fachada negra de azulejo art déco y el interior tal cual lo dejaron. Te sientas, gritan tu pedido desde la cocina y te traen el desayuno inglés completo por menos de diez libras. Sale en cien películas. Está cerca de Westminster, así que va bien la mañana que veáis el Parlamento.
+        <span class="pedir"><b>Pedid</b> <b>Full English breakfast</b> con tostada y té. Se pide en la barra y se paga en efectivo</span>
+        <span class="datos">🕐 L–V 7:00–14:30 y 16:00–19:15, S 7:00–12:00, cerrado domingos · 💷 menos de 10 £ · <b>llevad efectivo</b></span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Regency%20Cafe%2C%2017%20Regency%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="sur" class="etapa-sec">
+  <div class="kicker">La otra orilla</div>
+  <h2>Borough, Bankside y el paseo del río</h2>
+  <span class="fechas-chip">Un día entero, y casi todo gratis</span>
+  <div class="banner">
+    <img loading="lazy" decoding="async" src="img/borough.jpg" alt="Borough Market, el mercado de comida de Londres" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+    <div class="pie">Borough Market: puestos de comida bajo las vías del tren, y llevan ahí desde la Edad Media</div>
+  </div>
+  <p class="intro">La orilla sur del Támesis es un paseo continuo de cuatro kilómetros sin coches,
+  con el río a un lado y la ciudad enfrente. Se empieza en el mercado, se come picando, se sigue
+  andando y se va entrando en lo que apetezca: casi todo es gratis y no hace falta reservar nada.
+  Es la zona más fácil de hacer con una niña porque siempre hay algo que mirar.</p>
+
+  <div class="dias">
+    <div class="dia"><h4>El paseo, de este a oeste <span class="fecha">tres o cuatro horas con paradas</span></h4>
+      <p>Bajad en <strong>London Bridge</strong> y empezad en <strong>Borough Market</strong> antes
+      de las doce, cuando todavía se anda. Se pica de puesto en puesto —el queso fundido, un donut
+      recién hecho— y se sale al río. Enfrente tenéis el <strong>Globe</strong>, la reconstrucción
+      del teatro de Shakespeare con techo de paja, y al lado la <strong>Tate Modern</strong>, la
+      central eléctrica convertida en museo: se entra gratis y la <strong>sala de turbinas</strong>
+      es un espacio del tamaño de una catedral donde siempre hay una instalación gigante. Subid a
+      la <strong>terraza del piso 10</strong>, que también es gratis y tiene la mejor vista de la
+      catedral de San Pablo que hay en Londres. Se cruza el <strong>Millennium Bridge</strong>, el
+      puente peatonal de acero, o se sigue hacia el oeste hasta el <strong>London Eye</strong>.</p>
+      <div class="tip">Entre el Eye y Waterloo está el <b>túnel de Leake Street</b>: doscientos
+      metros de túnel donde pintar grafiti es legal, así que hay gente pintando a todas horas y las
+      paredes cambian cada semana. A los niños les parece magia. Huele a espray, eso sí.</div></div>
+  </div>
+
+  <h3 class="sub-h">Lo que hay en el paseo</h3>
+  <ul class="lista-ver">
+    <li><b>Tate Modern</b> — gratis, todos los días. La colección permanente tiene Picasso, Dalí, Rothko y Warhol. Con niños, lo mejor es la sala de turbinas y las plantas altas.</li>
+    <li><b>Shakespeare’s Globe</b> — el teatro isabelino reconstruido con las mismas técnicas. Se puede ver por fuera, hacer la visita guiada o, si os apetece, ver una función <b>de pie por 5 £</b>, que es como se veía entonces.</li>
+    <li><b>Southwark Cathedral</b> — pequeña, gratis, con vidrieras de Shakespeare y ochocientos años encima. Está pegada al mercado.</li>
+    <li><b>The Golden Hinde</b> — la réplica a tamaño real del galeón de Francis Drake, amarrada en un muelle. Se ve entera desde fuera; entrar cuesta unas pocas libras.</li>
+    <li><b>Millennium Bridge</b> — el puente que se movía tanto el día que lo abrieron que lo cerraron dos años. Ahora está quieto y la vista hacia San Pablo es la mejor postal de Londres.</li>
+    <li><b>Tower Bridge</b>, al otro extremo — el puente famoso, el de las torres. Se cruza gratis andando; pagar por subir a la pasarela de cristal solo merece la pena si a la niña le hace ilusión.</li>
+    <li><b>Sky Garden</b>, cruzando el puente — un jardín tropical en la planta 35 de un rascacielos, <b>gratis con reserva</b>. Ver <a href="#entradas">lo que hay que reservar</a>.</li>
+  </ul>
+
+  <div class="comer">
+    <h3>Qué y dónde comer en Borough y la orilla sur</h3>
+    <div class="platos">
+      <span class="plato">Grilled cheese</span><span class="plato">Pasta fresca</span><span class="plato">Donuts</span><span class="plato">Ostras</span><span class="plato">Cerveza en pub del XVII</span>
+    </div>
+    <ul class="sitios">
+      <li><span class="nombre">Borough Market</span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">8 Southwark Street, SE1 1TL · bajo las vías de London Bridge</span> · El mercado de comida de Londres, con casi mil años de historia en el mismo sitio. Se viene a picar de puesto en puesto: queso, ostras, empanadas, chocolate. Es el mejor sitio de la ciudad para comer sin sentarse y a la niña le va a encantar porque todo el mundo da a probar.
+        <span class="pedir"><b>Pedid</b> El <b>grilled cheese de Kappacasein</b> (pan de masa madre y queso fundido de su propia lechería, en Stoney Street) y un <b>donut de Bread Ahead</b> relleno de crema, que lo hacen delante de vosotros</span>
+        <span class="datos">🕐 mercado completo M–S 10:00–17:00, algunos puestos también domingo · 💷 se come por 10–15 £ · <b>id antes de las 12</b> o no se anda</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Borough%20Market%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Padella</span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">6 Southwark Street, SE1 1TQ · en la esquina del mercado</span> · Pasta hecha a mano delante de vosotros, platos pequeños, entre seis y doce libras cada uno. Es probablemente la mejor relación entre lo que cuesta y lo que se come de todo Londres, y por eso hay cola desde que abren.
+        <span class="pedir"><b>Pedid</b> Los <b>pici cacio e pepe</b> y los ravioli de cordero. Dos platos por persona y pan</span>
+        <span class="datos">🕐 12:00–15:45 y 17:00–22:00 · 💷 15–20 £ por persona · <b>no reservan</b>: se apunta uno en la lista por el móvil y te avisan; id a las 17:00 y esperáis poco</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Padella%2C%206%20Southwark%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Maltby Street Market</span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">Ropewalk, SE1 3PA · a 10 min andando de Borough</span> · Un callejón entre arcos de ferrocarril con veinte puestos y ninguna tienda de recuerdos. Es lo que era Borough antes de salir en las guías: más pequeño, más barato y con gente del barrio. Solo abre el fin de semana.
+        <span class="pedir"><b>Pedid</b> El <b>Scotch egg</b> del puesto de Finest Fayre y unos <i>waffles</i> para la niña</span>
+        <span class="datos">🕐 <b>solo sábados y domingos</b>, 10:00–17:00 · 💷 8–14 £ · mesas altas de pie, se come en el callejón</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Maltby%20Street%20Market%2C%20Ropewalk%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">The George Inn</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span> — <span class="dir">75–77 Borough High Street, SE1 1NH</span> · El <b>último pub de Londres con galería de madera</b>, de 1677, escondido en un patio y propiedad del National Trust. Dickens lo menciona en <i>La pequeña Dorrit</i>. Se entra a tomar una pinta en el patio y a mirar hacia arriba.
+        <span class="pedir"><b>Pedid</b> Una pinta de <i>bitter</i> —la cerveza inglesa de verdad, poco fría y poco gaseosa— en el patio</span>
+        <span class="datos">🕐 todos los días · 💷 6–7 £ la pinta · se pide en la barra y se paga en el momento: aquí nadie viene a tomar nota</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=The%20George%20Inn%2C%20Borough%20High%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="museos" class="etapa-sec">
+  <div class="kicker">Tres museos gigantes, uno al lado del otro</div>
+  <h2>South Kensington</h2>
+  <span class="fechas-chip">El plan seguro si llueve · gratis</span>
+  <div class="banner">
+    <img loading="lazy" decoding="async" src="img/natural-history.jpg" alt="El vestíbulo del Museo de Historia Natural de Londres" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+    <div class="pie">El Museo de Historia Natural: una catedral victoriana llena de bichos, y entrar no cuesta nada</div>
+  </div>
+  <p class="intro">Los victorianos pusieron aquí tres museos enormes con el dinero de una
+  exposición universal, y los tres siguen siendo <strong>gratis</strong>. Salen del mismo pasillo
+  subterráneo desde el metro de South Kensington, así que si el día está feo os podéis meter aquí y
+  no salir. <strong>No intentéis ver dos en un día</strong> con una niña de seis años: uno por la
+  mañana, comer y al parque.</p>
+
+  <h3 class="sub-h">Cuál elegir</h3>
+  <ul class="lista-ver">
+    <li><b>Historia Natural</b> (Cromwell Road) — <b>el de los dinosaurios</b>, y el que hay que hacer con ella. Esqueletos, un tiranosaurio animado que se mueve y ruge, la sala de mamíferos con la ballena azul colgando, y una sala de volcanes con un simulador que reproduce el terremoto de Kobe de 1995. El edificio ya vale la visita: parece una catedral. Fuera hay jardines nuevos con dinosaurios de bronce.</li>
+    <li><b>Ciencia</b> (Exhibition Road) — cohetes, la cápsula del Apolo 10, máquinas de vapor y, para su edad, <b>The Garden</b>: una sala de juego de agua, luz y construcción para menores de seis. Casi todo gratis; el <i>Wonderlab</i>, la parte de experimentos con botones, se paga aparte.</li>
+    <li><b>Victoria &amp; Albert</b> (Cromwell Road) — el de diseño y artes decorativas: moda, joyas, cerámica, la sala de los vaciados con la columna de Trajano partida en dos. Para los adultos es el mejor de los tres. Su <a href="#comer">cafetería de 1868</a> es la primera cafetería de museo del mundo y hay que verla.</li>
+  </ul>
+
+  <div class="tip"><b>Cómo se hacen sin morir en el intento:</b> entrad al abrir (10:00) o después
+  de las 15:00, que es cuando se vacían. Se puede reservar entrada gratis por internet para no
+  hacer cola, pero también se entra sin nada. Y las mochilas grandes hay que dejarlas en
+  consigna, que se paga.</div>
+
+  <h3 class="sub-h">Y al salir, el parque</h3>
+  <ul class="lista-ver">
+    <li><b>Kensington Gardens</b>, a cinco minutos — con el <a href="#nina">parque infantil del barco pirata</a> dedicado a Diana, que es de los mejores de Europa y es gratis.</li>
+    <li><b>Hyde Park y el Serpentine</b> — se puede alquilar una barca de remos en el lago, o solo dar de comer a los patos. Las ardillas se acercan a la mano.</li>
+    <li><b>Japan House</b>, en Kensington High Street — exposición y tienda japonesas, gratis, a quince minutos andando por el parque. En el <a href="#comer">bloque de comer</a> están los detalles.</li>
+    <li><b>Royal Albert Hall</b> — enfrente del Museo de la Ciencia, redondo y de ladrillo. Por fuera basta.</li>
+  </ul>
+
+  <div class="comer">
+    <h3>Qué y dónde comer en South Kensington</h3>
+    <div class="platos">
+      <span class="plato">Picnic en el parque</span><span class="plato">Comida japonesa</span><span class="plato">Té con pastas</span>
+    </div>
+    <ul class="sitios">
+      <li><span class="nombre">Las Refreshment Rooms del V&A</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">Victoria and Albert Museum, Cromwell Road, SW7 2RL</span> · La <b>primera cafetería de museo del mundo</b>, de 1868, con tres salas decoradas por William Morris y Edward Poynter: azulejos, vidrieras y columnas. Se paga como una cafetería normal y se está sentado en una obra de arte. Entrar al museo es gratis, así que se puede venir solo a esto.
+        <span class="pedir"><b>Pedid</b> Un té con un trozo de tarta en la <b>Gamble Room</b>, la de las columnas de cerámica</span>
+        <span class="datos">🕐 con el museo, 10:00–17:45 · 💷 6–12 £ · en el patio de fuera hay una lámina de agua donde los niños se meten en verano</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Victoria%20and%20Albert%20Museum%2C%20Cromwell%20Road%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Japan House</span> — <span class="dir">101–111 Kensington High Street, W8 5SA</span> · La casa de la cultura japonesa en Londres, y <b>entrar es gratis</b>: tres plantas con una exposición que va cambiando, una tienda de objetos japoneses muy bien elegidos —papelería, cerámica, cuchillos—, una biblioteca y un mostrador de té. Arriba está el restaurante AKIRA, que ya es caro; abajo se puede tomar algo sin gastar.
+        <span class="pedir"><b>Pedid</b> Ver la exposición de abajo, bajar a la tienda y tomar un <i>matcha</i> en el mostrador</span>
+        <span class="datos">🕐 L–S 10:00–20:00, D 12:00–18:00 · 💷 la exposición y la tienda, gratis · metro High Street Kensington, a 100 m</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Japan%20House%20London%2C%20101%20Kensington%20High%20Street%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Picnic en Kensington Gardens</span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">Comprad en el Whole Foods de Kensington High Street, W8 5SE</span> · Alrededor de los museos casi todo es caro y regular. La jugada buena es comprar comida hecha en un supermercado y cruzar al parque: hay césped, ardillas que se acercan a la mano y el <a href="#nina">parque infantil del barco pirata</a> a diez minutos.
+        <span class="pedir"><b>Pedid</b> Sándwiches, fruta y algo de beber. En cualquier supermercado inglés hay comida preparada decente por 4–5 £</span>
+        <span class="datos">💷 15 £ los tres · si llueve, los propios museos tienen cafetería y se puede entrar comida al patio del V&A</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Kensington%20Gardens%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="greenwich" class="etapa-sec">
+  <div class="kicker">Se va en barco, y esa es media gracia</div>
+  <h2>Greenwich y el río</h2>
+  <span class="fechas-chip">Un día entero · el más fácil con niños</span>
+  <div class="banner">
+    <img loading="lazy" decoding="async" src="img/greenwich.jpg" alt="El Cutty Sark y el parque de Greenwich" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+    <div class="pie">Greenwich: un velero de 1869 en dique seco, un parque en cuesta y el meridiano cero arriba del todo</div>
+  </div>
+  <p class="intro">Si hay un día que hacer entero fuera del centro, es este. Se baja por el
+  Támesis en un catamarán rápido —cuarenta minutos con toda la ciudad pasando por la
+  ventana—, se llega a un pueblo con mercado, un barco enorme, un parque en cuesta y, arriba,
+  <strong>la línea del meridiano cero</strong>, donde se pone un pie a cada lado y ya has estado en
+  los dos hemisferios. Todo cabe en un día sin agobio.</p>
+
+  <div class="dias">
+    <div class="dia"><h4>Cómo se hace <span class="fecha">salid sobre las 10:00</span></h4>
+      <p>Coged el <strong>Uber Boat by Thames Clipper</strong> en el embarcadero de Westminster,
+      London Eye o Tower. Es un barco de línea, no un crucero turístico: <strong>se paga con la
+      misma tarjeta contactless del metro</strong> y va cada veinte minutos. Al bajar en Greenwich
+      Pier tenéis delante el <strong>Cutty Sark</strong>. Luego el mercado, comer, y subir andando
+      por el parque hasta el observatorio. La bajada, con la vista de los rascacielos de Canary
+      Wharf enfrente, es de las mejores estampas de Londres. De vuelta, otra vez el barco, o el
+      <strong>DLR</strong>, el metro sin conductor: sentaos delante del todo, donde iría el
+      maquinista, que a los niños les encanta.</p>
+      <div class="tip">El barco no entra en el tope diario de 8,90 £ del metro: se paga aparte,
+      unas 9–10 £ el trayecto de adulto y la niña gratis. Vale la pena aunque solo sea de ida, y
+      volver en DLR, que sí entra en el tope.</div></div>
+  </div>
+
+  <h3 class="sub-h">Qué hay allí</h3>
+  <ul class="lista-ver">
+    <li><b>Cutty Sark</b> — el clíper del té de 1869, el barco más rápido de su tiempo, levantado del suelo para poder andar <b>por debajo del casco</b>. Se paga entrada; por fuera ya impresiona.</li>
+    <li><b>Greenwich Market</b> — mercado cubierto del XIX con puestos de comida y artesanía. Es donde se come.</li>
+    <li><b>El parque de Greenwich</b> — enorme, en cuesta, con ciervos en una reserva vallada y mucho sitio para correr.</li>
+    <li><b>El Observatorio Real y el meridiano</b> — la línea de latón donde empieza la longitud cero. Entrar al patio del meridiano se paga; la <b>bola roja del tiempo</b> de la torre, que cae a la una en punto desde 1833 para que los barcos pusieran el reloj, se ve gratis desde fuera.</li>
+    <li><b>El Museo Marítimo Nacional</b> — gratis, con una galería para niños de barcos y cañones donde se puede tocar todo.</li>
+    <li><b>El túnel peatonal bajo el Támesis</b> — de 1902, con ascensor de madera. Se cruza el río por debajo en diez minutos andando y sale gratis. A la niña le va a parecer una aventura.</li>
+  </ul>
+
+  <div class="comer">
+    <h3>Qué y dónde comer en Greenwich</h3>
+    <div class="platos">
+      <span class="plato">Pie and mash</span><span class="plato">Puestos del mercado</span><span class="plato">Pub junto al río</span>
+    </div>
+    <ul class="sitios">
+      <li><span class="nombre">Goddards at Greenwich</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">22 King William Walk, SE10 9HU</span> · Pie and mash: empanada de carne, puré de patata y una salsa verde de perejil llamada <i>liquor</i>. Es la comida obrera de Londres desde el siglo XIX y esta familia lleva haciéndolo desde 1890. No es alta cocina, es historia comestible y cuesta ocho libras.
+        <span class="pedir"><b>Pedid</b> <b>Pie and mash</b> con <i>liquor</i>. Los valientes, con anguila en gelatina</span>
+        <span class="datos">🕐 todos los días 10:00–19:00 · 💷 8–12 £ · a un paso del Cutty Sark</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Goddards%20at%20Greenwich%2C%2022%20King%20William%20Walk%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Greenwich Market</span><span class="sello barato" title="se come por menos de 12 £"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M11.5 2.5H20a1.5 1.5 0 0 1 1.5 1.5v8.5L12 21.5 2.5 12z"/><circle cx="17" cy="7" r="1.6" fill="currentColor" stroke="none"/></svg></span> — <span class="dir">5B Greenwich Market, SE10 9HZ</span> · Mercado cubierto del siglo XIX, más pequeño y menos agobiante que los del centro, con puestos de comida de medio mundo y artesanía. Perfecto para comer el día que bajéis en barco.
+        <span class="pedir"><b>Pedid</b> Lo que os entre por los ojos, y unos <i>brownies</i> de postre</span>
+        <span class="datos">🕐 todos los días 10:00–17:30 · 💷 8–14 £ · techado, así que sirve también si llueve</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Greenwich%20Market%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">The Trafalgar Tavern</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span> — <span class="dir">Park Row, SE10 9NW · junto al río</span> · Pub de 1837 con los ventanales dando al Támesis, donde los ministros victorianos venían a comer <i>whitebait</i> —pescaditos fritos— del río. Se toma algo mirando el agua y Canary Wharf enfrente.
+        <span class="pedir"><b>Pedid</b> Una pinta con vistas, o el <i>fish and chips</i> si es la hora</span>
+        <span class="datos">🕐 todos los días · 💷 6–7 £ la pinta, 20 £ comer · dos minutos andando desde el parque</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Trafalgar%20Tavern%2C%20Park%20Row%2C%20London" target="_blank" rel="noopener">📍 Maps</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="nina" class="etapa-sec">
+  <div class="kicker">Seis años, que no son ni dos ni doce</div>
+  <h2>Con la niña</h2>
+  <span class="fechas-chip">Lo de Harry Potter, y todo lo demás que le va a gustar</span>
+  <p class="intro">A esa edad funciona lo que se toca, lo que se sube y lo que se moja, y no
+  funciona ninguna cola de más de veinte minutos. Buena noticia: <strong>los museos grandes de
+  Londres son gratis y están hechos para niños</strong>, y ella <strong>viaja gratis en metro,
+  bus, tren y barco</strong> mientras vaya con vosotros. Aquí está todo junto, con lo que cuesta y
+  lo que hay que reservar.</p>
+
+  <h3 class="sub-h">Harry Potter, de menos a más</h3>
+  <ul class="lista-ver">
+    <li><b>El andén 9¾</b> · King’s Cross, dentro de la estación — <b>gratis</b>. Medio carrito metido en la pared, un empleado que te lanza la bufanda al aire para la foto y una tienda al lado. La foto que hacen ellos se paga, pero <b>podéis hacerla vosotros con el móvil sin pagar nada</b>. Suele haber entre 20 minutos y una hora de cola: id <b>a primera hora de la mañana o al final de la tarde</b>.</li>
+    <li><b>House of MinaLima</b> · 157 Wardour Street, Soho — <b>gratis</b>. Esta es la buena, y casi nadie la conoce. Es la casa de los dos diseñadores gráficos que hicieron <b>todo el papel de las películas</b>: <i>El Profeta</i>, los mapas del merodeador, las cartas de Hogwarts, las etiquetas de las pociones. Cuatro plantas de una casa antigua forradas de eso, con las paredes empapeladas de portadas y una escalera cubierta de cartas volando. Se puede tocar y hay tienda. Es pequeña, así que a veces hay cola en la puerta.</li>
+    <li><b>La tienda de Platform 9¾ y la de Harry Potter de Charing Cross</b> — tiendas, sin más, pero si lo que quiere es comprarse algo, aquí hay de todo: varitas, bufandas, ranas de chocolate.</li>
+    <li><b>Warner Bros Studio Tour</b> · Leavesden, a las afueras — <b>el plan gordo</b>, y el único que cuesta dinero de verdad. Son los estudios reales donde se rodaron las ocho películas: el Gran Comedor montado, el callejón Diagon entero, la maqueta del castillo, los decorados originales. Se tarda unas tres horas y media dentro. <b>Las entradas de adulto arrancan en 58,50 £ y solo se venden por internet, con fecha y hora</b>. Es lo primero que hay que mirar al llegar al hotel, porque <b>se agota con semanas de antelación</b>. Se va en tren desde Euston a Watford Junction (20 min) y allí un autobús lanzadera de 15 minutos que va incluido en la entrada.</li>
+  </ul>
+  <div class="tip"><b>Si el Studio Tour está agotado</b> —que puede pasar—, el plan de repuesto es
+  MinaLima por la mañana, el andén 9¾ por la tarde y, de paso, la fachada de <b>Leadenhall Market</b>
+  en la City, que es el Callejón Diagon de la primera película: un mercado victoriano cubierto,
+  pintado de burdeos y oro, y no cuesta nada.</div>
+
+  <h3 class="sub-h">Museos donde la dejan tocarlo todo</h3>
+  <ul class="lista-ver">
+    <li><b>Young V&amp;A</b> · Bethnal Green — <b>gratis</b> y probablemente lo que más le va a gustar de la semana. Un museo entero hecho para niños, reabierto hace poco: juguetes de todas las épocas, una zona de disfraces y construcción, y todo pensado para su edad exacta. Está a quince minutos andando de <a href="#este">Brick Lane</a>.</li>
+    <li><b>Historia Natural</b> · South Kensington — <b>gratis</b>. Los dinosaurios y el tiranosaurio que se mueve. Es el clásico y funciona.</li>
+    <li><b>Museo de la Ciencia</b> · South Kensington — <b>gratis</b>. Cohetes de verdad y la sala de juego de agua y construcción.</li>
+    <li><b>The Postal Museum y el Mail Rail</b> · cerca de Farringdon — <b>16 £ el adulto y 9 £ la niña</b>. Se monta en <b>un tren de correos en miniatura</b> por los túneles reales que llevaban las cartas bajo Londres desde 1927. Quince minutos de trayecto por debajo de la ciudad, a oscuras, en un vagón donde solo caben personas encogidas. Es rarísimo y les encanta.</li>
+    <li><b>London Transport Museum</b> · Covent Garden — <b>los menores entran gratis</b> y el adulto ronda las 25 £ (la entrada vale un año). Autobuses y vagones de metro antiguos <b>a los que se sube</b>, y una cabina de conductor de metro para jugar.</li>
+  </ul>
+
+  <h3 class="sub-h">Correr, mojarse y gastar energía</h3>
+  <ul class="lista-ver">
+    <li><b>Diana Memorial Playground</b> · Kensington Gardens — <b>gratis</b>. Un <b>barco pirata de tamaño real varado en la arena</b>, tipis, campanillas y toboganes, en un parque cerrado y vigilado donde no entran adultos sin niños. De los mejores parques infantiles de Europa. En verano hay cola en la puerta por aforo: mejor por la mañana.</li>
+    <li><b>Las fuentes de Granary Square</b> · <a href="#kingscross">King’s Cross</a> — <b>gratis</b>. Mil chorros que suben y bajan del suelo. Se moja entera, así que ropa de recambio.</li>
+    <li><b>Coram’s Fields</b> · Bloomsbury, junto al British Museum — <b>gratis</b>. Tres hectáreas con animales de granja, tirolina y arenero, en el sitio del antiguo hospicio. Y con la misma regla: <b>ningún adulto entra sin un niño</b>.</li>
+    <li><b>El túnel de Leake Street</b> · Waterloo — <b>gratis</b>. El túnel donde se puede pintar. Si lleváis un espray os dejan pintar a vosotros también.</li>
+    <li><b>Las ardillas de Hyde Park y St James’s Park</b> — se acercan a la mano si le dais un cacahuete. Y en St James’s hay pelícanos desde 1664, que comen a las 14:30.</li>
+    <li><b>Hamleys</b> · Regent Street — siete plantas de juguetería con demostraciones en cada piso. Es un caos y se sale con algo comprado, avisados quedáis.</li>
+  </ul>
+
+  <h3 class="sub-h">Lo que cuesta caro y hay que pensarse</h3>
+  <p style="color:var(--tinta2);font-size:.95rem;margin-bottom:10px">Todo esto está en la misma
+  manzana junto al London Eye y se vende en paquetes. Con 6 años funciona, pero es mucho dinero
+  para lo que es. Si tenéis que elegir uno, el acuario.</p>
+  <ul class="lista-ver">
+    <li><b>SEA LIFE London</b> — el acuario, con el túnel de tiburones por encima de la cabeza.</li>
+    <li><b>London Eye</b> — media hora de vuelta lenta con vistas. Comprado por internet y con antelación sale bastante más barato.</li>
+    <li><b>Shrek’s Adventure</b> — muy de su edad y muy caro.</li>
+  </ul>
+</section>
+
+<section id="paseos" class="etapa-sec">
+  <div class="kicker">Para las tardes sin plan</div>
+  <h2>Paseos, arquitectura y sitios raros</h2>
+  <p class="intro">Ninguno de estos es una visita: son sitios por los que andar. Van de mejor a
+  peor si solo podéis hacer uno o dos, y todos son gratis salvo donde se dice.</p>
+
+  <h3 class="sub-h">El cementerio de West Norwood</h3>
+  <div class="banner">
+    <img loading="lazy" decoding="async" src="img/west-norwood.jpg" alt="El cementerio victoriano de West Norwood" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+    <div class="pie">Mausoleos, ángeles y hiedra: uno de los siete grandes cementerios victorianos de Londres</div>
+  </div>
+  <p style="margin-bottom:14px">En 1830 los cementerios de Londres estaban tan llenos que los
+  cadáveres salían a la superficie, así que el Parlamento dejó que unas empresas privadas
+  construyeran <strong>siete cementerios enormes</strong> fuera de la ciudad. Los llaman
+  <i>los Siete Magníficos</i> y son jardines románticos llenos de mausoleos, ángeles y hiedra.
+  <strong>West Norwood</strong> fue el segundo, de 1837, y <strong>el primero del mundo construido
+  en estilo neogótico</strong>. Tiene 69 edificios protegidos y, en una esquina, una
+  <strong>necrópolis griega</strong> entera —diecinueve mausoleos de las familias armadoras que
+  hicieron fortuna en Londres— que parece trasplantada de otro país. Se entra gratis, todos los
+  días, y casi nunca hay nadie.</p>
+  <ul class="lista-ver">
+    <li><b>Cómo se llega</b> — tren desde London Bridge o Victoria hasta la estación de West Norwood, unos 20 minutos, y la entrada está enfrente. Entra en el tope diario de transporte.</li>
+    <li><b>Las catacumbas están cerradas</b> — la estructura no es segura desde hace años. En la web de los <i>Friends of West Norwood Cemetery</i> hay un recorrido en 3D por dentro, y de vez en cuando organizan visitas guiadas por el cementerio.</li>
+    <li><b>Quién está enterrado</b> — Mrs Beeton, la que escribió el libro de cocina que tuvo toda casa inglesa durante un siglo; Hiram Maxim, el de la ametralladora; y el fundador de Tate &amp; Lyle, el azúcar.</li>
+    <li><b>Si preferís el famoso</b> — <b>Highgate</b>, al norte, es el de la tumba de Karl Marx y la avenida egipcia. Se paga entrada (unas 10 £) y hay más gente, pero el ala oeste, con las tumbas comidas por el bosque, es impresionante.</li>
+  </ul>
+
+  <h3 class="sub-h">Arquitectura: lo que hay que ver de verdad</h3>
+  <ul class="lista-ver">
+    <li><b>Los gasómetros de <a href="#kingscross">King’s Cross</a></b> — ya está contado arriba, y es lo primero de esta lista.</li>
+    <li><b>El Barbican</b> · Silk Street, City — la ciudadela de hormigón de los años setenta: torres, pasarelas elevadas, un lago con fuentes y, dentro, un <b>invernadero tropical con más de mil quinientas plantas</b> que abre gratis casi todos los domingos (hay que reservar plaza en su web). Es la mejor arquitectura brutalista de Europa y no se parece a nada.</li>
+    <li><b>Battersea Power Station</b> · al sur del río — la central eléctrica de las cuatro chimeneas blancas, la de la portada de Pink Floyd, convertida en centro comercial. La sala de turbinas art déco es espectacular. Se puede <b>subir dentro de una de las chimeneas</b> en un ascensor de cristal, pero eso se paga.</li>
+    <li><b>Leadenhall Market</b> · City — mercado victoriano cubierto de 1881, pintado de burdeos y oro. Es el Callejón Diagon de la primera película. Entre semana a mediodía está lleno de gente de la City; el fin de semana está vacío y se fotografía mejor.</li>
+    <li><b>Las iglesias de Hawksmoor</b> — seis iglesias del XVIII repartidas por el este, todas raras y desproporcionadas a propósito: Christ Church en Spitalfields, St George in the East en Wapping, St Anne’s en Limehouse.</li>
+    <li><b>Sir John Soane’s Museum</b> · 13 Lincoln’s Inn Fields — <b>gratis</b>. La casa de un arquitecto del XIX que la dejó tal cual, atiborrada hasta el techo de estatuas, sarcófagos y cuadros, con espejos y claraboyas por todas partes. Es pequeña, oscura y absolutamente única. Con niños se hace en media hora.</li>
+  </ul>
+
+  <h3 class="sub-h">Paseos largos</h3>
+  <ul class="lista-ver">
+    <li><b>Regent’s Canal: Little Venice → Camden</b> — hora y cuarto por el camino de sirga, sin coches, entre barcazas de colores, y se pasa por dentro del zoo de Londres. También hay barcos que hacen el trayecto por unas libras, que con la niña quizá sea mejor.</li>
+    <li><b>Hampstead Heath</b> — el parque salvaje del norte: 320 hectáreas sin diseñar. Desde <b>Parliament Hill</b> se ve todo Londres, y es donde se vuelan las cometas los domingos. Al lado está <b>Kenwood House</b>, una casa de campo del XVIII con un Rembrandt y un Vermeer colgados, gratis. Y hay <b>estanques donde la gente se baña</b> todo el año.</li>
+    <li><b>La City un domingo</b> — el distrito financiero se queda literalmente vacío el fin de semana. Se puede andar por callejones medievales entre rascacielos sin cruzarse con nadie. Es de las cosas más raras de Londres.</li>
+    <li><b>Columbia Road y Broadway Market</b> — el domingo por la mañana el de las flores, el sábado el de comida en Hackney. Los dos, muy de barrio.</li>
+    <li><b>De Westminster a la Torre por la orilla sur</b> — cuatro kilómetros de paseo continuo junto al río, con todo enfrente. Se puede hacer por trozos.</li>
+  </ul>
+</section>
+
+<section id="comer" class="etapa-sec">
+  <div class="kicker">Lo importante</div>
+  <h2>Comer en Londres</h2>
+  <p class="intro">Lo de que en Londres se come mal lleva treinta años sin ser verdad. Lo que sí
+  es verdad es que <strong>hay que saber dónde meterse</strong>: la diferencia entre un sitio bueno
+  y una trampa para turistas está a veces en la misma calle. En esta guía hay
+  <b data-total-sitios>30</b> sitios, todos con dirección y enlace a Maps, repartidos por la zona a
+  la que pertenecen. Aquí tenéis el atajo a cada bloque.</p>
+
+  <h3 class="ir-titulo">Ir directo a los sitios de cada zona</h3>
+  <div class="ir-etapas">
+    <a class="ir-etapa" href="#este"><b>Brick Lane y Shoreditch</b><span>sitios</span></a>
+    <a class="ir-etapa" href="#kingscross"><b>King’s Cross</b><span>sitios</span></a>
+    <a class="ir-etapa" href="#soho"><b>Soho y Covent Garden</b><span>sitios</span></a>
+    <a class="ir-etapa" href="#sur"><b>Borough y el sur</b><span>sitios</span></a>
+    <a class="ir-etapa" href="#museos"><b>South Kensington</b><span>sitios</span></a>
+    <a class="ir-etapa" href="#greenwich"><b>Greenwich</b><span>sitios</span></a>
+  </div>
+
+  <div class="cerca-invita sans" style="margin-top:18px">
+    <b>📍 O mejor:</b> pulsad aquí y os ordeno los <b data-total-sitios>30</b> por lo cerca que
+    estén de donde estáis ahora mismo.
+    <button class="cerca-btn" onclick="abrirCerca()">¿Qué tengo cerca?</button>
+  </div>
+
+  <h3 class="ir-titulo" style="margin-top:30px">Lo que hay que probar, y qué es exactamente</h3>
+  <ul class="lista-ver">
+    <li><b>Salt beef beigel</b> — pecho de ternera en salmuera, cocido horas y cortado a cuchillo, dentro de un beigel hervido, con mostaza inglesa y pepinillo. Lo trajeron los judíos del este de Europa y solo queda bien hecho en <a href="#este">Brick Lane</a>. Es <i>el</i> bocado de Londres y cuesta ocho libras.</li>
+    <li><b>Full English breakfast</b> — huevo, bacon, salchicha, alubias, tomate, champiñón, morcilla negra y una tostada. Se come a las nueve de la mañana y se aguanta hasta las cinco. En una <i>caff</i> de barrio cuesta menos de diez libras; en el hotel, el triple.</li>
+    <li><b>Fish and chips</b> — bacalao rebozado en masa de cerveza y patatas gruesas. Se le echa <b>vinagre de malta</b> y sal, y se acompaña de <i>mushy peas</i>, un puré de guisantes verde fosforito que está mucho mejor de lo que parece.</li>
+    <li><b>Pie and mash</b> — empanada de carne, puré y <i>liquor</i>, una salsa verde de perejil. La comida de los obreros de Londres desde el XIX, y quedan cuatro o cinco sitios haciéndola. En <a href="#greenwich">Greenwich</a> hay uno de 1890.</li>
+    <li><b>Sunday roast</b> — el asado del domingo: carne, patatas asadas en grasa, verduras, salsa <i>gravy</i> y un <i>Yorkshire pudding</i>, que es una torta hueca de masa horneada. Se come de 12 a 16 en los pubs y hay que reservar. Es la comida más inglesa que existe.</li>
+    <li><b>Curry</b> — la comida nacional de Reino Unido, sin exagerar. Lo bueno no está en los restaurantes con neón de Brick Lane, sino en los punyabíes de Whitechapel, donde no venden alcohol pero <b>te dejan llevar el tuyo</b>.</li>
+    <li><b>Afternoon tea</b> — té con sándwiches, bollos y pastas a las cinco. En un hotel bueno cuesta 60 £ por persona; en la cafetería de un museo, 10 £ y está igual de rico.</li>
+    <li><b>Una pinta en un pub</b> — la cerveza inglesa de verdad (<i>ale</i>, <i>bitter</i>) se sirve poco fría y poco gaseosa, tirada a mano con una palanca. Probadla aunque solo sea una vez: no es que esté caliente, es que es otra cosa.</li>
+  </ul>
+
+  <div class="ojo" style="background:var(--oro-suave);color:var(--tinta);border-left:3px solid var(--oro);border-radius:0 9px 9px 0;margin-top:22px">
+    🍽️ <b>Las tres reglas que hay que saber:</b> <b>1)</b> en los pubs <b>se pide y se paga en la
+    barra</b>, nadie va a ir a tomaros nota a la mesa; <b>2)</b> los sitios buenos y baratos
+    <b>no reservan</b>: se apunta uno en una lista con el móvil y te avisan por mensaje, así que
+    dad el nombre y os vais a tomar algo mientras; <b>3)</b> se cena pronto, la cocina de muchos
+    sitios <b>cierra a las 22:00</b>. Cenar a las diez es cenar tarde aquí.
+  </div>
+
+  <div class="tip" style="margin-top:16px"><b>La propina:</b> en los restaurantes con mesa suelen
+  añadir un <i>service charge</i> del 12,5 % que ya viene en la cuenta: si está, no hay que dejar
+  nada más, y se puede pedir que lo quiten si algo ha ido mal. En pubs, cafeterías y puestos de
+  mercado <b>no se deja propina</b>.</div>
+</section>
+
+<section id="entradas" class="etapa-sec aviso-sec">
+  <div class="kicker">Antes de nada</div>
+  <h2>Lo que hay que hacer <em>ya</em></h2>
+  <p class="intro">Londres es una ciudad de entrar y salir sin reservar nada: los museos grandes son
+  gratis y se entra andando. Pero hay <strong>cuatro cosas</strong> que sí hay que mirar, y una de
+  ellas antes de ir al aeropuerto.</p>
+
+  <ul class="lista-ver">
+    <li><b>🛂 La ETA, y esto es lo urgente</b> — desde el <b>25 de febrero de 2026</b> los españoles
+      necesitan una <b>Autorización Electrónica de Viaje (ETA)</b> para entrar en Reino Unido.
+      <b>La necesita cada persona, la niña también</b>, cuesta <b>20 £</b> y vale dos años. Se pide
+      en la app oficial <i>UK ETA</i> o en <b>gov.uk</b> —desconfiad de las webs que cobran de más—
+      y hace falta el pasaporte. Suele concederse en minutos, pero el gobierno pide contar con
+      <b>hasta tres días hábiles</b>, y <b>las aerolíneas ya no dejan embarcar con la solicitud en
+      trámite</b>: hace falta tenerla aprobada. Y ojo con lo otro: <b>el DNI no sirve</b> desde el
+      Brexit, hay que llevar <b>pasaporte</b>, también el de la niña.</li>
+    <li><b>🧙 Warner Bros Studio Tour</b> — si queréis hacer lo de Harry Potter en serio, esto se
+      agota con semanas de antelación. Miradlo <b>hoy mismo</b> en su web oficial: si hay hueco,
+      cogedlo; si no, id al plan B de la <a href="#nina">sección de la niña</a>.</li>
+    <li><b>🏛️ British Museum, el viernes por la noche</b> — es gratis siempre, pero
+      <b>los viernes abre hasta las 20:30</b> (último pase a las 19:00) y esa es la mejor hora
+      para verlo: sin colegios, sin grupos y con las salas medio vacías. Se reserva una franja
+      gratis en su web para entrar directo. La piedra Rosetta, los mármoles del Partenón y las
+      momias, sin empujones.</li>
+    <li><b>🌿 Sky Garden</b> — el jardín de la planta 35, gratis. Las plazas se liberan
+      <b>los lunes por la mañana para tres semanas más adelante</b>, así que llegando mañana lo
+      normal es que esté todo cogido. Dos salidas: mirad por si hay cancelaciones (aparecen a
+      todas horas) o presentaos y probad, que si hay hueco dejan entrar.</li>
+  </ul>
+
+  <div class="tip"><b>Y una que no es reserva pero se agradece:</b> si vais a hacer un
+  <i>Sunday roast</i> en un pub el domingo, <b>llamad o reservad</b>. Es la única comida de la
+  semana para la que los ingleses sí reservan, y a las dos de la tarde no hay mesa en ningún sitio
+  bueno.</div>
+</section>
+
+<section id="transporte" class="etapa-sec">
+  <div class="kicker">Moverse</div>
+  <h2>Metro, bus y cómo se paga</h2>
+  <p class="intro">Esto es más fácil de lo que parece y no hay que comprar ninguna tarjeta
+  turística: <strong>se pasa la tarjeta del banco o el móvil por el lector y ya está</strong>.
+  Nada de billetes, nada de Oyster, nada de abonos.</p>
+
+  <ul class="lista-ver">
+    <li><b>Contactless, sin más</b> — cada uno con <b>su propia tarjeta o su móvil</b> (no se puede pasar a dos personas con la misma). Se toca al entrar y <b>también al salir</b> en metro, tren y DLR; en el autobús solo al subir. Si se olvida el toque de salida, cobran la tarifa máxima.</li>
+    <li><b>El tope diario</b> — por mucho que uséis el metro, <b>no os pueden cobrar más de 8,90 £ al día</b> en las zonas 1 y 2, que es donde vais a estar. A partir de ahí, gratis. Hay también un tope semanal si usáis siempre la misma tarjeta de lunes a domingo.</li>
+    <li><b>La niña no paga</b> — <b>los menores de 11 años viajan gratis</b> en metro, bus, DLR, Overground y Elizabeth line yendo con un adulto que pague (hasta cuatro niños por adulto). En el autobús, gratis siempre. En los tornos, <b>que pase con vosotros por la puerta ancha</b>, sin tocar nada: si le pasáis una tarjeta le cobran tarifa de adulto.</li>
+    <li><b>El autobús</b> — más barato que el metro y se ve la ciudad. <b>No aceptan efectivo</b>, solo tarjeta. Subid arriba del todo del piso de arriba, delante: para la niña es la mejor atracción gratis de Londres. Las líneas 11, 15 y 24 pasan por medio centro.</li>
+    <li><b>El barco</b> — el <i>Uber Boat by Thames Clipper</i> también se paga con contactless, pero <b>va aparte del tope diario</b>. Unas 9–10 £ el trayecto, y la niña gratis.</li>
+    <li><b>Andar más de lo que creéis</b> — Londres parece enorme en el plano del metro porque el plano no es a escala. Covent Garden y Leicester Square están a 250 metros. Si son dos paradas, id andando.</li>
+    <li><b>La app</b> — <b>Citymapper</b>, que es de aquí y es mejor que Google Maps para esto: dice por qué puerta del vagón bajarse y cuánto va a costar.</li>
+    <li><b>Horarios</b> — el metro cierra sobre las 00:30. Viernes y sábado algunas líneas funcionan toda la noche (<i>Night Tube</i>), y siempre hay autobuses nocturnos.</li>
+  </ul>
+
+  <div class="ojo" style="background:var(--oro-suave);color:var(--tinta);border-left:3px solid var(--oro);border-radius:0 9px 9px 0;margin-top:20px">
+    🚶 <b>En las escaleras mecánicas, a la derecha.</b> El lado izquierdo es para el que sube
+    andando y aquí eso va en serio. Es la única norma que os van a reprochar en voz alta.
+  </div>
+</section>
+
+<section id="lluvia" class="etapa-sec">
+  <div class="kicker">Porque va a pasar</div>
+  <h2>Si llueve</h2>
+  <p class="intro">En Londres la lluvia no cancela el día: cae media hora, escampa y vuelve. Nadie
+  se refugia y casi nadie lleva paraguas, porque con el viento no sirven. <strong>Chubasquero con
+  capucha</strong> y a seguir. Y si cae de verdad, hay plan:</p>
+  <ul class="lista-ver">
+    <li><b>South Kensington</b> — se llega a los tres museos <b>por un túnel desde el metro sin salir a la calle</b>. Un día entero a cubierto y gratis.</li>
+    <li><b>El British Museum</b> — el patio cubierto con la cúpula de cristal ya merece la entrada, que además es gratis.</li>
+    <li><b>Los mercados techados</b> — Borough, Old Spitalfields, Greenwich y Leadenhall están todos bajo techo.</li>
+    <li><b>Tate Modern</b> — gratis, enorme y con la terraza acristalada del piso 10.</li>
+    <li><b>El Mail Rail</b> — un tren por túneles bajo tierra: más a cubierto, imposible.</li>
+    <li><b>Un pub con chimenea</b> — que para eso los inventaron. Con la niña se puede entrar hasta las nueve de la noche en casi todos.</li>
+  </ul>
+</section>
+
+<section id="practico" class="etapa-sec">
+  <div class="kicker">Cuatro cosas sueltas</div>
+  <h2>Guía práctica</h2>
+  <ul class="lista-ver">
+    <li><b>Pasaporte y ETA</b> — lo de siempre, pero repetido porque es lo único que puede estropear el viaje: <a href="#entradas">ver arriba</a>. Pasaporte en vigor para los tres y ETA aprobada para los tres.</li>
+    <li><b>Enchufes</b> — Reino Unido usa <b>enchufe de tres clavijas planas</b> (tipo G). Hace falta adaptador y no lo venden barato en el aeropuerto: comprad uno antes de salir, o dos.</li>
+    <li><b>Se conduce por la izquierda</b> — al cruzar, <b>mirad primero a la derecha</b>. En los pasos de cebra del centro lo llevan pintado en el suelo (<i>look right</i>) precisamente por esto. Con la niña de la mano en los bordillos.</li>
+    <li><b>El dinero</b> — libras, no euros, y prácticamente <b>todo se paga con tarjeta</b>, hasta un café de una libra. Llevad algo de efectivo solo para las cafeterías antiguas, que a veces no aceptan tarjeta.</li>
+    <li><b>La hora</b> — Londres va <b>una hora por detrás</b> de España. Al aterrizar, atrasad el reloj.</li>
+    <li><b>El agua del grifo</b> es potable y buena, y en los restaurantes la ponen gratis si la pedís (<i>tap water</i>).</li>
+    <li><b>Salud</b> — la <b>tarjeta sanitaria europea española sigue valiendo</b> en Reino Unido. Urgencias, <b>999</b>. Para cosas menores, <b>111</b>, que es un teléfono de consulta médica gratuito, o cualquier farmacia (<i>Boots</i> hay en cada esquina).</li>
+    <li><b>El tiempo a final de agosto</b> — entre 18 y 24 grados de día y fresco al anochecer. Manga corta con chaqueta fina encima, y calzado cómodo de verdad: se andan diez o doce kilómetros al día sin darse cuenta.</li>
+    <li><b>Los baños</b> — usad los de los museos, que son gratis y están limpios. En las estaciones cobran.</li>
+    <li><b>Con niños en los pubs</b> — se puede entrar con ella hasta las 21:00 en la mayoría, si sirven comida. En los que no, lo dicen en la puerta.</li>
+    <li><b>Seguridad</b> — Londres es una ciudad segura; lo único a vigilar es <b>el móvil en la mano</b> en zonas concurridas (Oxford Street, Camden, salidas de metro), que es de lo poco que roban, y en moto. Llevadlo guardado al andar.</li>
+  </ul>
+</section>
+
+<section id="offline" class="etapa-sec">
+  <div class="kicker">Para el móvil</div>
+  <h2>Verla sin conexión</h2>
+  <p class="intro">En el metro de Londres no hay cobertura en casi ningún túnel. Esta guía se
+  puede guardar entera en el móvil y funciona sin datos: los sitios, las direcciones, los
+  horarios y el buscador. Lo único que necesita conexión es abrir Google Maps.</p>
+  <div class="offline-caja">
+    <button id="btnGuardar" class="offline-btn">📥 Guardar para usar sin conexión</button>
+    <div id="estadoOffline" class="offline-estado"></div>
+  </div>
+  <div class="tip"><b>Y para el móvil, un atajo:</b> abridla en Chrome o Safari, dadle a
+  compartir y a <b>«Añadir a la pantalla de inicio»</b>. Queda como una app, con su icono, y se
+  abre a pantalla completa.</div>
+</section>
+
+</main>
+
+<footer>
+  <p>Hecha a mano para vosotros tres, con lo que sé de Londres y lo que he mirado esta tarde.
+  Los precios y horarios son de finales de agosto de 2026 y cambian: comprobad los de la web
+  oficial antes de plantaros en la puerta. Buen viaje.</p>
+  <details class="creditos">
+    <summary>Créditos de las fotos</summary>
+    <ul>
+    <li><a href="https://commons.wikimedia.org/wiki/File%3ALondon_Thames_Sunset_panorama_-_Feb_2008.jpg" target="_blank" rel="noopener">London Thames Sunset panorama - Feb 2008.jpg</a> · CC BY 3.0</li>
+    <li><a href="https://commons.wikimedia.org/wiki/File%3ABrick_Lane%2C_London%2C_February_2023_%283%29.jpg" target="_blank" rel="noopener">Brick Lane, London, February 2023 (3).jpg</a> · CC BY-SA 4.0</li>
+    <li><a href="https://commons.wikimedia.org/wiki/File%3AGasholder_Park%2C_King%27s_Cross%2C_London_-_geograph.org.uk_-_5683879.jpg" target="_blank" rel="noopener">Gasholder Park, King's Cross, London - geograph.org.uk - 5683879.jpg</a> · CC BY-SA 2.0</li>
+    <li><a href="https://commons.wikimedia.org/wiki/File%3AChinatown_Leicester_Square_London_%2852347627829%29.jpg" target="_blank" rel="noopener">Chinatown Leicester Square London (52347627829).jpg</a> · CC BY 2.0</li>
+    <li><a href="https://commons.wikimedia.org/wiki/File%3ABorough_Market_-_geograph.org.uk_-_586118.jpg" target="_blank" rel="noopener">Borough Market - geograph.org.uk - 586118.jpg</a> · CC BY-SA 2.0</li>
+    <li><a href="https://commons.wikimedia.org/wiki/File%3AHintze_Hall%2C_Natural_History_Museum%2C_London_-_4.jpg" target="_blank" rel="noopener">Hintze Hall, Natural History Museum, London - 4.jpg</a> · CC BY 4.0</li>
+    <li><a href="https://commons.wikimedia.org/wiki/File%3AGreenwich_Park_-_View_NNW_on_Queen%27s_House%2C_Greenwich_Hospital_%26_Canary_Wharf_Docklands.jpg" target="_blank" rel="noopener">Greenwich Park - View NNW on Queen's House, Greenwich Hospital & Canary Wharf Docklands.jpg</a> · CC BY-SA 4.0</li>
+    <li><a href="https://commons.wikimedia.org/wiki/File%3AVarious_monuments%2C_West_Norwood_Cemetery_%2851%29_-_geograph.org.uk_-_5228436.jpg" target="_blank" rel="noopener">Various monuments, West Norwood Cemetery (51) - geograph.org.uk - 5228436.jpg</a> · CC BY-SA 2.0</li>
+    </ul>
+    <p>Todas de Wikimedia Commons, con licencia Creative Commons.</p>
+  </details>
+</footer>
+<script>
+  function toggleMenuInfo(e){
+    e.stopPropagation();
+    var p=document.getElementById('menuInfo'), b=document.getElementById('menuBtn');
+    var abierto=p.classList.toggle('abierto');
+    b.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+  }
+  function cerrarMenuInfo(){
+    var p=document.getElementById('menuInfo'), b=document.getElementById('menuBtn');
+    p.classList.remove('abierto');
+    b.setAttribute('aria-expanded','false');
+  }
+  // cerrar al hacer clic fuera del panel o al pulsar Escape
+  document.addEventListener('click', function(e){
+    var p=document.getElementById('menuInfo'), b=document.getElementById('menuBtn');
+    if(p.classList.contains('abierto') && !p.contains(e.target) && !b.contains(e.target)) cerrarMenuInfo();
+  });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') cerrarMenuInfo(); });
+
+  // ---- Guardar la web para verla sin conexión ----
+  var elEstado = document.getElementById('estadoOffline');
+  var elBoton  = document.getElementById('btnGuardar');
+
+  function esWeb(){ return location.protocol === 'https:' || location.hostname === 'localhost'; }
+
+  if (!esWeb()) {
+    if (elBoton) elBoton.style.display = 'none';
+    if (elEstado) elEstado.textContent = 'Esta es la copia descargada: ya funciona sin conexión.';
+  } else if (false) {  /* copia sin conexión: sin service worker */
+    navigator.serviceWorker.register('sw.js', {updateViaCache: 'none'}).then(function(reg){
+      // Avisar cuando haya una versión nueva, en vez de obligar a borrar la caché a mano.
+      function vigila(sw){
+        if (!sw) return;
+        sw.addEventListener('statechange', function(){
+          if (sw.state === 'installed' && navigator.serviceWorker.controller) avisaNueva(reg);
+        });
+      }
+      if (reg.waiting && navigator.serviceWorker.controller) avisaNueva(reg);
+      vigila(reg.installing);
+      reg.addEventListener('updatefound', function(){ vigila(reg.installing); });
+
+      // Comprobar si hay novedades al volver a la pestaña, no sólo al cargar
+      var ultima = Date.now();
+      document.addEventListener('visibilitychange', function(){
+        if (document.visibilityState === 'visible' && Date.now() - ultima > 60000) {
+          ultima = Date.now();
+          reg.update().catch(function(){});
+        }
+      });
+    }).catch(function(){});
+    if (window.caches) {
+      caches.match('img/portada.jpg', {ignoreSearch:true}).then(function(hit){
+        if (hit && elEstado) {
+          elEstado.textContent = '✓ Ya está guardada en este dispositivo.';
+          if (elBoton) elBoton.textContent = '🔄 Volver a guardar (actualizar)';
+        }
+      }).catch(function(){});
+    }
+    navigator.serviceWorker.addEventListener('message', function(e){
+      if (!e.data || !elEstado) return;
+      if (e.data.tipo === 'PROGRESO') {
+        elEstado.textContent = 'Guardando… ' + e.data.hechos + ' de ' + e.data.total;
+      } else if (e.data.tipo === 'LISTO') {
+        elEstado.textContent = '✓ Guardada. Ya podéis abrirla en modo avión.';
+        if (elBoton) { elBoton.disabled = false; elBoton.textContent = '🔄 Volver a guardar (actualizar)'; }
+      }
+    });
+  } else {
+    if (elBoton) elBoton.style.display = 'none';
+    if (elEstado) elEstado.textContent = 'Este navegador no permite guardar la web; usad la descarga en ZIP.';
+  }
+
+  function guardarOffline(){
+    if (!('serviceWorker' in navigator)) return;
+    elBoton.disabled = true;
+    elEstado.textContent = 'Preparando la descarga…';
+    navigator.serviceWorker.ready.then(function(reg){
+      var sw = reg.active || navigator.serviceWorker.controller;
+      if (sw) { sw.postMessage({tipo:'GUARDAR'}); }
+      else { elEstado.textContent = 'Recargad la página e intentadlo otra vez.'; elBoton.disabled = false; }
+    });
+  }
+
+</script>
+
+<script>
+const SITIOS=[{"n":"Beigel Bake","z":"159 Brick Lane, E1 6SB","e":"Brick Lane y Shoreditch","s":"leyenda","la":51.524512,"lo":-0.071753,"ap":0,"q":"Beigel%20Bake%2C%20159%20Brick%20Lane%2C%20London"},{"n":"The Beigel Shop","z":"155 Brick Lane, E1 6QL","e":"Brick Lane y Shoreditch","s":"leyenda","la":51.524365,"lo":-0.071726,"ap":0,"q":"Beigel%20Shop%2C%20155%20Brick%20Lane%2C%20London"},{"n":"Smokestak","z":"35 Sclater Street, E1 6LB","e":"Brick Lane y Shoreditch","s":"cena","la":51.523657,"lo":-0.072833,"ap":0,"q":"Smokestak%2C%2035%20Sclater%20Street%2C%20London"},{"n":"Smoking Goat","z":"64 Shoreditch High Street, E1 6JJ","e":"Brick Lane y Shoreditch","s":"amigo","la":51.524228,"lo":-0.076915,"ap":0,"q":"Smoking%20Goat%2C%2064%20Shoreditch%20High%20Street%2C%20London"},{"n":"Tayyabs","z":"83–89 Fieldgate Street, E1 1JU","e":"Brick Lane y Shoreditch","s":"local","la":51.517265,"lo":-0.063461,"ap":0,"q":"Tayyabs%2C%2083%20Fieldgate%20Street%2C%20London"},{"n":"Poppies Fish & Chips","z":"6–8 Hanbury Street, E1 6QR","e":"Brick Lane y Shoreditch","s":"","la":51.51993,"lo":-0.07413,"ap":0,"q":"Poppies%20Fish%20and%20Chips%2C%206%20Hanbury%20Street%2C%20London"},{"n":"E. Pellicci","z":"332 Bethnal Green Road, E2 0AG","e":"Brick Lane y Shoreditch","s":"leyenda","la":51.526496,"lo":-0.063379,"ap":0,"q":"E%20Pellicci%2C%20332%20Bethnal%20Green%20Road%2C%20London"},{"n":"Old Spitalfields Market","z":"Horner Square, E1 6EW","e":"Brick Lane y Shoreditch","s":"barato","la":51.5196,"lo":-0.075363,"ap":0,"q":"Old%20Spitalfields%20Market%2C%20London"},{"n":"Dishoom Shoreditch","z":"7 Boundary Street, E2 7JE","e":"Brick Lane y Shoreditch","s":"","la":51.524499,"lo":-0.076825,"ap":0,"q":"Dishoom%20Shoreditch%2C%207%20Boundary%20Street%2C%20London"},{"n":"The Marksman","z":"254 Hackney Road, E2 7SJ","e":"Brick Lane y Shoreditch","s":"","la":51.530838,"lo":-0.069509,"ap":0,"q":"The%20Marksman%2C%20254%20Hackney%20Road%2C%20London"},{"n":"Dishoom King’s Cross","z":"5 Stable Street, N1C 4AB","e":"King's Cross","s":"","la":51.53542,"lo":-0.12638,"ap":0,"q":"Dishoom%20Kings%20Cross%2C%205%20Stable%20Street%2C%20London"},{"n":"The Lighterman","z":"3 Granary Square, N1C 4BH","e":"King's Cross","s":"","la":51.535251,"lo":-0.124407,"ap":0,"q":"The%20Lighterman%2C%20Granary%20Square%2C%20London"},{"n":"Roti King","z":"40 Doric Way, NW1 1LH","e":"King's Cross","s":"local","la":51.529004,"lo":-0.132048,"ap":0,"q":"Roti%20King%2C%2040%20Doric%20Way%2C%20London"},{"n":"Casa Pastor y los puestos de Coal Drops Yard","z":"Coal Drops Yard, N1C 4DQ","e":"King's Cross","s":"","la":51.535798,"lo":-0.126666,"ap":0,"q":"Coal%20Drops%20Yard%2C%20London"},{"n":"Japan Centre","z":"35b Panton Street, SW1Y 4EA","e":"Soho y Covent Garden","s":"barato","la":51.509714,"lo":-0.131519,"ap":0,"q":"Japan%20Centre%2C%2035b%20Panton%20Street%2C%20London"},{"n":"Bao Soho","z":"53 Lexington Street, W1F 9AS","e":"Soho y Covent Garden","s":"","la":51.513216,"lo":-0.13653,"ap":0,"q":"Bao%20Soho%2C%2053%20Lexington%20Street%2C%20London"},{"n":"Dumplings’ Legend","z":"15–16 Gerrard Street, W1D 6JE","e":"Soho y Covent Garden","s":"barato","la":51.511734,"lo":-0.131466,"ap":0,"q":"Dumplings%20Legend%2C%2015%20Gerrard%20Street%2C%20London"},{"n":"Flat Iron","z":"17–18 Henrietta Street, WC2E 8QH (Covent Garden) y varios más","e":"Soho y Covent Garden","s":"barato","la":51.510807,"lo":-0.123989,"ap":0,"q":"Flat%20Iron%2C%2017%20Henrietta%20Street%2C%20London"},{"n":"Bar Italia","z":"22 Frith Street, W1D 4RF","e":"Soho y Covent Garden","s":"leyenda","la":51.513421,"lo":-0.131235,"ap":0,"q":"Bar%20Italia%2C%2022%20Frith%20Street%2C%20London"},{"n":"Regency Cafe","z":"17–19 Regency Street, SW1P 4BY","e":"Soho y Covent Garden","s":"leyenda","la":51.494002,"lo":-0.132095,"ap":0,"q":"Regency%20Cafe%2C%2017%20Regency%20Street%2C%20London"},{"n":"Borough Market","z":"8 Southwark Street, SE1 1TL","e":"Borough y la orilla sur","s":"barato","la":51.505581,"lo":-0.090198,"ap":0,"q":"Borough%20Market%2C%20London"},{"n":"Padella","z":"6 Southwark Street, SE1 1TQ","e":"Borough y la orilla sur","s":"barato","la":51.505138,"lo":-0.089912,"ap":0,"q":"Padella%2C%206%20Southwark%20Street%2C%20London"},{"n":"Maltby Street Market","z":"Ropewalk, SE1 3PA","e":"Borough y la orilla sur","s":"barato","la":51.499258,"lo":-0.075624,"ap":0,"q":"Maltby%20Street%20Market%2C%20Ropewalk%2C%20London"},{"n":"The George Inn","z":"75–77 Borough High Street, SE1 1NH","e":"Borough y la orilla sur","s":"leyenda","la":51.504161,"lo":-0.089932,"ap":0,"q":"The%20George%20Inn%2C%20Borough%20High%20Street%2C%20London"},{"n":"Las Refreshment Rooms del V&A","z":"Victoria and Albert Museum, Cromwell Road, SW7 2RL","e":"South Kensington","s":"leyenda","la":51.496884,"lo":-0.171637,"ap":0,"q":"Victoria%20and%20Albert%20Museum%2C%20Cromwell%20Road%2C%20London"},{"n":"Japan House","z":"101–111 Kensington High Street, W8 5SA","e":"South Kensington","s":"","la":51.50135,"lo":-0.191682,"ap":0,"q":"Japan%20House%20London%2C%20101%20Kensington%20High%20Street%2C%20London"},{"n":"Picnic en Kensington Gardens","z":"Comprad en el Whole Foods de Kensington High Street, W8 5SE","e":"South Kensington","s":"barato","la":51.506646,"lo":-0.180389,"ap":0,"q":"Kensington%20Gardens%2C%20London"},{"n":"Goddards at Greenwich","z":"22 King William Walk, SE10 9HU","e":"Greenwich","s":"leyenda","la":51.481372,"lo":-0.008391,"ap":0,"q":"Goddards%20at%20Greenwich%2C%2022%20King%20William%20Walk%2C%20London"},{"n":"Greenwich Market","z":"5B Greenwich Market, SE10 9HZ","e":"Greenwich","s":"barato","la":51.481583,"lo":-0.009045,"ap":0,"q":"Greenwich%20Market%2C%20London"},{"n":"The Trafalgar Tavern","z":"Park Row, SE10 9NW","e":"Greenwich","s":"leyenda","la":51.484594,"lo":-0.004169,"ap":0,"q":"Trafalgar%20Tavern%2C%20Park%20Row%2C%20London"}];
+</script>
+<script>
+/* ---------- AVISO DE VERSIÓN NUEVA ---------- */
+function avisaNueva(reg){
+  if (document.getElementById('nuevaVersion')) return;
+  var b = document.createElement('div');
+  b.id = 'nuevaVersion';
+  b.innerHTML = '<span>Hay una versión nueva de la guía</span>' +
+                '<button id="nvOk">Actualizar</button>' +
+                '<button id="nvNo" aria-label="Ahora no">✕</button>';
+  document.body.appendChild(b);
+  requestAnimationFrame(function(){ b.classList.add('visible'); });
+  document.getElementById('nvNo').onclick = function(){ b.remove(); };
+  document.getElementById('nvOk').onclick = function(){
+    document.getElementById('nvOk').textContent = 'Actualizando…';
+    if (reg.waiting) reg.waiting.postMessage({tipo: 'ACTIVAR_YA'});
+    setTimeout(function(){ location.reload(); }, 400);
+  };
+}
+</script>
+<script>
+/* ---------- AUDIOGUÍA ---------- */
+(function(){
+  if (typeof AUDIOS === 'undefined') return;
+
+  var au = document.getElementById('plAudio'), pl = document.getElementById('player');
+  var elTit = document.getElementById('plTit'), elProg = document.getElementById('plProg');
+  var elAhora = document.getElementById('plAhora'), elTotal = document.getElementById('plTotal');
+  var btPlay = document.getElementById('plPlay'), btVel = document.getElementById('plVel');
+  var actual = null, velocidades = [1, 1.25, 1.5, 0.85], iVel = 0;
+
+  function mmss(s){ s = Math.max(0, Math.round(s || 0)); return Math.floor(s/60) + ':' + String(s%60).padStart(2,'0'); }
+
+  /* Iconos: trazo simple, heredan el color del tipo.
+     cápsula = una pastilla · audioguía = libro que suena · historia = ondas que cuentan algo */
+  var SVG = {
+    capsula: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">'
+           + '<rect x="1.7" y="8.2" width="20.6" height="7.6" rx="3.8" transform="rotate(-45 12 12)"/>'
+           + '<line x1="9.2" y1="9.2" x2="14.8" y2="14.8"/></svg>',
+    guia:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'
+           + '<path d="M4 4.6h6.4a1.6 1.6 0 0 1 1.6 1.6v13a1.6 1.6 0 0 0-1.6-1.6H4z"/>'
+           + '<line x1="6.4" y1="4.6" x2="6.4" y2="17.6"/>'
+           + '<path d="M15.4 9.6a3.6 3.6 0 0 1 0 4.8"/>'
+           + '<path d="M18.4 7.2a7.4 7.4 0 0 1 0 9.6"/></svg>',
+    fondo:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">'
+           + '<circle cx="6.2" cy="12" r="1.7" fill="currentColor" stroke="none"/>'
+           + '<path d="M10.4 8.6a4.8 4.8 0 0 1 0 6.8"/>'
+           + '<path d="M14 6.2a9 9 0 0 1 0 11.6"/>'
+           + '<path d="M17.6 3.8a13.2 13.2 0 0 1 0 16.4"/></svg>',
+    bajar:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'
+           + '<path d="M12 3.5v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M4.5 19.5h15"/></svg>'
+  };
+  var TXT = {capsula:'cápsula', guia:'audioguía', fondo:'historia'};
+
+  function sonar(p){
+    if (actual === p.id && !au.paused) { au.pause(); return; }
+    if (actual === p.id) { au.play(); return; }
+    actual = p.id;
+    au.src = 'audio/' + p.id + '.mp3';
+    au.playbackRate = velocidades[iVel];
+    au.play().catch(function(){});
+    elTit.textContent = p.t;
+    elTotal.textContent = mmss(p.d);
+    pl.classList.add('visible');
+    marcar();
+  }
+
+  function marcar(){
+    document.querySelectorAll('.pista').forEach(function(b){
+      b.classList.toggle('sonando', b.dataset.id === actual && !au.paused);
+    });
+    btPlay.textContent = au.paused ? '▶' : '⏸';
+  }
+
+  au.addEventListener('timeupdate', function(){
+    if (!au.duration) return;
+    elProg.style.width = (au.currentTime / au.duration * 100) + '%';
+    elAhora.textContent = mmss(au.currentTime);
+    elTotal.textContent = mmss(au.duration);
+  });
+  au.addEventListener('play', marcar);
+  au.addEventListener('pause', marcar);
+  au.addEventListener('ended', function(){ elProg.style.width = '0'; marcar(); });
+
+  btPlay.onclick = function(){ au.paused ? au.play() : au.pause(); };
+  document.getElementById('plX').onclick = function(){ au.pause(); pl.classList.remove('visible'); };
+  btVel.onclick = function(){
+    iVel = (iVel + 1) % velocidades.length;
+    au.playbackRate = velocidades[iVel];
+    btVel.textContent = velocidades[iVel] + '×';
+  };
+  document.getElementById('plBarra').onclick = function(e){
+    if (!au.duration) return;
+    var r = this.getBoundingClientRect();
+    au.currentTime = (e.clientX - r.left) / r.width * au.duration;
+  };
+
+  /* --- lista de pistas --- */
+  var ORDEN = {capsula:0, guia:1, fondo:2};
+  function lista(pistas){
+    var d = document.createElement('div');
+    d.className = 'pistas';
+    pistas.slice().sort(function(a,b){ return (ORDEN[a.k]-ORDEN[b.k]) || a.id.localeCompare(b.id); })
+      .forEach(function(p){
+        var b = document.createElement('button');
+        b.className = 'pista k-' + p.k;
+        b.dataset.id = p.id;
+        b.innerHTML = '<span class="ico">' + SVG[p.k] + '</span><span class="txt">' +
+                      '<span class="nom">' + p.t + '</span>' +
+                      '<span class="meta">' + TXT[p.k] + ' · ' + mmss(p.d) + ' · ' + p.mb.toFixed(1) + ' MB</span>' +
+                      '</span>';
+        b.onclick = function(){ sonar(p); };
+        d.appendChild(b);
+      });
+    return d;
+  }
+
+  function botonBajar(pistas, texto){
+    var b = document.createElement('button');
+    b.className = 'btn-bajar sans';
+    var mb = pistas.reduce(function(a,p){ return a + p.mb; }, 0);
+    b.innerHTML = SVG.bajar + '<span>' + texto.replace('{n}', pistas.length).replace('{mb}', mb.toFixed(0)) + '</span>';
+    b.onclick = function(){ guardar(b, pistas); };
+    return b;
+  }
+
+  /* --- 1) bloque "para el tren", en la sección de la ruta --- */
+  var avion = AUDIOS.filter(function(p){ return p.s === 'tren'; });
+  var host = document.getElementById('ruta');
+  if (avion.length && host) {
+    var caja = document.createElement('div');
+    caja.className = 'audioguia sans';
+    caja.innerHTML = '<div class="cab">🎧 Audioguía · para el tren</div>' +
+      '<div class="expl">Escúchalos antes de llegar: con esto entiendes casi todo lo que vas a ver. ' +
+      'Los demás están repartidos por los días, cada uno donde toca.</div>';
+    caja.appendChild(lista(avion));
+    caja.appendChild(botonBajar(avion, 'Guardar estos {n} audios en el móvil ({mb} MB)'));
+    host.appendChild(caja);
+  }
+
+  /* --- 2) las demás pistas, dentro de la pastilla de su día --- */
+  document.querySelectorAll('[data-dia]').forEach(function(dia){
+    var pistas = AUDIOS.filter(function(p){ return p.s === dia.dataset.dia; });
+    if (!pistas.length) return;
+    var caja = document.createElement('div');
+    caja.className = 'audios-dia sans';
+    caja.innerHTML = '<div class="tit">' + SVG.guia + 'Para escuchar este día</div>';
+    caja.appendChild(lista(pistas));
+    dia.appendChild(caja);
+  });
+
+  /* --- 3) al final de cada etapa, guardar todos sus audios de una vez --- */
+  document.querySelectorAll('section.etapa-sec').forEach(function(sec){
+    var suyas = AUDIOS.filter(function(p){ return p.s.indexOf(sec.id + '-') === 0; });
+    if (!suyas.length) return;
+    var b = botonBajar(suyas, 'Guardar los {n} audios de esta etapa en el móvil ({mb} MB)');
+    b.classList.add('bajar-etapa');
+    var ultimo = sec.querySelector('.dias') || sec;
+    ultimo.appendChild(b);
+  });
+
+  /* --- descarga mediante el service worker --- */
+  function guardar(boton, pistas){
+    var rutas = pistas.map(function(p){ return 'audio/' + p.id + '.mp3'; });
+    var texto = boton.querySelector('span:last-child');
+    boton.disabled = true;
+    if (!('caches' in window)) { texto.textContent = 'Tu navegador no permite guardarlos'; return; }
+    var hechos = 0;
+    caches.open('nerja2026-v1').then(function(c){
+      return rutas.reduce(function(cadena, r){
+        return cadena.then(function(){
+          return c.add(new Request(r, {cache: 'reload'})).catch(function(){}).then(function(){
+            hechos++;
+            texto.textContent = 'Guardando… ' + hechos + ' de ' + rutas.length;
+          });
+        });
+      }, Promise.resolve());
+    }).then(function(){
+      texto.textContent = '✓ Guardados · funcionan sin conexión';
+    }).catch(function(){
+      texto.textContent = 'No se han podido guardar. Inténtalo con wifi.';
+      boton.disabled = false;
+    });
+  }
+})();
+</script>
+<script>
+/* ---------- HOY: lo que toca según la fecha ---------- */
+(function(){
+  var host = document.getElementById('hoy');
+  if (!host) return;
+
+  var dias = [].slice.call(document.querySelectorAll('[data-fecha]'));
+  if (!dias.length) return;
+
+  var MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto',
+               'septiembre','octubre','noviembre','diciembre'];
+  var SEMANA = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+
+  function iso(d){ return d.toISOString().slice(0,10); }
+  function deIso(s){ var p = s.split('-'); return new Date(+p[0], +p[1]-1, +p[2]); }
+  function bonita(d){ return SEMANA[d.getDay()] + ' ' + d.getDate() + ' de ' + MESES[d.getMonth()]; }
+  function mmss(s){ return Math.floor(s/60) + ':' + String(Math.round(s)%60).padStart(2,'0'); }
+
+  // en los días de traslado hay dos bloques con la misma fecha: si no se quitan
+  // los repetidos, indexOf devuelve siempre el primero y las flechas ‹ › se quedan
+  // clavadas en ese día sin poder pasar al siguiente.
+  var fechas = dias.map(function(d){ return d.dataset.fecha; }).sort()
+                   .filter(function(f, n, todas){ return f !== todas[n-1]; });
+  var PRIMERA = fechas[0], ULTIMA = fechas[fechas.length-1];
+
+  // día que se está mostrando: hoy, o el que el usuario elija con las flechas
+  var elegido = null;
+
+  function bloquesDe(fecha){
+    return dias.filter(function(d){ return d.dataset.fecha === fecha; });
+  }
+
+  function seccionDe(bloque){
+    var s = bloque.closest('section.etapa-sec');
+    return s ? {id: s.id, titulo: (s.querySelector('h2')||{}).textContent || ''} : null;
+  }
+
+  function pinta(fecha){
+    var bloques = bloquesDe(fecha);
+    if (!bloques.length) { host.innerHTML = ''; return; }
+
+    var d = deIso(fecha);
+    var numero = bloques[0].querySelector('h4').textContent.match(/Día\s+(\d+)/);
+    // en los días de traslado hay dos bloques: se sale de uno y se duerme en el otro.
+    // El título los muestra encadenados y la comida y el hotel son los del destino.
+    var secs = bloques.map(seccionDe).filter(Boolean);
+    var sec = secs[secs.length - 1];
+    var nombres = [], vistos = {};
+    secs.forEach(function(x){
+      var n = x.titulo.split('—')[0].trim();
+      if (!vistos[n]) { vistos[n] = 1; nombres.push(n); }
+    });
+    var esHoy = fecha === iso(new Date());
+
+    // plan: el texto de todos los bloques de esa fecha
+    var plan = bloques.map(function(b){
+      var titulo = b.querySelector('h4').cloneNode(true);
+      var f = titulo.querySelector('.fecha'); if (f) f.remove();
+      // el madrugador y los avisos se pintan aparte, en su propia caja. Si no se
+      // excluyen aquí, sus párrafos salen otra vez dentro del texto del día.
+      var ps = [].slice.call(b.querySelectorAll('p')).filter(function(p){
+        return !p.closest('.madrugador, .tip');
+      }).map(function(p){ return p.innerHTML; }).join(' ');
+      // los avisos del día (.tip) llevan lo importante: horarios raros, planes B, timos
+      var tip = b.querySelector('.tip');
+      var mad = b.querySelector('.madrugador');
+      return '<p style="margin-bottom:8px"><b>' + titulo.textContent.trim() + '</b> — ' + ps + '</p>' +
+             (mad ? '<div class="hoy-tip hoy-mad">' + mad.innerHTML + '</div>' : '') +
+             (tip ? '<div class="hoy-tip">' + tip.innerHTML + '</div>' : '');
+    }).join('');
+
+    // audios de esos días
+    var audios = [];
+    if (typeof AUDIOS !== 'undefined') {
+      bloques.forEach(function(b){
+        AUDIOS.filter(function(p){ return p.s === b.dataset.dia; }).forEach(function(p){ audios.push(p); });
+      });
+    }
+
+    // comida y hotel de la etapa
+    var comer = sec ? document.querySelector('#' + sec.id + ' .comer') : null;
+    // Por si alguna sección se queda sin lista propia: se busca una hermana
+    // con el mismo nombre base y se usa la suya.
+    if (sec && (!comer || !comer.querySelector('.sitios li'))) {
+      var raiz = sec.id.replace(/\d+$/, '');
+      var hermana = [].slice.call(document.querySelectorAll('section.etapa-sec')).filter(function(x){
+        return x.id !== sec.id && x.id.replace(/\d+$/, '') === raiz && x.querySelector('.comer .sitios li');
+      })[0];
+      if (hermana) comer = hermana.querySelector('.comer');
+    }
+    var sitios = comer ? [].slice.call(comer.querySelectorAll('.sitios li')).slice(0,3) : [];
+
+    var h = '<div class="hoy-caja' + (esHoy ? '' : ' hoy-caja') + '">';
+    h += '<div class="hoy-cab"><span class="hoy-eti">' + (esHoy ? '● Hoy' : 'Día del viaje') + '</span>';
+    h += '<span class="hoy-fecha">' + bonita(d) + '</span></div>';
+    h += '<h2>' + (numero ? 'Día ' + numero[1] + ' · ' : '') + nombres.join(' → ') + '</h2>';
+    h += '<div class="hoy-plan">' + plan + '</div>';
+
+    h += '<div class="hoy-rejilla">';
+    if (audios.length) {
+      h += '<div class="hoy-tarjeta"><h4>🎧 Para escuchar hoy</h4>';
+      audios.forEach(function(p){
+        h += '<button class="hoy-audio" data-audio="' + p.id + '"><span class="ic">▶</span>' +
+             '<span>' + p.t + '</span><span class="du">' + mmss(p.d) + '</span></button>';
+      });
+      h += '</div>';
+    }
+    if (sitios.length) {
+      h += '<div class="hoy-tarjeta"><h4>🍜 Dónde comer por aquí</h4><ul>';
+      sitios.forEach(function(li){
+        var n = li.querySelector('.nombre'), a = li.querySelector('a');
+        if (n && a) h += '<li><a href="' + a.href + '" target="_blank" rel="noopener">' + n.textContent + '</a></li>';
+      });
+      var secComer = comer ? comer.closest('section') : sec;
+      h += '</ul><a href="#' + (secComer ? secComer.id : '') + '" style="font-size:.84rem">ver los ' +
+           (comer ? comer.querySelectorAll('.sitios li').length : 0) + ' sitios →</a></div>';
+    }
+    h += '</div>';
+
+    h += '<div class="hoy-pie">';
+    if (sec) h += '<a class="hoy-btn" href="#' + sec.id + '">Ver la etapa completa</a>';
+    h += '<a class="hoy-btn ghost" href="#hoteles">Mi hotel</a>';
+    h += '<div class="hoy-nav"><button id="hoyAnt" title="Día anterior">‹</button>' +
+         (esHoy ? '' : '<button id="hoyVolver" title="Volver a hoy" style="width:auto;padding:0 12px;font-size:.82rem">hoy</button>') +
+         '<button id="hoySig" title="Día siguiente">›</button></div>';
+    h += '</div></div>';
+
+    host.innerHTML = h;
+
+    // reproducir con el reproductor de la audioguía
+    host.querySelectorAll('[data-audio]').forEach(function(b){
+      b.onclick = function(){
+        var real = document.querySelector('.pista[data-id="' + b.dataset.audio + '"]');
+        if (real) real.click();
+      };
+    });
+    var i = fechas.indexOf(fecha);
+    var ant = host.querySelector('#hoyAnt'), sig = host.querySelector('#hoySig'), vol = host.querySelector('#hoyVolver');
+    if (ant) ant.onclick = function(){ elegido = fechas[Math.max(0, i-1)]; pinta(elegido); };
+    if (sig) sig.onclick = function(){ elegido = fechas[Math.min(fechas.length-1, i+1)]; pinta(elegido); };
+    if (vol) vol.onclick = function(){ elegido = null; arranca(); };
+  }
+
+  function cuentaAtras(dias_faltan){
+    host.innerHTML =
+      '<div class="hoy-caja hoy-cuenta">' +
+        '<div class="hoy-cab"><span class="hoy-eti">Cuenta atrás</span></div>' +
+        '<h2>' + (dias_faltan === 1 ? 'Mañana salís' : 'Faltan ' + dias_faltan + ' días') + '</h2>' +
+        '<div class="hoy-plan">Cuando empiece el viaje, aquí aparecerá automáticamente el plan del día, ' +
+        'los audios que tocan y dónde comer cerca.</div>' +
+        '<div class="hoy-pie"><button class="hoy-btn" id="hoyVerPrimero">Ver el primer día</button></div>' +
+      '</div>';
+    host.querySelector('#hoyVerPrimero').onclick = function(){ elegido = PRIMERA; pinta(PRIMERA); };
+  }
+
+  function arranca(){
+    var hoy = iso(new Date());
+    if (elegido) return pinta(elegido);
+    if (hoy < PRIMERA) {
+      var faltan = Math.round((deIso(PRIMERA) - deIso(hoy)) / 86400000);
+      return cuentaAtras(faltan);
+    }
+    if (hoy > ULTIMA) {
+      host.innerHTML = '<div class="hoy-caja hoy-cuenta"><div class="hoy-cab">' +
+        '<span class="hoy-eti">El viaje terminó</span></div><h2>Ya estáis de vuelta</h2>' +
+        '<div class="hoy-plan">Aquí queda todo por si queréis recordarlo.</div></div>';
+      return;
+    }
+    pinta(hoy);
+  }
+
+  arranca();
+})();
+</script>
+<script>
+/* ---------- BUSCADOR, VOLVER ARRIBA Y TEMA ---------- */
+(function(){
+  /* --- índice de todo lo buscable: días, sitios de comida, hoteles y secciones --- */
+  var indice = [];
+  function anota(el, titulo, contexto, ancla){
+    var t = (titulo||'').replace(/\s+/g,' ').trim();
+    if (t) indice.push({t: t, c: contexto, a: ancla, el: el});
+  }
+  document.querySelectorAll('section.etapa-sec').forEach(function(sec){
+    var h2 = sec.querySelector('h2');
+    anota(sec, h2 ? h2.textContent : sec.id, 'etapa', '#' + sec.id);
+    sec.querySelectorAll('[data-dia] h4').forEach(function(h4){
+      var c = h4.cloneNode(true), f = c.querySelector('.fecha'); if (f) f.remove();
+      anota(h4, c.textContent, (h2?h2.textContent.split('—')[0].trim():''), '#' + sec.id);
+    });
+    sec.querySelectorAll('.sitios .nombre').forEach(function(n){
+      anota(n, n.textContent, 'comer en ' + (h2?h2.textContent.split('—')[0].trim():''), '#' + sec.id);
+    });
+    sec.querySelectorAll('.plato').forEach(function(p){
+      anota(p, p.textContent, 'plato de ' + (h2?h2.textContent.split('—')[0].trim():''), '#' + sec.id);
+    });
+  });
+  document.querySelectorAll('.hotel').forEach(function(a){ anota(a, a.textContent, 'hotel', '#hoteles'); });
+  document.querySelectorAll('#practico h4, #comer h3, .bcard h4').forEach(function(h){
+    var s = h.closest('section');
+    anota(h, h.textContent, 'guía práctica', '#' + (s ? s.id : ''));
+  });
+  if (typeof AUDIOS !== 'undefined')
+    AUDIOS.forEach(function(p){ indice.push({t: p.t, c: 'audio', a: '#' + p.s, audio: p.id}); });
+
+  function normaliza(s){
+    return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  }
+  var normalizado = indice.map(function(x){ return normaliza(x.t + ' ' + x.c); });
+
+  var caja = document.getElementById('buscar');
+  var lista = document.getElementById('resultados');
+  if (caja && lista) {
+    caja.addEventListener('input', function(){
+      var q = normaliza(caja.value.trim());
+      if (q.length < 2) { lista.classList.remove('abierto'); return; }
+      var hits = [];
+      for (var i = 0; i < indice.length && hits.length < 12; i++)
+        if (normalizado[i].indexOf(q) !== -1) hits.push(indice[i]);
+      lista.innerHTML = hits.length
+        ? hits.map(function(x){
+            return '<a href="' + x.a + '" data-i="' + indice.indexOf(x) + '">' + x.t +
+                   '<small>' + x.c + '</small></a>'; }).join('')
+        : '<div class="vacio">Nada con «' + caja.value + '»</div>';
+      lista.classList.add('abierto');
+      lista.querySelectorAll('a').forEach(function(a){
+        a.onclick = function(e){
+          var x = indice[+a.dataset.i];
+          lista.classList.remove('abierto'); caja.value = '';
+          if (x.audio) {
+            e.preventDefault();
+            var b = document.querySelector('.pista[data-id="' + x.audio + '"]');
+            if (b) { b.scrollIntoView({block:'center'}); b.click(); }
+          } else if (x.el) {
+            e.preventDefault();
+            x.el.scrollIntoView({block:'center', behavior:'smooth'});
+            x.el.style.transition = 'background .3s';
+            var previo = x.el.style.background;
+            x.el.style.background = '#ffe9b0';
+            setTimeout(function(){ x.el.style.background = previo; }, 1400);
+          }
+        };
+      });
+    });
+    document.addEventListener('click', function(e){
+      if (!e.target.closest('.buscador')) lista.classList.remove('abierto');
+    });
+    caja.addEventListener('keydown', function(e){ if (e.key === 'Escape') { caja.value=''; lista.classList.remove('abierto'); } });
+  }
+
+  /* --- tema claro / oscuro --- */
+  var btn = document.getElementById('tema');
+  function aplica(t){
+    document.documentElement.setAttribute('data-tema', t);
+    if (btn) { btn.textContent = t === 'oscuro' ? '☀' : '☾';
+               btn.setAttribute('aria-label', t === 'oscuro' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'); }
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', t === 'oscuro' ? '#17140f' : '#946307');
+  }
+  var guardado = null;
+  try { guardado = localStorage.getItem('tema'); } catch(e){}
+  aplica(guardado || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro'));
+  var btnMenu = document.getElementById('temaMenu');
+  if (btnMenu) btnMenu.onclick = function(){
+    var nuevo = document.documentElement.getAttribute('data-tema') === 'oscuro' ? 'claro' : 'oscuro';
+    aplica(nuevo);
+    btnMenu.textContent = nuevo === 'oscuro' ? '☀ Modo claro' : '☾ Modo oscuro';
+    try { localStorage.setItem('tema', nuevo); } catch(e){}
+  };
+  if (btn) btn.onclick = function(){
+    var nuevo = document.documentElement.getAttribute('data-tema') === 'oscuro' ? 'claro' : 'oscuro';
+    aplica(nuevo);
+    try { localStorage.setItem('tema', nuevo); } catch(e){}
+  };
+})();
+</script>
+<script>
+/* ---------- MARCAR SITIOS COMO PROBADOS ---------- */
+(function(){
+  var CLAVE = 'londres-hechos';
+  var hechos = {};
+  try { hechos = JSON.parse(localStorage.getItem(CLAVE) || '{}'); } catch(e){}
+  function guarda(){ try { localStorage.setItem(CLAVE, JSON.stringify(hechos)); } catch(e){} }
+
+  function id(li){
+    var n = li.querySelector('.nombre');
+    return n ? n.textContent.trim().toLowerCase().replace(/\s+/g,'-') : null;
+  }
+
+  document.querySelectorAll('.sitios li').forEach(function(li){
+    var k = id(li); if (!k) return;
+    var b = document.createElement('button');
+    b.className = 'marcar';
+    b.type = 'button';
+    function pinta(){
+      var ok = !!hechos[k];
+      li.classList.toggle('hecho', ok);
+      b.textContent = ok ? '✓ probado' : '＋ marcar';
+      b.setAttribute('aria-pressed', ok ? 'true' : 'false');
+      b.title = ok ? 'Quitar la marca' : 'Marcar como probado';
+    }
+    b.onclick = function(){
+      if (hechos[k]) delete hechos[k]; else hechos[k] = 1;
+      guarda(); pinta(); cuenta();
+    };
+    li.appendChild(b);
+    pinta();
+  });
+
+  // contador por etapa
+  function cuenta(){
+    document.querySelectorAll('.comer').forEach(function(c){
+      var lis = c.querySelectorAll('.sitios li');
+      var ok = c.querySelectorAll('.sitios li.hecho').length;
+      var e = c.querySelector('.contador-probados');
+      if (!e) {
+        e = document.createElement('div');
+        e.className = 'contador-probados sans';
+        var ul = c.querySelector('.sitios');
+        if (ul) ul.parentNode.insertBefore(e, ul.nextSibling);
+      }
+      e.textContent = ok ? '🍜 Habéis probado ' + ok + ' de ' + lis.length : '';
+    });
+  }
+  cuenta();
+})();
+</script>
+<script>
+/* ---------- FRASES: escuchar y enseñar ---------- */
+(function(){
+  var lista = document.querySelectorAll('[data-frase]');
+  if (!lista.length) return;
+
+  var audio = new Audio();
+  var sonando = null;
+  function suena(id, boton){
+    if (sonando) sonando.classList.remove('sonando');
+    audio.src = 'audio/frases/' + id + '.mp3';
+    audio.play().catch(function(){});
+    if (boton) { boton.classList.add('sonando'); sonando = boton; }
+  }
+  audio.addEventListener('ended', function(){ if (sonando) sonando.classList.remove('sonando'); });
+
+  // pantalla para enseñar la frase a alguien
+  var panel = document.createElement('div');
+  panel.id = 'enseñar';
+  panel.innerHTML = '<button class="cerrar" aria-label="Cerrar">✕</button>' +
+    '<div class="th" lang="th"></div><div class="es"></div><div class="fon"></div>' +
+    '<button class="oir">▶ Que lo oiga</button>';
+  document.body.appendChild(panel);
+  var actual = null;
+  panel.querySelector('.cerrar').onclick = function(){ panel.classList.remove('abierto'); };
+  panel.querySelector('.oir').onclick = function(){ if (actual) suena(actual, null); };
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') panel.classList.remove('abierto');
+  });
+
+  lista.forEach(function(li){
+    var id = li.dataset.frase;
+    var play = li.querySelector('.fr-play');
+    var ver = li.querySelector('.fr-ver');
+    if (play) play.onclick = function(){ suena(id, play); };
+    if (ver) ver.onclick = function(){
+      actual = id;
+      panel.querySelector('.th').textContent = li.dataset.th;
+      panel.querySelector('.es').textContent = li.querySelector('.fr-es').textContent;
+      panel.querySelector('.fon').textContent = li.querySelector('.fr-fon').textContent;
+      panel.classList.add('abierto');
+    };
+  });
+})();
+</script>
+<script>
+/* ---------- ETAPAS: desplegable en móvil en vez de scroll lateral ---------- */
+(function(){
+  var wrap = document.querySelector('nav .wrap');
+  if (!wrap) return;
+  var enlaces = [].slice.call(wrap.querySelectorAll('a'));
+  if (!enlaces.length) return;
+
+  var sel = document.createElement('select');
+  sel.className = 'etapas-sel sans';
+  sel.setAttribute('aria-label', 'Ir a una zona de la guía');
+  sel.innerHTML = '<option value="">Ir a una zona…</option>' +
+    enlaces.map(function(a){
+      return '<option value="' + a.getAttribute('href') + '">' + a.textContent.trim() + '</option>';
+    }).join('');
+  sel.onchange = function(){
+    if (!sel.value) return;
+    var d = document.querySelector(sel.value);
+    if (d) d.scrollIntoView({behavior:'smooth', block:'start'});
+    sel.selectedIndex = 0;
+  };
+  wrap.parentNode.insertBefore(sel, wrap);
+})();
+/* ---------- ACCESO RÁPIDO: un solo botón en vez de tres ---------- */
+(function(){
+  // fuera los flotantes antiguos, que competían por la misma esquina
+  ['arriba','irhoy'].forEach(function(id){
+    var v = document.getElementById(id); if (v) v.remove();
+  });
+
+  var ACCESOS = [
+    {ic:'📍', t:'Cerca',    a:'cerca'},
+    {ic:'🥯', t:'Comer',    a:'#comer'},
+    {ic:'🧒', t:'La niña',  a:'#nina'},
+    {ic:'↑',  t:'Arriba',   a:'top'}
+  ];
+
+  var caja = document.createElement('div');
+  caja.id = 'rapido';
+  caja.innerHTML =
+    '<div class="rap-lista">' +
+      ACCESOS.map(function(x){
+        return '<button class="rap-item" data-a="' + x.a + '">' +
+               '<span class="rap-t">' + x.t + '</span>' +
+               '<span class="rap-ic">' + x.ic + '</span></button>';
+      }).join('') +
+    '</div>' +
+    '<button class="rap-btn" aria-label="Accesos rápidos" aria-expanded="false">⚡</button>';
+  document.body.appendChild(caja);
+
+  var btn = caja.querySelector('.rap-btn');
+  function abre(v){
+    caja.classList.toggle('abierto', v);
+    btn.setAttribute('aria-expanded', v ? 'true' : 'false');
+    btn.textContent = v ? '✕' : '⚡';
+  }
+  btn.onclick = function(e){ e.stopPropagation(); abre(!caja.classList.contains('abierto')); };
+  document.addEventListener('click', function(){ abre(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') abre(false); });
+
+  caja.querySelectorAll('.rap-item').forEach(function(b){
+    b.onclick = function(e){
+      e.stopPropagation();
+      abre(false);
+      if (b.dataset.a === 'cerca') return window.abrirCerca && window.abrirCerca();
+      if (b.dataset.a === 'top') return window.scrollTo({top:0, behavior:'smooth'});
+      var destino = document.querySelector(b.dataset.a);
+      if (destino) destino.scrollIntoView({behavior:'smooth', block:'start'});
+    };
+  });
+
+  // aparece al bajar; en lo alto de la página estorba
+  var previo = 0;
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY;
+    if ((y > 500) !== (previo > 500)) {
+      caja.classList.toggle('visible', y > 500);
+      if (y <= 500) abre(false);
+    }
+    previo = y;
+  }, {passive:true});
+})();
+
+/* ---------- FILTRO DE PLATOS ---------- */
+(function(){
+  var botones = document.querySelectorAll('.fp');
+  if (!botones.length) return;
+  var tarjetas = document.querySelectorAll('.plato-card');
+  botones.forEach(function(b){
+    b.onclick = function(){
+      botones.forEach(function(x){ x.classList.remove('activo'); });
+      b.classList.add('activo');
+      var f = b.dataset.f.toLowerCase();
+      tarjetas.forEach(function(t){
+        var etapas = (t.dataset.etapas || '').toLowerCase();
+        t.classList.toggle('oculto', !!f && etapas.indexOf(f) === -1 && etapas.indexOf('todo el viaje') === -1);
+      });
+    };
+  });
+})();
+</script>
+<script>
+/* ---------- ¿QUÉ TENGO CERCA? ---------- */
+(function(){
+  if (typeof SITIOS === 'undefined') return;
+
+  var SELLO = {amigo:'lo recomienda quien ha estado', leyenda:'lleva décadas abierto',
+               local:'donde come la gente de aquí', barato:'muy barato',
+               cena:'la comida buena', '':''};
+
+  var panel = document.createElement('div');
+  panel.id = 'cerca';
+  panel.innerHTML =
+    '<div class="cerca-caja">' +
+      '<button class="cerca-x" aria-label="Cerrar">✕</button>' +
+      '<h3>¿Qué tengo cerca?</h3>' +
+      '<div class="cerca-estado">Buscando dónde estás…</div>' +
+      '<div class="cerca-lista"></div>' +
+    '</div>';
+  document.body.appendChild(panel);
+
+  var estado = panel.querySelector('.cerca-estado');
+  var lista = panel.querySelector('.cerca-lista');
+  panel.querySelector('.cerca-x').onclick = cerrar;
+  panel.onclick = function(e){ if (e.target === panel) cerrar(); };
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') cerrar(); });
+  function cerrar(){ panel.classList.remove('abierto'); }
+
+  function km(la1, lo1, la2, lo2){
+    var R = 6371, r = Math.PI/180;
+    var dla = (la2-la1)*r, dlo = (lo2-lo1)*r;
+    var a = Math.sin(dla/2)*Math.sin(dla/2) +
+            Math.cos(la1*r)*Math.cos(la2*r)*Math.sin(dlo/2)*Math.sin(dlo/2);
+    return 2*R*Math.asin(Math.sqrt(a));
+  }
+  function distancia(d){
+    return d < 1 ? Math.round(d*1000) + ' m' : d.toFixed(1).replace('.',',') + ' km';
+  }
+  function andando(d){
+    var min = Math.round(d*1000/75);
+    return min <= 25 ? ' · ' + min + ' min andando' : '';
+  }
+
+  function pinta(lat, lon){
+    var cerca = SITIOS.map(function(s){
+      var d = km(lat, lon, s.la, s.lo);
+      // los de posición aproximada llevan la coordenada del barrio, no la del local:
+      // se penalizan al ordenar para que no adelanten a los que sí están situados
+      return {s: s, d: d, orden: s.ap ? d + 0.6 : d};
+    }).sort(function(a,b){ return a.orden - b.orden; });
+
+    var enEtapa = cerca[0].d < 60 ? cerca[0].s.e : null;
+    var top = cerca.filter(function(x){ return x.d < 80; }).slice(0, 12);
+
+    if (!top.length) {
+      estado.innerHTML = 'Estás lejos de todo lo que hay en la guía. ' +
+        '¿Seguro que ya estáis en Londres?';
+      lista.innerHTML = '';
+      return;
+    }
+    estado.innerHTML = 'Estás en <b>' + enEtapa + '</b>. Lo más cercano de la guía:';
+    lista.innerHTML = top.map(function(x){
+      var s = x.s;
+      var url = 'https://www.google.com/maps/search/?api=1&query=' + s.q;
+      return '<a class="cerca-item" href="' + url + '" target="_blank" rel="noopener">' +
+        '<span class="cerca-d' + (s.ap ? ' aprox' : '') + '">' +
+          (s.ap ? 'por aquí' : distancia(x.d)) + '</span>' +
+        '<span class="cerca-n">' + s.n +
+          (s.s ? '<span class="cerca-sello k-' + s.s + '">' + SELLO[s.s] + '</span>' : '') +
+        '<small>' + s.z + (s.ap ? ' · no tengo su punto exacto' : andando(x.d)) + '</small></span></a>';
+    }).join('');
+  }
+
+  function abrir(){
+    panel.classList.add('abierto');
+    lista.innerHTML = '';
+    if (!navigator.geolocation) {
+      estado.innerHTML = 'Este navegador no puede darme tu posición.'; return;
+    }
+    estado.innerHTML = 'Buscando dónde estás…';
+    navigator.geolocation.getCurrentPosition(
+      function(p){ pinta(p.coords.latitude, p.coords.longitude); },
+      function(err){
+        estado.innerHTML = err.code === 1
+          ? 'Has denegado el permiso de ubicación. Actívalo en los ajustes del navegador y vuelve a intentarlo.'
+          : 'No he podido saber dónde estás. Prueba a salir a la calle: dentro de un edificio el GPS falla.';
+      },
+      {enableHighAccuracy: true, timeout: 12000, maximumAge: 60000}
+    );
+  }
+
+  // se abre desde el acceso rápido y desde la sección de comida
+  window.abrirCerca = abrir;
+})();
+
+/* ---------- LOS CONTADORES DE SITIOS, AL DÍA ---------- */
+(function(){
+  document.querySelectorAll('.ir-etapa').forEach(function(a){
+    var sec = document.querySelector(a.getAttribute('href'));
+    if (!sec) return;
+    var n = sec.querySelectorAll('.sitios li').length;
+    var etq = a.querySelector('span');
+    if (etq) etq.textContent = n + (n === 1 ? ' sitio' : ' sitios');
+  });
+  var total = document.querySelectorAll('.sitios li').length;
+  document.querySelectorAll('[data-total-sitios]').forEach(function(e){ e.textContent = total; });
+})();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

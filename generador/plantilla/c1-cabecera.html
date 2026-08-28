@@ -1,0 +1,79 @@
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="fechas">Una semana en Londres · desde el sábado 29 de agosto</div>
+    <h1>Londres, a vuestro aire</h1>
+    <p class="sub">Nada de día a día. Aquí hay sitios donde comer bien sin arruinarse, cosas que
+    hacer con la niña y paseos para las tardes. Cada mañana miráis, elegís y ya está.</p>
+  </div>
+</header>
+
+<nav class="sans"><div class="nav-inner"><div class="wrap">
+  <a href="#ruta">Cómo usarla</a>
+  <a href="#carnaval">Este finde</a>
+  <a href="#nina">Con la niña</a>
+  <a href="#comer">Comer</a>
+  <a href="#este">Brick Lane</a>
+  <a href="#kingscross">King's Cross</a>
+  <a href="#soho">Soho</a>
+  <a href="#sur">Borough</a>
+  <a href="#museos">Museos</a>
+  <a href="#greenwich">Greenwich</a>
+  <a href="#paseos">Paseos</a>
+  <a href="#mapa">Mapa</a>
+</div>
+  <div class="buscador sans">
+    <span class="lupa">🔍</span>
+    <input id="buscar" type="search" placeholder="Buscar…" aria-label="Buscar en la guía" autocomplete="off">
+    <div class="resultados" id="resultados"></div>
+  </div>
+  <button id="tema" class="tema-btn sans" aria-label="Cambiar a modo oscuro">☾</button>
+  <button id="menuBtn" class="menu-btn" onclick="toggleMenuInfo(event)" aria-label="Menú de información práctica" aria-expanded="false">
+    <span class="bars">☰</span><span>Info</span>
+  </button>
+  <div class="menu-panel" id="menuInfo">
+    <button id="temaMenu" class="tema-en-menu">☾ Modo oscuro</button>
+    <div class="cab">Sobre la marcha</div>
+    <a href="#comer" onclick="cerrarMenuInfo()">🥯 Comer (todo)</a>
+    <a href="#nina" onclick="cerrarMenuInfo()">🧒 Con la niña</a>
+    <a href="#paseos" onclick="cerrarMenuInfo()">🚶 Paseos y arquitectura</a>
+    <a href="#lluvia" onclick="cerrarMenuInfo()">🌧️ Si llueve</a>
+    <div class="cab cab2">Antes de salir</div>
+    <a href="#entradas" onclick="cerrarMenuInfo()">🎟️ Lo poco que hay que reservar</a>
+    <a href="#transporte" onclick="cerrarMenuInfo()">🚇 Metro, bus y pagar</a>
+    <a href="#practico" onclick="cerrarMenuInfo()">🧭 Guía práctica</a>
+    <a href="#offline" onclick="cerrarMenuInfo()">📥 Guardarla en el móvil</a>
+  </div>
+</div></nav>
+
+<main>
+
+<section class="resumen" id="ruta">
+  <div class="kicker">Cómo se usa esto</div>
+  <h2>Una semana, sin agenda</h2>
+  <p class="intro">Esta guía no os dice qué hacer el martes. Londres no funciona así: se tarda
+  media hora en cruzarla, llueve cuando quiere y con una niña de seis años los planes duran lo
+  que duran. Lo que hay aquí son <strong>seis zonas</strong>, y cada zona trae sus cosas que ver,
+  sus paseos y <strong>dónde comer allí mismo</strong>. Elegís una por día, o dos si caen cerca,
+  y os sobra tiempo.</p>
+
+  <div class="claves">
+    <div class="clave"><div class="n">£0</div><div class="t">los grandes museos son gratis, todos</div></div>
+    <div class="clave"><div class="n">gratis</div><div class="t">la niña, en metro y bus, hasta los 11</div></div>
+    <div class="clave"><div class="n">8,90</div><div class="t">libras: tope diario de transporte, zonas 1–2</div></div>
+    <div class="clave"><div class="n">2</div><div class="t">cosas que conviene reservar ya, y solo dos</div></div>
+  </div>
+
+  <h3 class="sub-h">Las seis zonas, en una línea cada una</h3>
+  <ul class="lista-ver">
+    <li><b><a href="#este">Brick Lane y Shoreditch</a></b> — donde se come mejor y más barato de todo Londres. Beigels de <i>salt beef</i>, barbacoa de humo y curry. Mercados el domingo.</li>
+    <li><b><a href="#kingscross">King's Cross</a></b> — los gasómetros victorianos convertidos en plazas, las fuentes donde se moja la niña y el andén 9¾. Media tarde larga.</li>
+    <li><b><a href="#soho">Soho, Chinatown y Covent Garden</a></b> — la tienda de Harry Potter buena, el sushi a mitad de precio y sitios de comer por todas partes.</li>
+    <li><b><a href="#sur">Borough y la orilla sur</a></b> — el mercado de comida, la Tate, el paseo del río y el mejor <i>grilled cheese</i> del país.</li>
+    <li><b><a href="#museos">South Kensington</a></b> — dinosaurios, ciencia con botones y el parque con el barco pirata. El plan seguro si llueve.</li>
+    <li><b><a href="#greenwich">Greenwich y el río</a></b> — se va en barco, hay un velero, un parque en cuesta y el meridiano. El día completo más fácil con niños.</li>
+  </ul>
+  <p class="intro" style="margin-top:18px">Y aparte, dos cosas que no son zona: <a href="#nina"><b>lo de la niña</b></a>,
+  todo junto en una sección, y <a href="#paseos"><b>los paseos</b></a>, para cuando queráis andar sin destino.</p>
+</section>

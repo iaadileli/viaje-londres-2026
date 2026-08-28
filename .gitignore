@@ -1,0 +1,6 @@
+__pycache__/
+node_modules/
+generador/datos-fuente/cand/
+generador/datos-fuente/hojas/
+*.mp3.tmp
+nerja-sin-conexion.html
