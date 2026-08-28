@@ -4,3 +4,4 @@ generador/datos-fuente/cand/
 generador/datos-fuente/hojas/
 *.mp3.tmp
 generador/datos-fuente/capturas/
+.ultima-actualizacion-tiempo

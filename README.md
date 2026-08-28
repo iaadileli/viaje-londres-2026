@@ -44,3 +44,16 @@ Conviene portarlos a `viaje-nerja` y `viaje-tailandia`:
 
 Y en modo oscuro los bloques `.comer` se quedaban con fondo claro y texto claro: corregido en
 `css-londres.html`.
+
+## El tiempo se actualiza solo
+
+`generador/tiempo.py` consulta Open-Meteo (sin clave) y reescribe
+`generador/plantilla/d0-tiempo.html` con la predicción de los ocho días del viaje. Además, el JS
+de la página vuelve a pedir la predicción **cada vez que alguien abre la web**, así que lo que ven
+Edu y Sara siempre es de hoy; los datos escritos en el HTML son el respaldo para cuando no hay
+conexión.
+
+`actualizar-tiempo.sh` hace el ciclo completo (predicción → montar → copia sin conexión → commit →
+push) y está enganchado a un hook `SessionStart` en `~/.claude/settings.json`. **Se apaga solo**:
+no hace nada a partir del 6 de septiembre de 2026, y como mucho actúa una vez al día. Para
+quitarlo antes, borrar el hook con `/hooks`.
