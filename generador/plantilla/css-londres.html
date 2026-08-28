@@ -40,52 +40,36 @@
   html[data-tema="oscuro"] .aviso-sec{background:linear-gradient(135deg,#221a16,#1b1f24);border-color:#3a2a20}
   .aviso-sec > .kicker{color:var(--teca)}
 
-  /* mapa esquemático. OJO: los colores van aquí en CSS y además repetidos como
-     atributo en el SVG. En un atributo de presentación, fill="var(--x)" NO lo
-     resuelven Safari ni iOS: el fondo y el río desaparecían y solo quedaban los
-     puntos, que sí llevaban CSS. Así se ve en todos, y el CSS solo repinta. */
+  /* el mapa: una imagen de OpenStreetMap de fondo y las zonas encima, cada una
+     en su coordenada real. Los colores van en CSS y también literales en el SVG:
+     fill="var(--x)" en un ATRIBUTO no lo resuelven Safari ni iOS. */
   .mapa-wrap{display:block;margin:22px 0 10px;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .mapa-svg{width:100%;min-width:600px;height:auto;display:block;border-radius:14px;
+  .mapa-svg{width:100%;min-width:660px;height:auto;display:block;border-radius:14px;
     border:1px solid var(--linea);box-shadow:var(--sombra)}
-  .m-fondo{fill:#e8eef6}
-  .m-verde{fill:#cfe0cd}
-  .m-parque{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:12px;
-    font-style:italic;fill:#5c7a56;text-anchor:middle}
-  .m-rio-borde{stroke:#a9c9d6}
-  .m-rio-linea{stroke:#7fb0c4}
-  .m-rio{font-family:Georgia,serif;font-style:italic;font-size:17px;fill:#2f7a8c;text-anchor:middle}
-  .m-rosa-c{fill:#ffffff;stroke:#c9d3de}
-  .m-rosa-t{font-family:-apple-system,'Segoe UI',sans-serif;font-size:12px;font-weight:700;
-    fill:#5e666e;text-anchor:middle}
-  .m-punto circle{fill:#17456e}
-  .m-punto.destaca circle{fill:#a5452e;stroke:#ffffff;stroke-width:3}
-  .m-punto text{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:15px;font-weight:600;
-    fill:#23262a;text-anchor:middle;paint-order:stroke;stroke:#e8eef6;stroke-width:4;stroke-linejoin:round}
-  .m-punto .m-sub{font-size:12px;font-weight:400;fill:#5e666e}
-  /* en modo oscuro el mapa se repinta entero, que si no queda una isla blanca */
-  html[data-tema="oscuro"] .m-fondo{fill:#11202b}
-  html[data-tema="oscuro"] .m-verde{fill:#1b2f24}
-  html[data-tema="oscuro"] .m-parque{fill:#7d9c77}
-  html[data-tema="oscuro"] .m-rio-borde{stroke:#1d4356}
-  html[data-tema="oscuro"] .m-rio-linea{stroke:#2b6076}
-  html[data-tema="oscuro"] .m-rio{fill:#8cc6d8}
-  html[data-tema="oscuro"] .m-rosa-c{fill:#182129;stroke:#2c3a45}
-  html[data-tema="oscuro"] .m-rosa-t{fill:#9aa4ae}
-  html[data-tema="oscuro"] .m-punto circle{fill:#7fb2dd}
-  html[data-tema="oscuro"] .m-punto.destaca circle{fill:#e08a6c;stroke:#11202b}
-  html[data-tema="oscuro"] .m-punto text{fill:#e7eaee;stroke:#11202b}
-  html[data-tema="oscuro"] .m-punto .m-sub{fill:#9aa4ae}
+  .m-base{opacity:.95}
+  html[data-tema="oscuro"] .m-base{filter:invert(.9) hue-rotate(180deg) saturate(.55) brightness(1.05)}
+
+  .m-punto circle{fill:#17456e;stroke:#ffffff;stroke-width:3}
+  .m-punto.destaca circle{fill:#a5452e;stroke:#ffffff;stroke-width:4}
+  html[data-tema="oscuro"] .m-punto circle{stroke:#121a22}
+  .m-tit{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:27px;font-weight:700;
+    fill:#1b2b3a;paint-order:stroke;stroke:#ffffff;stroke-width:7;stroke-linejoin:round}
+  .m-sub{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:21px;font-weight:500;
+    fill:#4a5a68;paint-order:stroke;stroke:#ffffff;stroke-width:6;stroke-linejoin:round}
+  html[data-tema="oscuro"] .m-tit{fill:#eef3f7;stroke:#0e161d;stroke-width:8}
+  html[data-tema="oscuro"] .m-sub{fill:#b3c1cc;stroke:#0e161d;stroke-width:7}
 
   /* cada zona del mapa es un enlace a su sección */
   a.m-punto{cursor:pointer}
   .m-toca{fill:transparent}
-  a.m-punto:hover .m-toca,a.m-punto:focus .m-toca{fill:#17456e;fill-opacity:.07}
-  html[data-tema="oscuro"] a.m-punto:hover .m-toca{fill:#7fb2dd;fill-opacity:.12}
-  a.m-punto:hover circle{r:13}
-  a.m-punto:hover text{text-decoration:underline}
+  a.m-punto:hover .m-toca,a.m-punto:focus .m-toca{fill:#17456e;fill-opacity:.10}
+  html[data-tema="oscuro"] a.m-punto:hover .m-toca{fill:#7fb2dd;fill-opacity:.16}
+  a.m-punto:hover circle{stroke-width:6}
+  a.m-punto:hover .m-tit{text-decoration:underline}
   a.m-punto:focus{outline:none}
-  a.m-punto:focus-visible .m-toca{fill-opacity:.14;stroke:#17456e;stroke-width:2}
+  a.m-punto:focus-visible .m-toca{fill-opacity:.18;stroke:#17456e;stroke-width:3}
   .mapa-pinchar b{color:var(--teca)}
+  .mapa-credito a{color:var(--mar)}
 
   /* leyenda bajo el mapa */
   .mapa-pie{display:flex;flex-wrap:wrap;gap:16px;font-size:.82rem;color:var(--tinta2);margin:0 0 18px}

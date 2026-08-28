@@ -1,10 +1,11 @@
-const CACHE = 'londres2026-v2';
+const CACHE = 'londres2026-v3';
 const RECURSOS = [
   './',
   'index.html',
   'manifest.webmanifest',
   'sitios.js',
   'img/portada-hero.jpg',
+  'img/mapa-londres.jpg',
   'img/brick-lane.jpg',
   'img/gasholder.jpg',
   'img/chinatown.jpg',

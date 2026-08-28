@@ -90,16 +90,47 @@ function avisaNueva(reg){
   if (document.getElementById('nuevaVersion')) return;
   var b = document.createElement('div');
   b.id = 'nuevaVersion';
-  b.innerHTML = '<span>Hay una versión nueva de la guía</span>' +
-                '<button id="nvOk">Actualizar</button>' +
-                '<button id="nvNo" aria-label="Ahora no">✕</button>';
+  b.setAttribute('role', 'dialog');
+  b.setAttribute('aria-modal', 'true');
+  b.setAttribute('aria-labelledby', 'nvTit');
+  b.innerHTML =
+    '<div class="nv-caja">' +
+      '<div class="nv-ico" aria-hidden="true">\u2728</div>' +
+      '<h3 id="nvTit">Hay una versi\u00f3n nueva de la gu\u00eda</h3>' +
+      '<p>Se ha cambiado algo desde la \u00faltima vez que la abriste. Al actualizar se borra ' +
+      'la copia guardada en el m\u00f3vil y se descarga la nueva, con los cambios.</p>' +
+      '<div class="nv-botones">' +
+        '<button id="nvOk">Actualizar ahora</button>' +
+        '<button id="nvNo">Ahora no</button>' +
+      '</div>' +
+    '</div>';
   document.body.appendChild(b);
   requestAnimationFrame(function(){ b.classList.add('visible'); });
-  document.getElementById('nvNo').onclick = function(){ b.remove(); };
-  document.getElementById('nvOk').onclick = function(){
-    document.getElementById('nvOk').textContent = 'Actualizando…';
-    if (reg.waiting) reg.waiting.postMessage({tipo: 'ACTIVAR_YA'});
-    setTimeout(function(){ location.reload(); }, 400);
+
+  var ok = document.getElementById('nvOk');
+  ok.focus();
+  function cerrar(){ b.classList.remove('visible'); setTimeout(function(){ b.remove(); }, 220); }
+  document.getElementById('nvNo').onclick = cerrar;
+  b.addEventListener('click', function(e){ if (e.target === b) cerrar(); });
+  document.addEventListener('keydown', function esc(e){
+    if (e.key === 'Escape' && document.getElementById('nuevaVersion')) { cerrar(); document.removeEventListener('keydown', esc); }
+  });
+
+  ok.onclick = function(){
+    ok.textContent = 'Actualizando\u2026';
+    ok.disabled = true;
+    if (reg && reg.waiting) reg.waiting.postMessage({tipo: 'ACTIVAR_YA'});
+    function recarga(){ location.reload(); }
+    // se borra la copia guardada para que no quede nada de la versi\u00f3n vieja.
+    // Sin conexi\u00f3n NO se borra: se quedar\u00edan sin gu\u00eda hasta volver a tener datos.
+    if (window.caches && caches.keys && navigator.onLine !== false) {
+      caches.keys()
+        .then(function(ks){ return Promise.all(ks.map(function(k){ return caches.delete(k); })); })
+        .then(function(){ setTimeout(recarga, 300); })
+        .catch(function(){ setTimeout(recarga, 300); });
+    } else {
+      setTimeout(recarga, 400);
+    }
   };
 }
 </script>

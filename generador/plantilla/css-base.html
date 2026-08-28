@@ -699,15 +699,30 @@
   .ir-etapa span{font-size:.8rem;color:var(--tinta2)}
 
   /* ---------- AVISO DE VERSIÓN NUEVA ---------- */
-  #nuevaVersion{position:fixed;left:50%;bottom:20px;transform:translate(-50%,140%);z-index:200;
-    background:var(--teca);color:#fff;border-radius:30px;padding:10px 12px 10px 20px;display:flex;
-    align-items:center;gap:12px;box-shadow:0 6px 24px rgba(0,0,0,.3);transition:transform .3s ease;
-    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem;max-width:92vw}
-  #nuevaVersion.visible{transform:translate(-50%,0)}
-  #nvOk{background:#fff;color:var(--teca);border:none;border-radius:20px;padding:7px 15px;
-    font-weight:700;font-size:.86rem;cursor:pointer;white-space:nowrap;font-family:inherit}
-  #nvNo{background:none;border:none;color:#fff;opacity:.7;font-size:1rem;cursor:pointer;padding:2px 4px}
-  #nvNo:hover{opacity:1}
+  /* Ventana centrada, no una pastilla abajo: si la guía cambia mientras están de
+     viaje, tienen que verlo. Al aceptar se borra la copia guardada y se recarga. */
+  #nuevaVersion{position:fixed;inset:0;z-index:300;display:flex;align-items:center;
+    justify-content:center;padding:20px;background:rgba(12,20,28,.55);
+    backdrop-filter:blur(3px);opacity:0;transition:opacity .22s ease;
+    font-family:-apple-system,'Segoe UI',Roboto,sans-serif}
+  #nuevaVersion.visible{opacity:1}
+  #nuevaVersion .nv-caja{background:var(--card);color:var(--tinta);border-radius:18px;
+    padding:30px 28px 24px;max-width:420px;width:100%;text-align:center;
+    box-shadow:0 18px 60px rgba(0,0,0,.35);transform:scale(.92);transition:transform .22s ease}
+  #nuevaVersion.visible .nv-caja{transform:scale(1)}
+  #nuevaVersion .nv-ico{font-size:2.4rem;line-height:1;margin-bottom:12px}
+  #nuevaVersion h3{font-family:Georgia,serif;font-size:1.35rem;font-weight:normal;
+    color:var(--teca);margin-bottom:10px}
+  #nuevaVersion p{font-size:.94rem;color:var(--tinta2);line-height:1.6;margin-bottom:20px}
+  #nuevaVersion .nv-botones{display:flex;flex-direction:column;gap:9px}
+  #nvOk{background:var(--oro);color:#fff;border:none;border-radius:11px;padding:13px 20px;
+    font-weight:700;font-size:1rem;cursor:pointer;font-family:inherit;width:100%}
+  #nvOk:hover{background:var(--teca)}
+  #nvOk[disabled]{opacity:.7;cursor:default}
+  #nvNo{background:none;border:none;color:var(--tinta2);font-size:.9rem;cursor:pointer;
+    padding:8px;font-family:inherit;text-decoration:underline}
+  #nvNo:hover{color:var(--tinta)}
+  @media(max-width:420px){#nuevaVersion .nv-caja{padding:24px 20px 18px}}
 
   /* ---------- LOS TIMOS ---------- */
   .pcard-ancho{grid-column:1/-1}

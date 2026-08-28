@@ -728,15 +728,30 @@
   .ir-etapa span{font-size:.8rem;color:var(--tinta2)}
 
   /* ---------- AVISO DE VERSIÓN NUEVA ---------- */
-  #nuevaVersion{position:fixed;left:50%;bottom:20px;transform:translate(-50%,140%);z-index:200;
-    background:var(--teca);color:#fff;border-radius:30px;padding:10px 12px 10px 20px;display:flex;
-    align-items:center;gap:12px;box-shadow:0 6px 24px rgba(0,0,0,.3);transition:transform .3s ease;
-    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem;max-width:92vw}
-  #nuevaVersion.visible{transform:translate(-50%,0)}
-  #nvOk{background:#fff;color:var(--teca);border:none;border-radius:20px;padding:7px 15px;
-    font-weight:700;font-size:.86rem;cursor:pointer;white-space:nowrap;font-family:inherit}
-  #nvNo{background:none;border:none;color:#fff;opacity:.7;font-size:1rem;cursor:pointer;padding:2px 4px}
-  #nvNo:hover{opacity:1}
+  /* Ventana centrada, no una pastilla abajo: si la guía cambia mientras están de
+     viaje, tienen que verlo. Al aceptar se borra la copia guardada y se recarga. */
+  #nuevaVersion{position:fixed;inset:0;z-index:300;display:flex;align-items:center;
+    justify-content:center;padding:20px;background:rgba(12,20,28,.55);
+    backdrop-filter:blur(3px);opacity:0;transition:opacity .22s ease;
+    font-family:-apple-system,'Segoe UI',Roboto,sans-serif}
+  #nuevaVersion.visible{opacity:1}
+  #nuevaVersion .nv-caja{background:var(--card);color:var(--tinta);border-radius:18px;
+    padding:30px 28px 24px;max-width:420px;width:100%;text-align:center;
+    box-shadow:0 18px 60px rgba(0,0,0,.35);transform:scale(.92);transition:transform .22s ease}
+  #nuevaVersion.visible .nv-caja{transform:scale(1)}
+  #nuevaVersion .nv-ico{font-size:2.4rem;line-height:1;margin-bottom:12px}
+  #nuevaVersion h3{font-family:Georgia,serif;font-size:1.35rem;font-weight:normal;
+    color:var(--teca);margin-bottom:10px}
+  #nuevaVersion p{font-size:.94rem;color:var(--tinta2);line-height:1.6;margin-bottom:20px}
+  #nuevaVersion .nv-botones{display:flex;flex-direction:column;gap:9px}
+  #nvOk{background:var(--oro);color:#fff;border:none;border-radius:11px;padding:13px 20px;
+    font-weight:700;font-size:1rem;cursor:pointer;font-family:inherit;width:100%}
+  #nvOk:hover{background:var(--teca)}
+  #nvOk[disabled]{opacity:.7;cursor:default}
+  #nvNo{background:none;border:none;color:var(--tinta2);font-size:.9rem;cursor:pointer;
+    padding:8px;font-family:inherit;text-decoration:underline}
+  #nvNo:hover{color:var(--tinta)}
+  @media(max-width:420px){#nuevaVersion .nv-caja{padding:24px 20px 18px}}
 
   /* ---------- LOS TIMOS ---------- */
   .pcard-ancho{grid-column:1/-1}
@@ -806,52 +821,36 @@
   html[data-tema="oscuro"] .aviso-sec{background:linear-gradient(135deg,#221a16,#1b1f24);border-color:#3a2a20}
   .aviso-sec > .kicker{color:var(--teca)}
 
-  /* mapa esquemático. OJO: los colores van aquí en CSS y además repetidos como
-     atributo en el SVG. En un atributo de presentación, fill="var(--x)" NO lo
-     resuelven Safari ni iOS: el fondo y el río desaparecían y solo quedaban los
-     puntos, que sí llevaban CSS. Así se ve en todos, y el CSS solo repinta. */
+  /* el mapa: una imagen de OpenStreetMap de fondo y las zonas encima, cada una
+     en su coordenada real. Los colores van en CSS y también literales en el SVG:
+     fill="var(--x)" en un ATRIBUTO no lo resuelven Safari ni iOS. */
   .mapa-wrap{display:block;margin:22px 0 10px;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .mapa-svg{width:100%;min-width:600px;height:auto;display:block;border-radius:14px;
+  .mapa-svg{width:100%;min-width:660px;height:auto;display:block;border-radius:14px;
     border:1px solid var(--linea);box-shadow:var(--sombra)}
-  .m-fondo{fill:#e8eef6}
-  .m-verde{fill:#cfe0cd}
-  .m-parque{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:12px;
-    font-style:italic;fill:#5c7a56;text-anchor:middle}
-  .m-rio-borde{stroke:#a9c9d6}
-  .m-rio-linea{stroke:#7fb0c4}
-  .m-rio{font-family:Georgia,serif;font-style:italic;font-size:17px;fill:#2f7a8c;text-anchor:middle}
-  .m-rosa-c{fill:#ffffff;stroke:#c9d3de}
-  .m-rosa-t{font-family:-apple-system,'Segoe UI',sans-serif;font-size:12px;font-weight:700;
-    fill:#5e666e;text-anchor:middle}
-  .m-punto circle{fill:#17456e}
-  .m-punto.destaca circle{fill:#a5452e;stroke:#ffffff;stroke-width:3}
-  .m-punto text{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:15px;font-weight:600;
-    fill:#23262a;text-anchor:middle;paint-order:stroke;stroke:#e8eef6;stroke-width:4;stroke-linejoin:round}
-  .m-punto .m-sub{font-size:12px;font-weight:400;fill:#5e666e}
-  /* en modo oscuro el mapa se repinta entero, que si no queda una isla blanca */
-  html[data-tema="oscuro"] .m-fondo{fill:#11202b}
-  html[data-tema="oscuro"] .m-verde{fill:#1b2f24}
-  html[data-tema="oscuro"] .m-parque{fill:#7d9c77}
-  html[data-tema="oscuro"] .m-rio-borde{stroke:#1d4356}
-  html[data-tema="oscuro"] .m-rio-linea{stroke:#2b6076}
-  html[data-tema="oscuro"] .m-rio{fill:#8cc6d8}
-  html[data-tema="oscuro"] .m-rosa-c{fill:#182129;stroke:#2c3a45}
-  html[data-tema="oscuro"] .m-rosa-t{fill:#9aa4ae}
-  html[data-tema="oscuro"] .m-punto circle{fill:#7fb2dd}
-  html[data-tema="oscuro"] .m-punto.destaca circle{fill:#e08a6c;stroke:#11202b}
-  html[data-tema="oscuro"] .m-punto text{fill:#e7eaee;stroke:#11202b}
-  html[data-tema="oscuro"] .m-punto .m-sub{fill:#9aa4ae}
+  .m-base{opacity:.95}
+  html[data-tema="oscuro"] .m-base{filter:invert(.9) hue-rotate(180deg) saturate(.55) brightness(1.05)}
+
+  .m-punto circle{fill:#17456e;stroke:#ffffff;stroke-width:3}
+  .m-punto.destaca circle{fill:#a5452e;stroke:#ffffff;stroke-width:4}
+  html[data-tema="oscuro"] .m-punto circle{stroke:#121a22}
+  .m-tit{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:27px;font-weight:700;
+    fill:#1b2b3a;paint-order:stroke;stroke:#ffffff;stroke-width:7;stroke-linejoin:round}
+  .m-sub{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:21px;font-weight:500;
+    fill:#4a5a68;paint-order:stroke;stroke:#ffffff;stroke-width:6;stroke-linejoin:round}
+  html[data-tema="oscuro"] .m-tit{fill:#eef3f7;stroke:#0e161d;stroke-width:8}
+  html[data-tema="oscuro"] .m-sub{fill:#b3c1cc;stroke:#0e161d;stroke-width:7}
 
   /* cada zona del mapa es un enlace a su sección */
   a.m-punto{cursor:pointer}
   .m-toca{fill:transparent}
-  a.m-punto:hover .m-toca,a.m-punto:focus .m-toca{fill:#17456e;fill-opacity:.07}
-  html[data-tema="oscuro"] a.m-punto:hover .m-toca{fill:#7fb2dd;fill-opacity:.12}
-  a.m-punto:hover circle{r:13}
-  a.m-punto:hover text{text-decoration:underline}
+  a.m-punto:hover .m-toca,a.m-punto:focus .m-toca{fill:#17456e;fill-opacity:.10}
+  html[data-tema="oscuro"] a.m-punto:hover .m-toca{fill:#7fb2dd;fill-opacity:.16}
+  a.m-punto:hover circle{stroke-width:6}
+  a.m-punto:hover .m-tit{text-decoration:underline}
   a.m-punto:focus{outline:none}
-  a.m-punto:focus-visible .m-toca{fill-opacity:.14;stroke:#17456e;stroke-width:2}
+  a.m-punto:focus-visible .m-toca{fill-opacity:.18;stroke:#17456e;stroke-width:3}
   .mapa-pinchar b{color:var(--teca)}
+  .mapa-credito a{color:var(--mar)}
 
   /* leyenda bajo el mapa */
   .mapa-pie{display:flex;flex-wrap:wrap;gap:16px;font-size:.82rem;color:var(--tinta2);margin:0 0 18px}
@@ -1128,41 +1127,82 @@
   <h2>Dónde está cada cosa</h2>
   <p class="intro">Londres se entiende con el río. Todo lo que os interesa está a un lado o al otro
   del Támesis y, salvo Greenwich, dentro de las zonas 1 y 2: <strong>de punta a punta son 30 o 40
-  minutos de metro</strong>. Este mapa no es a escala, es para situarse.</p>
+  minutos de metro</strong>. Cada chincheta está en su sitio de verdad, y <strong>si la pulsáis os
+  lleva a su apartado</strong>.</p>
 
   <div class="mapa-wrap">
-  <svg viewBox="0 0 900 540" class="mapa-svg" role="img" aria-label="Mapa esquemático de Londres: el Támesis cruza de oeste a este y las zonas de la guía se reparten al norte y al sur del río. Cada zona es un enlace a su apartado">
-    <rect class="m-fondo" x="0" y="0" width="900" height="540" fill="#e8eef6"/>
-    <path class="m-rio-borde" d="M-10 316 C 120 356, 240 308, 340 334 C 430 358, 500 312, 590 334 C 660 351, 690 408, 762 404 C 830 400, 870 360, 910 352"
-          fill="none" stroke="#a9c9d6" stroke-width="34" stroke-linecap="round"/>
-    <path class="m-rio-linea" d="M-10 316 C 120 356, 240 308, 340 334 C 430 358, 500 312, 590 334 C 660 351, 690 408, 762 404 C 830 400, 870 360, 910 352"
-          fill="none" stroke="#7fb0c4" stroke-width="26" stroke-linecap="round"/>
-    <text class="m-rio" x="120" y="372" fill="#2f7a8c">El Támesis</text>
-
-    <g class="m-rosa" transform="translate(842,64)">
-      <circle class="m-rosa-c" r="26" fill="#ffffff" stroke="#c9d3de" stroke-width="1.5"/>
-      <path d="M0-19 L7 3 L0-2 L-7 3 Z" fill="#a5452e"/>
-      <text class="m-rosa-t" y="-24" fill="#5e666e">N</text>
-    </g>
-
-    <a class="m-punto" href="#carnaval" aria-label="Ir a Notting Hill"><rect class="m-toca" x="24" y="142" width="192" height="66" rx="10"/><circle cx="120" cy="176" r="9"/><text x="120" y="158">Notting Hill</text><text x="120" y="200" class="m-sub">el carnaval</text></a>
-    <a class="m-punto" href="#museos" aria-label="Ir a South Kensington"><rect class="m-toca" x="56" y="234" width="224" height="66" rx="10"/><circle cx="168" cy="268" r="9"/><text x="168" y="250">South Kensington</text><text x="168" y="292" class="m-sub">los museos grandes</text></a>
-    <a class="m-punto" href="#paseos" aria-label="Ir a Camden"><rect class="m-toca" x="228" y="52" width="144" height="66" rx="10"/><circle cx="300" cy="86" r="9"/><text x="300" y="68">Camden</text><text x="300" y="110" class="m-sub">canal y mercado</text></a>
-    <a class="m-punto destaca" href="#kingscross" aria-label="Ir a King’s Cross"><rect class="m-toca" x="328" y="104" width="192" height="68" rx="10"/><circle cx="424" cy="140" r="11"/><text x="424" y="120">King’s Cross</text><text x="424" y="164" class="m-sub">gasómetros y andén 9¾</text></a>
-    <a class="m-punto destaca" href="#soho" aria-label="Ir a Soho y Covent Garden"><rect class="m-toca" x="264" y="210" width="256" height="68" rx="10"/><circle cx="392" cy="246" r="11"/><text x="392" y="226">Soho · Covent Garden</text><text x="392" y="270" class="m-sub">Chinatown y Japan Centre</text></a>
-    <a class="m-punto destaca" href="#este" aria-label="Ir a Brick Lane y Shoreditch"><rect class="m-toca" x="492" y="160" width="280" height="68" rx="10"/><circle cx="632" cy="196" r="11"/><text x="632" y="176">Brick Lane · Shoreditch</text><text x="632" y="220" class="m-sub">comer y mercados</text></a>
-    <a class="m-punto" href="#paseos" aria-label="Ir a la City"><rect class="m-toca" x="624" y="244" width="152" height="66" rx="10"/><circle cx="700" cy="278" r="9"/><text x="700" y="260">la City</text><text x="700" y="302" class="m-sub">Sky Garden</text></a>
-    <a class="m-punto destaca" href="#sur" aria-label="Ir a Borough y South Bank"><rect class="m-toca" x="342" y="376" width="256" height="70" rx="10"/><circle cx="470" cy="392" r="11"/><text x="470" y="416">Borough · South Bank</text><text x="470" y="438" class="m-sub">mercado y la Tate</text></a>
-    <a class="m-punto destaca" href="#greenwich" aria-label="Ir a Greenwich"><rect class="m-toca" x="728" y="418" width="168" height="66" rx="10"/><circle cx="812" cy="452" r="11"/><text x="812" y="434">Greenwich</text><text x="812" y="476" class="m-sub">en barco desde el centro</text></a>
-    <a class="m-punto" href="#paseos" aria-label="Ir a West Norwood"><rect class="m-toca" x="234" y="438" width="192" height="66" rx="10"/><circle cx="330" cy="472" r="9"/><text x="330" y="454">West Norwood</text><text x="330" y="496" class="m-sub">el cementerio victoriano</text></a>
+  <svg viewBox="0 0 1631 1244" class="mapa-svg" role="img"
+       aria-label="Mapa de Londres con las zonas de la guía señaladas; cada una es un enlace a su apartado">
+    <image class="m-base" href="img/mapa-londres.jpg" xlink:href="img/mapa-londres.jpg"
+           x="0" y="0" width="1631" height="1244" preserveAspectRatio="xMidYMid slice"/>
+    <a class="m-punto" href="#carnaval" aria-label="Ir a Notting Hill">
+      <rect class="m-toca" x="182" y="346" width="206" height="84" rx="14"/>
+      <circle cx="285" cy="412" r="12"/>
+      <text class="m-tit" x="285" y="378" text-anchor="middle">Notting Hill</text>
+      <text class="m-sub" x="285" y="400" text-anchor="middle">el carnaval</text>
+    </a>
+    <a class="m-punto destaca" href="#museos" aria-label="Ir a South Kensington">
+      <rect class="m-toca" x="282" y="519" width="266" height="118" rx="14"/>
+      <circle cx="415" cy="551" r="15"/>
+      <text class="m-tit" x="415" y="595" text-anchor="middle">South Kensington</text>
+      <text class="m-sub" x="415" y="619" text-anchor="middle">los museos grandes</text>
+    </a>
+    <a class="m-punto" href="#paseos" aria-label="Ir a Camden">
+      <rect class="m-toca" x="519" y="43" width="116" height="84" rx="14"/>
+      <circle cx="577" cy="109" r="12"/>
+      <text class="m-tit" x="577" y="75" text-anchor="middle">Camden</text>
+      <text class="m-sub" x="577" y="97" text-anchor="middle">canal y mercado</text>
+    </a>
+    <a class="m-punto destaca" href="#kingscross" aria-label="Ir a King’s Cross">
+      <rect class="m-toca" x="603" y="142" width="206" height="84" rx="14"/>
+      <circle cx="706" cy="208" r="15"/>
+      <text class="m-tit" x="706" y="174" text-anchor="middle">King’s Cross</text>
+      <text class="m-sub" x="706" y="196" text-anchor="middle">gasómetros y andén 9¾</text>
+    </a>
+    <a class="m-punto destaca" href="#soho" aria-label="Ir a Soho y Covent Garden">
+      <rect class="m-toca" x="507" y="344" width="326" height="118" rx="14"/>
+      <circle cx="670" cy="376" r="15"/>
+      <text class="m-tit" x="670" y="420" text-anchor="middle">Soho · Covent Garden</text>
+      <text class="m-sub" x="670" y="444" text-anchor="middle">Chinatown y Japan Centre</text>
+    </a>
+    <a class="m-punto destaca" href="#este" aria-label="Ir a Brick Lane y Shoreditch">
+      <rect class="m-toca" x="822" y="206" width="371" height="84" rx="14"/>
+      <circle cx="1008" cy="272" r="15"/>
+      <text class="m-tit" x="1008" y="238" text-anchor="middle">Brick Lane · Shoreditch</text>
+      <text class="m-sub" x="1008" y="260" text-anchor="middle">comer y mercados</text>
+    </a>
+    <a class="m-punto" href="#paseos" aria-label="Ir a la City">
+      <rect class="m-toca" x="902" y="335" width="131" height="76" rx="14"/>
+      <circle cx="920" cy="367" r="12"/>
+      <text class="m-tit" x="946" y="369" text-anchor="start">la City</text>
+      <text class="m-sub" x="946" y="393" text-anchor="start">Sky Garden y Leadenhall</text>
+    </a>
+    <a class="m-punto destaca" href="#sur" aria-label="Ir a Borough y South Bank">
+      <rect class="m-toca" x="740" y="417" width="326" height="118" rx="14"/>
+      <circle cx="903" cy="449" r="15"/>
+      <text class="m-tit" x="903" y="493" text-anchor="middle">Borough · South Bank</text>
+      <text class="m-sub" x="903" y="517" text-anchor="middle">mercado y la Tate</text>
+    </a>
+    <a class="m-punto destaca" href="#greenwich" aria-label="Ir a Greenwich">
+      <rect class="m-toca" x="1294" y="602" width="161" height="84" rx="14"/>
+      <circle cx="1375" cy="668" r="15"/>
+      <text class="m-tit" x="1375" y="634" text-anchor="middle">Greenwich</text>
+      <text class="m-sub" x="1375" y="656" text-anchor="middle">en barco desde el centro</text>
+    </a>
+    <a class="m-punto" href="#paseos" aria-label="Ir a West Norwood">
+      <rect class="m-toca" x="753" y="1075" width="206" height="84" rx="14"/>
+      <circle cx="856" cy="1141" r="12"/>
+      <text class="m-tit" x="856" y="1107" text-anchor="middle">West Norwood</text>
+      <text class="m-sub" x="856" y="1129" text-anchor="middle">el cementerio victoriano</text>
+    </a>
   </svg>
   </div>
 
   <div class="mapa-pie sans">
     <span><i class="m-ll destaca"></i>las seis zonas de la guía</span>
     <span><i class="m-ll"></i>otros sitios que se nombran</span>
-    <span><i class="m-ll rio"></i>el Támesis · al norte, arriba</span>
     <span class="mapa-pinchar"><b>👆 Pulsad en una zona</b> y os lleva a ella</span>
+    <span class="mapa-credito">Mapa: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a></span>
   </div>
 
   <div class="tip"><b>La regla que os ahorra tiempo:</b> si dos planes están en zonas distintas,
@@ -2037,16 +2077,47 @@ function avisaNueva(reg){
   if (document.getElementById('nuevaVersion')) return;
   var b = document.createElement('div');
   b.id = 'nuevaVersion';
-  b.innerHTML = '<span>Hay una versión nueva de la guía</span>' +
-                '<button id="nvOk">Actualizar</button>' +
-                '<button id="nvNo" aria-label="Ahora no">✕</button>';
+  b.setAttribute('role', 'dialog');
+  b.setAttribute('aria-modal', 'true');
+  b.setAttribute('aria-labelledby', 'nvTit');
+  b.innerHTML =
+    '<div class="nv-caja">' +
+      '<div class="nv-ico" aria-hidden="true">\u2728</div>' +
+      '<h3 id="nvTit">Hay una versi\u00f3n nueva de la gu\u00eda</h3>' +
+      '<p>Se ha cambiado algo desde la \u00faltima vez que la abriste. Al actualizar se borra ' +
+      'la copia guardada en el m\u00f3vil y se descarga la nueva, con los cambios.</p>' +
+      '<div class="nv-botones">' +
+        '<button id="nvOk">Actualizar ahora</button>' +
+        '<button id="nvNo">Ahora no</button>' +
+      '</div>' +
+    '</div>';
   document.body.appendChild(b);
   requestAnimationFrame(function(){ b.classList.add('visible'); });
-  document.getElementById('nvNo').onclick = function(){ b.remove(); };
-  document.getElementById('nvOk').onclick = function(){
-    document.getElementById('nvOk').textContent = 'Actualizando…';
-    if (reg.waiting) reg.waiting.postMessage({tipo: 'ACTIVAR_YA'});
-    setTimeout(function(){ location.reload(); }, 400);
+
+  var ok = document.getElementById('nvOk');
+  ok.focus();
+  function cerrar(){ b.classList.remove('visible'); setTimeout(function(){ b.remove(); }, 220); }
+  document.getElementById('nvNo').onclick = cerrar;
+  b.addEventListener('click', function(e){ if (e.target === b) cerrar(); });
+  document.addEventListener('keydown', function esc(e){
+    if (e.key === 'Escape' && document.getElementById('nuevaVersion')) { cerrar(); document.removeEventListener('keydown', esc); }
+  });
+
+  ok.onclick = function(){
+    ok.textContent = 'Actualizando\u2026';
+    ok.disabled = true;
+    if (reg && reg.waiting) reg.waiting.postMessage({tipo: 'ACTIVAR_YA'});
+    function recarga(){ location.reload(); }
+    // se borra la copia guardada para que no quede nada de la versi\u00f3n vieja.
+    // Sin conexi\u00f3n NO se borra: se quedar\u00edan sin gu\u00eda hasta volver a tener datos.
+    if (window.caches && caches.keys && navigator.onLine !== false) {
+      caches.keys()
+        .then(function(ks){ return Promise.all(ks.map(function(k){ return caches.delete(k); })); })
+        .then(function(){ setTimeout(recarga, 300); })
+        .catch(function(){ setTimeout(recarga, 300); });
+    } else {
+      setTimeout(recarga, 400);
+    }
   };
 }
 </script>
