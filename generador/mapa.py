@@ -25,7 +25,7 @@ ZONAS = [
  (51.5240, -0.0720, '#este',       'Brick Lane · Shoreditch', 'comer y mercados',         True,  'arriba'),
  (51.5138, -0.0870, '#paseos',     'la City',                 'Sky Garden y Leadenhall',  False, 'derecha'),
  (51.5050, -0.0900, '#sur',        'Borough · South Bank',    'mercado y la Tate',        True,  'abajo'),
- (51.4816, -0.0090, '#greenwich',  'Greenwich',               'en barco desde el centro', True,  'arriba'),
+ (51.4816, -0.0090, '#greenwich',  'Greenwich',               'a 15 min de casa', True,  'arriba'),
  (51.4310, -0.0980, '#paseos',     'West Norwood',            'el cementerio victoriano', False, 'arriba'),
 ]
 
@@ -135,6 +135,7 @@ html = '''
   </div>
 
   <div class="mapa-pie sans">
+    <span><i class="m-ll casa"></i>vuestra casa</span>
     <span><i class="m-ll destaca"></i>las seis zonas de la guía</span>
     <span><i class="m-ll"></i>otros sitios que se nombran</span>
     <span class="mapa-pinchar"><b>👆 Pulsad en una zona</b> y os lleva a ella</span>
