@@ -778,6 +778,24 @@
     border-radius:50%;background:var(--oro)}
   .lista-ver li b{color:var(--tinta)}
   html[data-tema="oscuro"] .lista-ver li{color:var(--tinta)}
+
+  /* --- Legibilidad en modo oscuro (auditoría del 28 ago 2026) ---
+     Estos textos llevaban el color fijo #3a4247, pensado para fondo claro: sobre
+     el fondo oscuro daban 1,64:1 de contraste y no se leían. */
+  html[data-tema="oscuro"] .dia p,
+  html[data-tema="oscuro"] .bcard p,
+  html[data-tema="oscuro"] .lista-ver li,
+  html[data-tema="oscuro"] .leyenda .lg,
+  html[data-tema="oscuro"] .pcard ul,
+  html[data-tema="oscuro"] table.hoteles td,
+  html[data-tema="oscuro"] table.tab td{color:var(--tinta)}
+  /* el botón Info: en oscuro el azul se aclara, así que el texto va oscuro */
+  html[data-tema="oscuro"] .menu-btn{color:#12161a}
+  html[data-tema="oscuro"] .menu-btn:hover{color:#fff}
+
+  /* la flecha «Arriba» del acceso rápido es texto, no un emoji: en modo oscuro
+     se quedaba en negro sobre fondo oscuro y no se veía */
+  html[data-tema="oscuro"] .rap-ic{color:var(--tinta)}
 </style>
 <style>
   /* ================== LONDRES: paleta y piezas propias ================== */
@@ -1901,7 +1919,7 @@
   puede guardar entera en el móvil y funciona sin datos: los sitios, las direcciones, los
   horarios y el buscador. Lo único que necesita conexión es abrir Google Maps.</p>
   <div class="offline-caja">
-    <button id="btnGuardar" class="offline-btn">📥 Guardar para usar sin conexión</button>
+    <button id="btnGuardar" class="offline-btn" onclick="guardarOffline()">📥 Guardar para usar sin conexión</button>
     <div id="estadoOffline" class="offline-estado"></div>
   </div>
   <div class="tip"><b>Y para el móvil, un atajo:</b> abridla en Chrome o Safari, dadle a
@@ -2055,6 +2073,12 @@
   } else {
     if (elBoton) elBoton.style.display = 'none';
     if (elEstado) elEstado.textContent = 'Este navegador no permite guardar la web; usad la descarga en ZIP.';
+  }
+
+  // por si al botón se le olvida el onclick en el HTML: sin esto, el guardado
+  // sin conexión no hace absolutamente nada y nadie se entera hasta el avión
+  if (elBoton && !elBoton.getAttribute('onclick')) {
+    elBoton.addEventListener('click', function(){ guardarOffline(); });
   }
 
   function guardarOffline(){

@@ -70,6 +70,12 @@
     if (elEstado) elEstado.textContent = 'Este navegador no permite guardar la web; usad la descarga en ZIP.';
   }
 
+  // por si al botón se le olvida el onclick en el HTML: sin esto, el guardado
+  // sin conexión no hace absolutamente nada y nadie se entera hasta el avión
+  if (elBoton && !elBoton.getAttribute('onclick')) {
+    elBoton.addEventListener('click', function(){ guardarOffline(); });
+  }
+
   function guardarOffline(){
     if (!('serviceWorker' in navigator)) return;
     elBoton.disabled = true;

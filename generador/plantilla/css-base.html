@@ -749,4 +749,22 @@
     border-radius:50%;background:var(--oro)}
   .lista-ver li b{color:var(--tinta)}
   html[data-tema="oscuro"] .lista-ver li{color:var(--tinta)}
+
+  /* --- Legibilidad en modo oscuro (auditoría del 28 ago 2026) ---
+     Estos textos llevaban el color fijo #3a4247, pensado para fondo claro: sobre
+     el fondo oscuro daban 1,64:1 de contraste y no se leían. */
+  html[data-tema="oscuro"] .dia p,
+  html[data-tema="oscuro"] .bcard p,
+  html[data-tema="oscuro"] .lista-ver li,
+  html[data-tema="oscuro"] .leyenda .lg,
+  html[data-tema="oscuro"] .pcard ul,
+  html[data-tema="oscuro"] table.hoteles td,
+  html[data-tema="oscuro"] table.tab td{color:var(--tinta)}
+  /* el botón Info: en oscuro el azul se aclara, así que el texto va oscuro */
+  html[data-tema="oscuro"] .menu-btn{color:#12161a}
+  html[data-tema="oscuro"] .menu-btn:hover{color:#fff}
+
+  /* la flecha «Arriba» del acceso rápido es texto, no un emoji: en modo oscuro
+     se quedaba en negro sobre fondo oscuro y no se veía */
+  html[data-tema="oscuro"] .rap-ic{color:var(--tinta)}
 </style>
