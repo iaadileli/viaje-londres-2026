@@ -1,4 +1,4 @@
-const CACHE = 'londres2026-v1';
+const CACHE = 'londres2026-v2';
 const RECURSOS = [
   './',
   'index.html',
@@ -12,6 +12,7 @@ const RECURSOS = [
   'img/natural-history.jpg',
   'img/greenwich.jpg',
   'img/west-norwood.jpg',
+  'img/west-norwood-doulton.jpg',
   'img/icono-192.png',
   'img/icono-512.png',
   'img/portada.jpg',

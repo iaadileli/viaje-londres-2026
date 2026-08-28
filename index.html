@@ -40,7 +40,7 @@
 
   /* ---------- HERO ---------- */
   header.hero{position:relative;min-height:58vh;display:flex;align-items:flex-end;
-    background:linear-gradient(180deg,rgba(8,30,45,.22),rgba(8,30,45,.62)),url('img/nerja-balcon-europa.jpg') center/cover no-repeat;color:#fff}
+    background:linear-gradient(180deg,rgba(8,30,45,.22),rgba(8,30,45,.62));color:#fff}
   .hero-inner{max-width:1050px;margin:0 auto;padding:60px 24px 48px;width:100%}
   .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:normal;letter-spacing:.5px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
   .hero .fechas{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.02rem;letter-spacing:1.5px;text-transform:uppercase;opacity:.95;margin-top:10px}
@@ -779,6 +779,16 @@
     --card:#181e24; --sombra:0 2px 14px rgba(0,0,0,.4);
   }
 
+  /* al saltar a una sección, que el nav pegajoso no tape el título */
+  .etapa-sec,section[id],#tiempo{scroll-margin-top:64px}
+
+  /* la foto de West Norwood es de 640 px en origen: a todo lo ancho se ve
+     blanda, así que se muestra a su tamaño y centrada */
+  .banner.pequeno{max-width:660px;margin-left:auto;margin-right:auto}
+
+  /* el hero de Nerja seguía citado en el CSS heredado: fuera esa foto,
+     que aquí no existe y era una petición rota */
+
   /* el hero, con la foto de Londres */
   header.hero{background:linear-gradient(180deg,rgba(10,20,35,.28),rgba(10,20,35,.68)),
     url('img/portada-hero.jpg') center/cover no-repeat}
@@ -796,16 +806,62 @@
   html[data-tema="oscuro"] .aviso-sec{background:linear-gradient(135deg,#221a16,#1b1f24);border-color:#3a2a20}
   .aviso-sec > .kicker{color:var(--teca)}
 
-  /* mapa esquemático */
-  .mapa-wrap{display:block;margin:22px 0 14px;overflow-x:auto}
-  .mapa-svg{width:100%;min-width:560px;height:auto;display:block;border-radius:14px;
-    background:var(--card);box-shadow:var(--sombra)}
-  .m-punto circle{fill:var(--oro)}
-  .m-punto.destaca circle{fill:var(--teca)}
+  /* mapa esquemático. OJO: los colores van aquí en CSS y además repetidos como
+     atributo en el SVG. En un atributo de presentación, fill="var(--x)" NO lo
+     resuelven Safari ni iOS: el fondo y el río desaparecían y solo quedaban los
+     puntos, que sí llevaban CSS. Así se ve en todos, y el CSS solo repinta. */
+  .mapa-wrap{display:block;margin:22px 0 10px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .mapa-svg{width:100%;min-width:600px;height:auto;display:block;border-radius:14px;
+    border:1px solid var(--linea);box-shadow:var(--sombra)}
+  .m-fondo{fill:#e8eef6}
+  .m-verde{fill:#cfe0cd}
+  .m-parque{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:12px;
+    font-style:italic;fill:#5c7a56;text-anchor:middle}
+  .m-rio-borde{stroke:#a9c9d6}
+  .m-rio-linea{stroke:#7fb0c4}
+  .m-rio{font-family:Georgia,serif;font-style:italic;font-size:17px;fill:#2f7a8c;text-anchor:middle}
+  .m-rosa-c{fill:#ffffff;stroke:#c9d3de}
+  .m-rosa-t{font-family:-apple-system,'Segoe UI',sans-serif;font-size:12px;font-weight:700;
+    fill:#5e666e;text-anchor:middle}
+  .m-punto circle{fill:#17456e}
+  .m-punto.destaca circle{fill:#a5452e;stroke:#ffffff;stroke-width:3}
   .m-punto text{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:15px;font-weight:600;
-    fill:var(--tinta);text-anchor:middle}
-  .m-punto .m-sub{font-size:12px;font-weight:400;fill:var(--tinta2)}
-  .m-rio{font-family:Georgia,serif;font-style:italic;font-size:16px;fill:var(--mar);text-anchor:middle}
+    fill:#23262a;text-anchor:middle;paint-order:stroke;stroke:#e8eef6;stroke-width:4;stroke-linejoin:round}
+  .m-punto .m-sub{font-size:12px;font-weight:400;fill:#5e666e}
+  /* en modo oscuro el mapa se repinta entero, que si no queda una isla blanca */
+  html[data-tema="oscuro"] .m-fondo{fill:#11202b}
+  html[data-tema="oscuro"] .m-verde{fill:#1b2f24}
+  html[data-tema="oscuro"] .m-parque{fill:#7d9c77}
+  html[data-tema="oscuro"] .m-rio-borde{stroke:#1d4356}
+  html[data-tema="oscuro"] .m-rio-linea{stroke:#2b6076}
+  html[data-tema="oscuro"] .m-rio{fill:#8cc6d8}
+  html[data-tema="oscuro"] .m-rosa-c{fill:#182129;stroke:#2c3a45}
+  html[data-tema="oscuro"] .m-rosa-t{fill:#9aa4ae}
+  html[data-tema="oscuro"] .m-punto circle{fill:#7fb2dd}
+  html[data-tema="oscuro"] .m-punto.destaca circle{fill:#e08a6c;stroke:#11202b}
+  html[data-tema="oscuro"] .m-punto text{fill:#e7eaee;stroke:#11202b}
+  html[data-tema="oscuro"] .m-punto .m-sub{fill:#9aa4ae}
+
+  /* cada zona del mapa es un enlace a su sección */
+  a.m-punto{cursor:pointer}
+  .m-toca{fill:transparent}
+  a.m-punto:hover .m-toca,a.m-punto:focus .m-toca{fill:#17456e;fill-opacity:.07}
+  html[data-tema="oscuro"] a.m-punto:hover .m-toca{fill:#7fb2dd;fill-opacity:.12}
+  a.m-punto:hover circle{r:13}
+  a.m-punto:hover text{text-decoration:underline}
+  a.m-punto:focus{outline:none}
+  a.m-punto:focus-visible .m-toca{fill-opacity:.14;stroke:#17456e;stroke-width:2}
+  .mapa-pinchar b{color:var(--teca)}
+
+  /* leyenda bajo el mapa */
+  .mapa-pie{display:flex;flex-wrap:wrap;gap:16px;font-size:.82rem;color:var(--tinta2);margin:0 0 18px}
+  .mapa-pie span{display:inline-flex;align-items:center;gap:7px}
+  .m-ll{width:12px;height:12px;border-radius:50%;background:#17456e;display:inline-block}
+  html[data-tema="oscuro"] .m-ll{background:#7fb2dd}
+  .m-ll.destaca{background:#a5452e}
+  html[data-tema="oscuro"] .m-ll.destaca{background:#e08a6c}
+  .m-ll.rio{width:22px;height:7px;border-radius:4px;background:#7fb0c4}
+  html[data-tema="oscuro"] .m-ll.rio{background:#2b6076}
 
   /* la invitación al «qué tengo cerca» */
   .cerca-invita{background:#f4f9fb;border:1px solid #cfe2ea;border-radius:12px;
@@ -832,6 +888,29 @@
   .sitios .sello.leyenda{padding:0;border:none;box-shadow:none;background:var(--teca)}
   .leyenda-sellos i{padding:0;border:none;box-shadow:none}
 
+  /* el tiempo, día a día */
+  .tiempo-rejilla{display:grid;gap:8px;margin:20px 0 14px}
+  .t-dia{display:grid;grid-template-columns:132px 34px 1fr 84px 74px 92px;align-items:center;gap:10px;
+    background:var(--card);border:1px solid var(--linea);border-radius:11px;padding:10px 14px;
+    font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:.9rem;color:var(--tinta2)}
+  .t-dia.mojado{border-color:#bcd6e2;background:linear-gradient(90deg,#eef6fa,var(--card) 60%)}
+  html[data-tema="oscuro"] .t-dia.mojado{border-color:#26485c;background:linear-gradient(90deg,#152630,var(--card) 60%)}
+  .t-cuando b{color:var(--tinta);text-transform:capitalize}
+  .t-cuando span{display:block;font-size:.76rem}
+  .t-icono{font-size:1.5rem;text-align:center;line-height:1}
+  .t-cielo{color:var(--tinta)}
+  .t-grados b{color:var(--teca);font-size:1.12rem}
+  .t-grados span{margin-left:7px}
+  .t-lluvia,.t-viento{font-size:.85rem;white-space:nowrap}
+  .t-pie{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:.82rem;color:var(--tinta2);margin-bottom:16px}
+  #tiempoSello.al-dia::before{content:'● ';color:var(--verde)}
+  @media(max-width:680px){
+    .t-dia{grid-template-columns:1fr 34px 74px;grid-template-areas:'cuando icono grados' 'cielo cielo cielo' 'll ll vv';
+      row-gap:4px}
+    .t-cuando{grid-area:cuando} .t-icono{grid-area:icono} .t-grados{grid-area:grados;text-align:right}
+    .t-cielo{grid-area:cielo} .t-lluvia{grid-area:ll} .t-viento{grid-area:vv;text-align:right}
+  }
+
   /* créditos de fotos en el pie */
   .creditos{margin-top:16px;font-family:-apple-system,'Segoe UI',sans-serif;font-size:.82rem}
   .creditos summary{cursor:pointer;color:var(--tinta2)}
@@ -857,6 +936,7 @@
 <nav class="sans"><div class="nav-inner"><div class="wrap">
   <a href="#ruta">Cómo usarla</a>
   <a href="#carnaval">Este finde</a>
+  <a href="#tiempo">El tiempo</a>
   <a href="#nina">Con Julia</a>
   <a href="#comer">Comer</a>
   <a href="#este">Brick Lane</a>
@@ -883,6 +963,7 @@
     <a href="#comer" onclick="cerrarMenuInfo()">🥯 Comer (todo)</a>
     <a href="#nina" onclick="cerrarMenuInfo()">🧒 Con Julia</a>
     <a href="#paseos" onclick="cerrarMenuInfo()">🚶 Paseos y arquitectura</a>
+    <a href="#tiempo" onclick="cerrarMenuInfo()">🌡️ El tiempo de esta semana</a>
     <a href="#lluvia" onclick="cerrarMenuInfo()">🌧️ Si llueve</a>
     <div class="cab cab2">Antes de salir</div>
     <a href="#entradas" onclick="cerrarMenuInfo()">🎟️ Lo poco que hay que reservar</a>
@@ -958,6 +1039,90 @@
   </ul>
 </section>
 
+<section id="tiempo" class="etapa-sec">
+  <div class="kicker">Qué meter en la maleta</div>
+  <h2>El tiempo, día a día</h2>
+  <p class="intro">Varios días con lluvia probable (sábado 29, domingo 30, lunes 31). No pasa nada: cae media hora y escampa. Chubasquero con capucha mejor que paraguas, que con el viento no sirve. <b>Ojo al fin de semana del <a href="#carnaval">carnaval</a></b>, que es todo en la calle: sábado 29 al 100%, domingo 30 al 69%, lunes 31 al 69%. Con Julia, chubasquero puesto desde casa y calzado cerrado.</p>
+
+  <div class="tiempo-rejilla" id="tiempoRejilla">
+      <div class="t-dia mojado" data-t="2026-08-29">
+        <div class="t-cuando"><b>sábado 29</b><span>de agosto</span></div>
+        <div class="t-icono" aria-hidden="true">🌦️</div>
+        <div class="t-cielo">lluvia floja</div>
+        <div class="t-grados"><b>20°</b><span>17°</span></div>
+        <div class="t-lluvia">💧 100%</div>
+        <div class="t-viento">💨 19 km/h</div>
+      </div>
+      <div class="t-dia mojado" data-t="2026-08-30">
+        <div class="t-cuando"><b>domingo 30</b><span>de agosto</span></div>
+        <div class="t-icono" aria-hidden="true">🌦️</div>
+        <div class="t-cielo">llovizna</div>
+        <div class="t-grados"><b>22°</b><span>17°</span></div>
+        <div class="t-lluvia">💧 69%</div>
+        <div class="t-viento">💨 22 km/h</div>
+      </div>
+      <div class="t-dia mojado" data-t="2026-08-31">
+        <div class="t-cuando"><b>lunes 31</b><span>de agosto</span></div>
+        <div class="t-icono" aria-hidden="true">🌦️</div>
+        <div class="t-cielo">llovizna</div>
+        <div class="t-grados"><b>20°</b><span>15°</span></div>
+        <div class="t-lluvia">💧 69%</div>
+        <div class="t-viento">💨 21 km/h</div>
+      </div>
+      <div class="t-dia" data-t="2026-09-01">
+        <div class="t-cuando"><b>martes 1</b><span>de septiembre</span></div>
+        <div class="t-icono" aria-hidden="true">☁️</div>
+        <div class="t-cielo">nublado</div>
+        <div class="t-grados"><b>21°</b><span>14°</span></div>
+        <div class="t-lluvia">💧 41%</div>
+        <div class="t-viento">💨 18 km/h</div>
+      </div>
+      <div class="t-dia" data-t="2026-09-02">
+        <div class="t-cuando"><b>miércoles 2</b><span>de septiembre</span></div>
+        <div class="t-icono" aria-hidden="true">🌦️</div>
+        <div class="t-cielo">llovizna</div>
+        <div class="t-grados"><b>20°</b><span>16°</span></div>
+        <div class="t-lluvia">💧 27%</div>
+        <div class="t-viento">💨 20 km/h</div>
+      </div>
+      <div class="t-dia" data-t="2026-09-03">
+        <div class="t-cuando"><b>jueves 3</b><span>de septiembre</span></div>
+        <div class="t-icono" aria-hidden="true">☁️</div>
+        <div class="t-cielo">nublado</div>
+        <div class="t-grados"><b>21°</b><span>15°</span></div>
+        <div class="t-lluvia">💧 23%</div>
+        <div class="t-viento">💨 18 km/h</div>
+      </div>
+      <div class="t-dia" data-t="2026-09-04">
+        <div class="t-cuando"><b>viernes 4</b><span>de septiembre</span></div>
+        <div class="t-icono" aria-hidden="true">🌦️</div>
+        <div class="t-cielo">llovizna</div>
+        <div class="t-grados"><b>24°</b><span>18°</span></div>
+        <div class="t-lluvia">💧 31%</div>
+        <div class="t-viento">💨 15 km/h</div>
+      </div>
+      <div class="t-dia" data-t="2026-09-05">
+        <div class="t-cuando"><b>sábado 5</b><span>de septiembre</span></div>
+        <div class="t-icono" aria-hidden="true">🌦️</div>
+        <div class="t-cielo">llovizna</div>
+        <div class="t-grados"><b>19°</b><span>16°</span></div>
+        <div class="t-lluvia">💧 20%</div>
+        <div class="t-viento">💨 11 km/h</div>
+      </div>
+  </div>
+
+  <div class="t-pie sans">
+    <span id="tiempoSello">Predicción del 28 de agosto · se actualiza sola al abrir la web</span>
+    <span>🌅 amanece a las 06:08 · 🌇 anochece a las 19:54</span>
+    <span>Máximas de 14° a 24° · mínimas de hasta 14°</span>
+  </div>
+
+  <div class="tip"><b>Con esos números:</b> manga corta de día y <b>una chaqueta fina para la
+  noche</b>, que en cuanto se pone el sol refresca. Calzado cómodo y que aguante un charco. Y para
+  Julia, una capa impermeable con capucha: los paraguas en Londres duran lo que dura la primera
+  racha de viento.</div>
+</section>
+
 <section id="mapa" class="etapa-sec">
   <div class="kicker">Para hacerse el mapa mental</div>
   <h2>Dónde está cada cosa</h2>
@@ -966,28 +1131,43 @@
   minutos de metro</strong>. Este mapa no es a escala, es para situarse.</p>
 
   <div class="mapa-wrap">
-  <svg viewBox="0 0 900 520" class="mapa-svg" role="img" aria-label="Mapa esquemático de Londres con las zonas de la guía">
-    <rect x="0" y="0" width="900" height="520" fill="var(--oro-suave)" opacity=".28"/>
-    <path d="M-10 300 C 120 340, 240 292, 340 318 C 430 342, 500 296, 590 318 C 660 335, 690 392, 762 388 C 830 384, 870 344, 910 336"
-          fill="none" stroke="var(--mar)" stroke-width="26" stroke-linecap="round" opacity=".45"/>
-    <text x="118" y="352" class="m-rio">El Támesis</text>
+  <svg viewBox="0 0 900 540" class="mapa-svg" role="img" aria-label="Mapa esquemático de Londres: el Támesis cruza de oeste a este y las zonas de la guía se reparten al norte y al sur del río. Cada zona es un enlace a su apartado">
+    <rect class="m-fondo" x="0" y="0" width="900" height="540" fill="#e8eef6"/>
+    <path class="m-rio-borde" d="M-10 316 C 120 356, 240 308, 340 334 C 430 358, 500 312, 590 334 C 660 351, 690 408, 762 404 C 830 400, 870 360, 910 352"
+          fill="none" stroke="#a9c9d6" stroke-width="34" stroke-linecap="round"/>
+    <path class="m-rio-linea" d="M-10 316 C 120 356, 240 308, 340 334 C 430 358, 500 312, 590 334 C 660 351, 690 408, 762 404 C 830 400, 870 360, 910 352"
+          fill="none" stroke="#7fb0c4" stroke-width="26" stroke-linecap="round"/>
+    <text class="m-rio" x="120" y="372" fill="#2f7a8c">El Támesis</text>
 
-    <g class="m-punto"><circle cx="120" cy="176" r="9"/><text x="120" y="158">Notting Hill</text><text x="120" y="200" class="m-sub">el carnaval</text></g>
-    <g class="m-punto"><circle cx="168" cy="268" r="9"/><text x="168" y="250">South Kensington</text><text x="168" y="292" class="m-sub">los museos grandes</text></g>
-    <g class="m-punto"><circle cx="300" cy="86" r="9"/><text x="300" y="68">Camden</text><text x="300" y="110" class="m-sub">canal y mercado</text></g>
-    <g class="m-punto destaca"><circle cx="424" cy="132" r="11"/><text x="424" y="112">King's Cross</text><text x="424" y="156" class="m-sub">gasómetros y andén 9¾</text></g>
-    <g class="m-punto destaca"><circle cx="392" cy="238" r="11"/><text x="392" y="218">Soho · Covent Garden</text><text x="392" y="262" class="m-sub">Chinatown y Japan Centre</text></g>
-    <g class="m-punto destaca"><circle cx="628" cy="196" r="11"/><text x="628" y="176">Brick Lane · Shoreditch</text><text x="628" y="220" class="m-sub">comer y mercados</text></g>
-    <g class="m-punto destaca"><circle cx="470" cy="352" r="11"/><text x="470" y="334">Borough · South Bank</text><text x="470" y="376" class="m-sub">mercado y la Tate</text></g>
-    <g class="m-punto"><circle cx="700" cy="286" r="9"/><text x="700" y="268">la City</text><text x="700" y="310" class="m-sub">Sky Garden</text></g>
-    <g class="m-punto destaca"><circle cx="812" cy="418" r="11"/><text x="812" y="400">Greenwich</text><text x="812" y="442" class="m-sub">en barco desde el centro</text></g>
-    <g class="m-punto"><circle cx="452" cy="478" r="9"/><text x="452" y="460">West Norwood</text><text x="452" y="502" class="m-sub">el cementerio victoriano</text></g>
+    <g class="m-rosa" transform="translate(842,64)">
+      <circle class="m-rosa-c" r="26" fill="#ffffff" stroke="#c9d3de" stroke-width="1.5"/>
+      <path d="M0-19 L7 3 L0-2 L-7 3 Z" fill="#a5452e"/>
+      <text class="m-rosa-t" y="-24" fill="#5e666e">N</text>
+    </g>
+
+    <a class="m-punto" href="#carnaval" aria-label="Ir a Notting Hill"><rect class="m-toca" x="24" y="142" width="192" height="66" rx="10"/><circle cx="120" cy="176" r="9"/><text x="120" y="158">Notting Hill</text><text x="120" y="200" class="m-sub">el carnaval</text></a>
+    <a class="m-punto" href="#museos" aria-label="Ir a South Kensington"><rect class="m-toca" x="56" y="234" width="224" height="66" rx="10"/><circle cx="168" cy="268" r="9"/><text x="168" y="250">South Kensington</text><text x="168" y="292" class="m-sub">los museos grandes</text></a>
+    <a class="m-punto" href="#paseos" aria-label="Ir a Camden"><rect class="m-toca" x="228" y="52" width="144" height="66" rx="10"/><circle cx="300" cy="86" r="9"/><text x="300" y="68">Camden</text><text x="300" y="110" class="m-sub">canal y mercado</text></a>
+    <a class="m-punto destaca" href="#kingscross" aria-label="Ir a King’s Cross"><rect class="m-toca" x="328" y="104" width="192" height="68" rx="10"/><circle cx="424" cy="140" r="11"/><text x="424" y="120">King’s Cross</text><text x="424" y="164" class="m-sub">gasómetros y andén 9¾</text></a>
+    <a class="m-punto destaca" href="#soho" aria-label="Ir a Soho y Covent Garden"><rect class="m-toca" x="264" y="210" width="256" height="68" rx="10"/><circle cx="392" cy="246" r="11"/><text x="392" y="226">Soho · Covent Garden</text><text x="392" y="270" class="m-sub">Chinatown y Japan Centre</text></a>
+    <a class="m-punto destaca" href="#este" aria-label="Ir a Brick Lane y Shoreditch"><rect class="m-toca" x="492" y="160" width="280" height="68" rx="10"/><circle cx="632" cy="196" r="11"/><text x="632" y="176">Brick Lane · Shoreditch</text><text x="632" y="220" class="m-sub">comer y mercados</text></a>
+    <a class="m-punto" href="#paseos" aria-label="Ir a la City"><rect class="m-toca" x="624" y="244" width="152" height="66" rx="10"/><circle cx="700" cy="278" r="9"/><text x="700" y="260">la City</text><text x="700" y="302" class="m-sub">Sky Garden</text></a>
+    <a class="m-punto destaca" href="#sur" aria-label="Ir a Borough y South Bank"><rect class="m-toca" x="342" y="376" width="256" height="70" rx="10"/><circle cx="470" cy="392" r="11"/><text x="470" y="416">Borough · South Bank</text><text x="470" y="438" class="m-sub">mercado y la Tate</text></a>
+    <a class="m-punto destaca" href="#greenwich" aria-label="Ir a Greenwich"><rect class="m-toca" x="728" y="418" width="168" height="66" rx="10"/><circle cx="812" cy="452" r="11"/><text x="812" y="434">Greenwich</text><text x="812" y="476" class="m-sub">en barco desde el centro</text></a>
+    <a class="m-punto" href="#paseos" aria-label="Ir a West Norwood"><rect class="m-toca" x="234" y="438" width="192" height="66" rx="10"/><circle cx="330" cy="472" r="9"/><text x="330" y="454">West Norwood</text><text x="330" y="496" class="m-sub">el cementerio victoriano</text></a>
   </svg>
+  </div>
+
+  <div class="mapa-pie sans">
+    <span><i class="m-ll destaca"></i>las seis zonas de la guía</span>
+    <span><i class="m-ll"></i>otros sitios que se nombran</span>
+    <span><i class="m-ll rio"></i>el Támesis · al norte, arriba</span>
+    <span class="mapa-pinchar"><b>👆 Pulsad en una zona</b> y os lleva a ella</span>
   </div>
 
   <div class="tip"><b>La regla que os ahorra tiempo:</b> si dos planes están en zonas distintas,
   no los juntéis el mismo día. Un museo del oeste por la mañana y una cena en el este por la noche
-  suena bien y son cuarenta minutos de metro en medio, con la niña cansada. Mejor una zona por día
+  suena bien y son cuarenta minutos de metro en medio, con Julia cansada. Mejor una zona por día
   y andar mucho dentro de ella.</div>
 
   <div class="cerca-invita sans">
@@ -1489,9 +1669,9 @@
   peor si solo podéis hacer uno o dos, y todos son gratis salvo donde se dice.</p>
 
   <h3 class="sub-h">El cementerio de West Norwood</h3>
-  <div class="banner">
-    <img loading="lazy" decoding="async" src="img/west-norwood.jpg" alt="El cementerio victoriano de West Norwood" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
-    <div class="pie">Mausoleos, ángeles y hiedra: uno de los siete grandes cementerios victorianos de Londres</div>
+  <div class="duo">
+    <figure><img loading="lazy" decoding="async" src="img/west-norwood.jpg" alt="Mausoleo entre la niebla en el cementerio de West Norwood" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Niebla, tejos y mausoleos: así es un cementerio victoriano de los Siete Magníficos</figcaption></figure>
+    <figure><img loading="lazy" decoding="async" src="img/west-norwood-doulton.jpg" alt="Detalle en terracota del panteón de Sir Henry Doulton en West Norwood" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>El panteón de Henry Doulton, el de la cerámica, hecho con su propia terracota</figcaption></figure>
   </div>
   <p style="margin-bottom:14px">En 1830 los cementerios de Londres estaban tan llenos que los
   cadáveres salían a la superficie, así que el Parlamento dejó que unas empresas privadas
@@ -1702,7 +1882,7 @@
     <li><a href="https://commons.wikimedia.org/wiki/File%3ABrick_Lane%2C_London%2C_February_2023_%283%29.jpg" target="_blank" rel="noopener">Brick Lane, London, February 2023 (3).jpg</a> · CC BY-SA 4.0</li>
     <li><a href="https://commons.wikimedia.org/wiki/File%3AGasholder_Park%2C_King%27s_Cross%2C_London_-_geograph.org.uk_-_5683879.jpg" target="_blank" rel="noopener">Gasholder Park, King's Cross, London - geograph.org.uk - 5683879.jpg</a> · CC BY-SA 2.0</li>
     <li><a href="https://commons.wikimedia.org/wiki/File%3AChinatown_Leicester_Square_London_%2852347627829%29.jpg" target="_blank" rel="noopener">Chinatown Leicester Square London (52347627829).jpg</a> · CC BY 2.0</li>
-    <li><a href="https://commons.wikimedia.org/wiki/File%3ABorough_Market_-_geograph.org.uk_-_586118.jpg" target="_blank" rel="noopener">Borough Market - geograph.org.uk - 586118.jpg</a> · CC BY-SA 2.0</li>
+    <li><a href="https://commons.wikimedia.org/wiki/File%3ABorough_Market_-_geograph.org.uk_-_2315586.jpg" target="_blank" rel="noopener">Borough Market - geograph.org.uk - 2315586.jpg</a> · CC BY-SA 2.0</li>
     <li><a href="https://commons.wikimedia.org/wiki/File%3AHintze_Hall%2C_Natural_History_Museum%2C_London_-_4.jpg" target="_blank" rel="noopener">Hintze Hall, Natural History Museum, London - 4.jpg</a> · CC BY 4.0</li>
     <li><a href="https://commons.wikimedia.org/wiki/File%3AGreenwich_Park_-_View_NNW_on_Queen%27s_House%2C_Greenwich_Hospital_%26_Canary_Wharf_Docklands.jpg" target="_blank" rel="noopener">Greenwich Park - View NNW on Queen's House, Greenwich Hospital & Canary Wharf Docklands.jpg</a> · CC BY-SA 4.0</li>
     <li><a href="https://commons.wikimedia.org/wiki/File%3AVarious_monuments%2C_West_Norwood_Cemetery_%2851%29_-_geograph.org.uk_-_5228436.jpg" target="_blank" rel="noopener">Various monuments, West Norwood Cemetery (51) - geograph.org.uk - 5228436.jpg</a> · CC BY-SA 2.0</li>
@@ -1710,6 +1890,61 @@
     <p>Todas de Wikimedia Commons, con licencia Creative Commons.</p>
   </details>
 </footer>
+<script>
+/* ---------- EL TIEMPO, ACTUALIZADO AL ABRIR LA WEB ----------
+   La sección ya viene con la predicción escrita (así se ve sin conexión y aunque
+   la API no responda). Si hay datos, se repinta con lo último de Open-Meteo. */
+(function(){
+  var rejilla = document.getElementById('tiempoRejilla');
+  if (!rejilla) return;
+
+  var CIELO = {0:['☀️','despejado'], 1:['🌤️','casi despejado'], 2:['⛅','nubes y claros'], 3:['☁️','nublado'],
+    45:['🌫️','niebla'], 48:['🌫️','niebla helada'],
+    51:['🌦️','llovizna'], 53:['🌦️','llovizna'], 55:['🌧️','llovizna fuerte'],
+    56:['🌧️','llovizna helada'], 57:['🌧️','llovizna helada'],
+    61:['🌦️','lluvia floja'], 63:['🌧️','lluvia'], 65:['🌧️','lluvia fuerte'],
+    66:['🌧️','lluvia helada'], 67:['🌧️','lluvia helada'],
+    71:['🌨️','nieve'], 73:['🌨️','nieve'], 75:['🌨️','nieve fuerte'], 77:['🌨️','granizo menudo'],
+    80:['🌦️','chubascos'], 81:['🌧️','chubascos'], 82:['🌧️','chubascos fuertes'],
+    85:['🌨️','chubascos de nieve'], 86:['🌨️','chubascos de nieve'],
+    95:['⛈️','tormenta'], 96:['⛈️','tormenta con granizo'], 99:['⛈️','tormenta con granizo']};
+  var MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto',
+               'septiembre','octubre','noviembre','diciembre'];
+
+  var url = 'https://api.open-meteo.com/v1/forecast?latitude=51.5074&longitude=-0.1278' +
+            '&daily=weather_code,temperature_2m_max,temperature_2m_min,' +
+            'precipitation_probability_max,wind_speed_10m_max&timezone=Europe%2FLondon&forecast_days=10';
+
+  fetch(url).then(function(r){ return r.json(); }).then(function(d){
+    var dd = d && d.daily;
+    if (!dd || !dd.time) return;
+    var cambiados = 0;
+    dd.time.forEach(function(fecha, i){
+      var fila = rejilla.querySelector('[data-t="' + fecha + '"]');
+      if (!fila) return;
+      var c = CIELO[dd.weather_code[i]] || ['🌡️','variable'];
+      var lluvia = dd.precipitation_probability_max[i] || 0;
+      fila.querySelector('.t-icono').textContent = c[0];
+      fila.querySelector('.t-cielo').textContent = c[1];
+      fila.querySelector('.t-grados').innerHTML =
+        '<b>' + Math.round(dd.temperature_2m_max[i]) + '°</b>' +
+        '<span>' + Math.round(dd.temperature_2m_min[i]) + '°</span>';
+      fila.querySelector('.t-lluvia').textContent = '💧 ' + lluvia + '%';
+      fila.querySelector('.t-viento').textContent = '💨 ' + Math.round(dd.wind_speed_10m_max[i]) + ' km/h';
+      fila.classList.toggle('mojado', lluvia >= 50);
+      cambiados++;
+    });
+    var sello = document.getElementById('tiempoSello');
+    if (sello && cambiados) {
+      var h = new Date();
+      sello.textContent = 'Predicción de hoy, ' + h.getDate() + ' de ' + MESES[h.getMonth()] +
+                          ', a las ' + String(h.getHours()).padStart(2,'0') + ':' +
+                          String(h.getMinutes()).padStart(2,'0');
+      sello.classList.add('al-dia');
+    }
+  }).catch(function(){ /* sin datos: se queda la predicción escrita, que es lo que toca */ });
+})();
+</script>
 <script>
   function toggleMenuInfo(e){
     e.stopPropagation();

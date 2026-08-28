@@ -7,28 +7,43 @@
   minutos de metro</strong>. Este mapa no es a escala, es para situarse.</p>
 
   <div class="mapa-wrap">
-  <svg viewBox="0 0 900 520" class="mapa-svg" role="img" aria-label="Mapa esquemático de Londres con las zonas de la guía">
-    <rect x="0" y="0" width="900" height="520" fill="var(--oro-suave)" opacity=".28"/>
-    <path d="M-10 300 C 120 340, 240 292, 340 318 C 430 342, 500 296, 590 318 C 660 335, 690 392, 762 388 C 830 384, 870 344, 910 336"
-          fill="none" stroke="var(--mar)" stroke-width="26" stroke-linecap="round" opacity=".45"/>
-    <text x="118" y="352" class="m-rio">El Támesis</text>
+  <svg viewBox="0 0 900 540" class="mapa-svg" role="img" aria-label="Mapa esquemático de Londres: el Támesis cruza de oeste a este y las zonas de la guía se reparten al norte y al sur del río. Cada zona es un enlace a su apartado">
+    <rect class="m-fondo" x="0" y="0" width="900" height="540" fill="#e8eef6"/>
+    <path class="m-rio-borde" d="M-10 316 C 120 356, 240 308, 340 334 C 430 358, 500 312, 590 334 C 660 351, 690 408, 762 404 C 830 400, 870 360, 910 352"
+          fill="none" stroke="#a9c9d6" stroke-width="34" stroke-linecap="round"/>
+    <path class="m-rio-linea" d="M-10 316 C 120 356, 240 308, 340 334 C 430 358, 500 312, 590 334 C 660 351, 690 408, 762 404 C 830 400, 870 360, 910 352"
+          fill="none" stroke="#7fb0c4" stroke-width="26" stroke-linecap="round"/>
+    <text class="m-rio" x="120" y="372" fill="#2f7a8c">El Támesis</text>
 
-    <g class="m-punto"><circle cx="120" cy="176" r="9"/><text x="120" y="158">Notting Hill</text><text x="120" y="200" class="m-sub">el carnaval</text></g>
-    <g class="m-punto"><circle cx="168" cy="268" r="9"/><text x="168" y="250">South Kensington</text><text x="168" y="292" class="m-sub">los museos grandes</text></g>
-    <g class="m-punto"><circle cx="300" cy="86" r="9"/><text x="300" y="68">Camden</text><text x="300" y="110" class="m-sub">canal y mercado</text></g>
-    <g class="m-punto destaca"><circle cx="424" cy="132" r="11"/><text x="424" y="112">King's Cross</text><text x="424" y="156" class="m-sub">gasómetros y andén 9¾</text></g>
-    <g class="m-punto destaca"><circle cx="392" cy="238" r="11"/><text x="392" y="218">Soho · Covent Garden</text><text x="392" y="262" class="m-sub">Chinatown y Japan Centre</text></g>
-    <g class="m-punto destaca"><circle cx="628" cy="196" r="11"/><text x="628" y="176">Brick Lane · Shoreditch</text><text x="628" y="220" class="m-sub">comer y mercados</text></g>
-    <g class="m-punto destaca"><circle cx="470" cy="352" r="11"/><text x="470" y="334">Borough · South Bank</text><text x="470" y="376" class="m-sub">mercado y la Tate</text></g>
-    <g class="m-punto"><circle cx="700" cy="286" r="9"/><text x="700" y="268">la City</text><text x="700" y="310" class="m-sub">Sky Garden</text></g>
-    <g class="m-punto destaca"><circle cx="812" cy="418" r="11"/><text x="812" y="400">Greenwich</text><text x="812" y="442" class="m-sub">en barco desde el centro</text></g>
-    <g class="m-punto"><circle cx="452" cy="478" r="9"/><text x="452" y="460">West Norwood</text><text x="452" y="502" class="m-sub">el cementerio victoriano</text></g>
+    <g class="m-rosa" transform="translate(842,64)">
+      <circle class="m-rosa-c" r="26" fill="#ffffff" stroke="#c9d3de" stroke-width="1.5"/>
+      <path d="M0-19 L7 3 L0-2 L-7 3 Z" fill="#a5452e"/>
+      <text class="m-rosa-t" y="-24" fill="#5e666e">N</text>
+    </g>
+
+    <a class="m-punto" href="#carnaval" aria-label="Ir a Notting Hill"><rect class="m-toca" x="24" y="142" width="192" height="66" rx="10"/><circle cx="120" cy="176" r="9"/><text x="120" y="158">Notting Hill</text><text x="120" y="200" class="m-sub">el carnaval</text></a>
+    <a class="m-punto" href="#museos" aria-label="Ir a South Kensington"><rect class="m-toca" x="56" y="234" width="224" height="66" rx="10"/><circle cx="168" cy="268" r="9"/><text x="168" y="250">South Kensington</text><text x="168" y="292" class="m-sub">los museos grandes</text></a>
+    <a class="m-punto" href="#paseos" aria-label="Ir a Camden"><rect class="m-toca" x="228" y="52" width="144" height="66" rx="10"/><circle cx="300" cy="86" r="9"/><text x="300" y="68">Camden</text><text x="300" y="110" class="m-sub">canal y mercado</text></a>
+    <a class="m-punto destaca" href="#kingscross" aria-label="Ir a King’s Cross"><rect class="m-toca" x="328" y="104" width="192" height="68" rx="10"/><circle cx="424" cy="140" r="11"/><text x="424" y="120">King’s Cross</text><text x="424" y="164" class="m-sub">gasómetros y andén 9¾</text></a>
+    <a class="m-punto destaca" href="#soho" aria-label="Ir a Soho y Covent Garden"><rect class="m-toca" x="264" y="210" width="256" height="68" rx="10"/><circle cx="392" cy="246" r="11"/><text x="392" y="226">Soho · Covent Garden</text><text x="392" y="270" class="m-sub">Chinatown y Japan Centre</text></a>
+    <a class="m-punto destaca" href="#este" aria-label="Ir a Brick Lane y Shoreditch"><rect class="m-toca" x="492" y="160" width="280" height="68" rx="10"/><circle cx="632" cy="196" r="11"/><text x="632" y="176">Brick Lane · Shoreditch</text><text x="632" y="220" class="m-sub">comer y mercados</text></a>
+    <a class="m-punto" href="#paseos" aria-label="Ir a la City"><rect class="m-toca" x="624" y="244" width="152" height="66" rx="10"/><circle cx="700" cy="278" r="9"/><text x="700" y="260">la City</text><text x="700" y="302" class="m-sub">Sky Garden</text></a>
+    <a class="m-punto destaca" href="#sur" aria-label="Ir a Borough y South Bank"><rect class="m-toca" x="342" y="376" width="256" height="70" rx="10"/><circle cx="470" cy="392" r="11"/><text x="470" y="416">Borough · South Bank</text><text x="470" y="438" class="m-sub">mercado y la Tate</text></a>
+    <a class="m-punto destaca" href="#greenwich" aria-label="Ir a Greenwich"><rect class="m-toca" x="728" y="418" width="168" height="66" rx="10"/><circle cx="812" cy="452" r="11"/><text x="812" y="434">Greenwich</text><text x="812" y="476" class="m-sub">en barco desde el centro</text></a>
+    <a class="m-punto" href="#paseos" aria-label="Ir a West Norwood"><rect class="m-toca" x="234" y="438" width="192" height="66" rx="10"/><circle cx="330" cy="472" r="9"/><text x="330" y="454">West Norwood</text><text x="330" y="496" class="m-sub">el cementerio victoriano</text></a>
   </svg>
+  </div>
+
+  <div class="mapa-pie sans">
+    <span><i class="m-ll destaca"></i>las seis zonas de la guía</span>
+    <span><i class="m-ll"></i>otros sitios que se nombran</span>
+    <span><i class="m-ll rio"></i>el Támesis · al norte, arriba</span>
+    <span class="mapa-pinchar"><b>👆 Pulsad en una zona</b> y os lleva a ella</span>
   </div>
 
   <div class="tip"><b>La regla que os ahorra tiempo:</b> si dos planes están en zonas distintas,
   no los juntéis el mismo día. Un museo del oeste por la mañana y una cena en el este por la noche
-  suena bien y son cuarenta minutos de metro en medio, con la niña cansada. Mejor una zona por día
+  suena bien y son cuarenta minutos de metro en medio, con Julia cansada. Mejor una zona por día
   y andar mucho dentro de ella.</div>
 
   <div class="cerca-invita sans">

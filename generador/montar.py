@@ -8,10 +8,10 @@ os.chdir(RAIZ)
 P = 'generador/plantilla/'
 
 PIEZAS = ['head-nuevo.html', 'css-base.html', 'css-londres.html', 'c1-cabecera.html', 'c2-carnaval.html',
-          'c3-mapa.html', 'c4-este.html', 'c5-kingscross.html', 'c6-soho.html',
+          'd0-tiempo.html', 'c3-mapa.html', 'c4-este.html', 'c5-kingscross.html', 'c6-soho.html',
           'c7-sur.html', 'c8-museos.html', 'c9-greenwich.html', 'd1-nina.html',
           'd2-paseos.html', 'd3-comer.html', 'd4-entradas.html', 'd5-transporte.html',
-          'd6-practico.html', 'd7-offline.html', 'd8-footer.html', '3-scripts.html']
+          'd6-practico.html', 'd7-offline.html', 'd8-footer.html', 'js-tiempo.html', '3-scripts.html']
 # id de la sección de la web -> fichero de comida
 COMIDA = {'este': 'este', 'kingscross': 'kingscross', 'soho': 'soho',
           'sur': 'sur', 'museos': 'museos', 'greenwich': 'greenwich'}

@@ -13,6 +13,16 @@
     --card:#181e24; --sombra:0 2px 14px rgba(0,0,0,.4);
   }
 
+  /* al saltar a una sección, que el nav pegajoso no tape el título */
+  .etapa-sec,section[id],#tiempo{scroll-margin-top:64px}
+
+  /* la foto de West Norwood es de 640 px en origen: a todo lo ancho se ve
+     blanda, así que se muestra a su tamaño y centrada */
+  .banner.pequeno{max-width:660px;margin-left:auto;margin-right:auto}
+
+  /* el hero de Nerja seguía citado en el CSS heredado: fuera esa foto,
+     que aquí no existe y era una petición rota */
+
   /* el hero, con la foto de Londres */
   header.hero{background:linear-gradient(180deg,rgba(10,20,35,.28),rgba(10,20,35,.68)),
     url('img/portada-hero.jpg') center/cover no-repeat}
@@ -30,16 +40,62 @@
   html[data-tema="oscuro"] .aviso-sec{background:linear-gradient(135deg,#221a16,#1b1f24);border-color:#3a2a20}
   .aviso-sec > .kicker{color:var(--teca)}
 
-  /* mapa esquemático */
-  .mapa-wrap{display:block;margin:22px 0 14px;overflow-x:auto}
-  .mapa-svg{width:100%;min-width:560px;height:auto;display:block;border-radius:14px;
-    background:var(--card);box-shadow:var(--sombra)}
-  .m-punto circle{fill:var(--oro)}
-  .m-punto.destaca circle{fill:var(--teca)}
+  /* mapa esquemático. OJO: los colores van aquí en CSS y además repetidos como
+     atributo en el SVG. En un atributo de presentación, fill="var(--x)" NO lo
+     resuelven Safari ni iOS: el fondo y el río desaparecían y solo quedaban los
+     puntos, que sí llevaban CSS. Así se ve en todos, y el CSS solo repinta. */
+  .mapa-wrap{display:block;margin:22px 0 10px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .mapa-svg{width:100%;min-width:600px;height:auto;display:block;border-radius:14px;
+    border:1px solid var(--linea);box-shadow:var(--sombra)}
+  .m-fondo{fill:#e8eef6}
+  .m-verde{fill:#cfe0cd}
+  .m-parque{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:12px;
+    font-style:italic;fill:#5c7a56;text-anchor:middle}
+  .m-rio-borde{stroke:#a9c9d6}
+  .m-rio-linea{stroke:#7fb0c4}
+  .m-rio{font-family:Georgia,serif;font-style:italic;font-size:17px;fill:#2f7a8c;text-anchor:middle}
+  .m-rosa-c{fill:#ffffff;stroke:#c9d3de}
+  .m-rosa-t{font-family:-apple-system,'Segoe UI',sans-serif;font-size:12px;font-weight:700;
+    fill:#5e666e;text-anchor:middle}
+  .m-punto circle{fill:#17456e}
+  .m-punto.destaca circle{fill:#a5452e;stroke:#ffffff;stroke-width:3}
   .m-punto text{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:15px;font-weight:600;
-    fill:var(--tinta);text-anchor:middle}
-  .m-punto .m-sub{font-size:12px;font-weight:400;fill:var(--tinta2)}
-  .m-rio{font-family:Georgia,serif;font-style:italic;font-size:16px;fill:var(--mar);text-anchor:middle}
+    fill:#23262a;text-anchor:middle;paint-order:stroke;stroke:#e8eef6;stroke-width:4;stroke-linejoin:round}
+  .m-punto .m-sub{font-size:12px;font-weight:400;fill:#5e666e}
+  /* en modo oscuro el mapa se repinta entero, que si no queda una isla blanca */
+  html[data-tema="oscuro"] .m-fondo{fill:#11202b}
+  html[data-tema="oscuro"] .m-verde{fill:#1b2f24}
+  html[data-tema="oscuro"] .m-parque{fill:#7d9c77}
+  html[data-tema="oscuro"] .m-rio-borde{stroke:#1d4356}
+  html[data-tema="oscuro"] .m-rio-linea{stroke:#2b6076}
+  html[data-tema="oscuro"] .m-rio{fill:#8cc6d8}
+  html[data-tema="oscuro"] .m-rosa-c{fill:#182129;stroke:#2c3a45}
+  html[data-tema="oscuro"] .m-rosa-t{fill:#9aa4ae}
+  html[data-tema="oscuro"] .m-punto circle{fill:#7fb2dd}
+  html[data-tema="oscuro"] .m-punto.destaca circle{fill:#e08a6c;stroke:#11202b}
+  html[data-tema="oscuro"] .m-punto text{fill:#e7eaee;stroke:#11202b}
+  html[data-tema="oscuro"] .m-punto .m-sub{fill:#9aa4ae}
+
+  /* cada zona del mapa es un enlace a su sección */
+  a.m-punto{cursor:pointer}
+  .m-toca{fill:transparent}
+  a.m-punto:hover .m-toca,a.m-punto:focus .m-toca{fill:#17456e;fill-opacity:.07}
+  html[data-tema="oscuro"] a.m-punto:hover .m-toca{fill:#7fb2dd;fill-opacity:.12}
+  a.m-punto:hover circle{r:13}
+  a.m-punto:hover text{text-decoration:underline}
+  a.m-punto:focus{outline:none}
+  a.m-punto:focus-visible .m-toca{fill-opacity:.14;stroke:#17456e;stroke-width:2}
+  .mapa-pinchar b{color:var(--teca)}
+
+  /* leyenda bajo el mapa */
+  .mapa-pie{display:flex;flex-wrap:wrap;gap:16px;font-size:.82rem;color:var(--tinta2);margin:0 0 18px}
+  .mapa-pie span{display:inline-flex;align-items:center;gap:7px}
+  .m-ll{width:12px;height:12px;border-radius:50%;background:#17456e;display:inline-block}
+  html[data-tema="oscuro"] .m-ll{background:#7fb2dd}
+  .m-ll.destaca{background:#a5452e}
+  html[data-tema="oscuro"] .m-ll.destaca{background:#e08a6c}
+  .m-ll.rio{width:22px;height:7px;border-radius:4px;background:#7fb0c4}
+  html[data-tema="oscuro"] .m-ll.rio{background:#2b6076}
 
   /* la invitación al «qué tengo cerca» */
   .cerca-invita{background:#f4f9fb;border:1px solid #cfe2ea;border-radius:12px;
@@ -65,6 +121,29 @@
      borde y sombra) y salía como un botón enorme: aquí se le devuelve su tamaño */
   .sitios .sello.leyenda{padding:0;border:none;box-shadow:none;background:var(--teca)}
   .leyenda-sellos i{padding:0;border:none;box-shadow:none}
+
+  /* el tiempo, día a día */
+  .tiempo-rejilla{display:grid;gap:8px;margin:20px 0 14px}
+  .t-dia{display:grid;grid-template-columns:132px 34px 1fr 84px 74px 92px;align-items:center;gap:10px;
+    background:var(--card);border:1px solid var(--linea);border-radius:11px;padding:10px 14px;
+    font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:.9rem;color:var(--tinta2)}
+  .t-dia.mojado{border-color:#bcd6e2;background:linear-gradient(90deg,#eef6fa,var(--card) 60%)}
+  html[data-tema="oscuro"] .t-dia.mojado{border-color:#26485c;background:linear-gradient(90deg,#152630,var(--card) 60%)}
+  .t-cuando b{color:var(--tinta);text-transform:capitalize}
+  .t-cuando span{display:block;font-size:.76rem}
+  .t-icono{font-size:1.5rem;text-align:center;line-height:1}
+  .t-cielo{color:var(--tinta)}
+  .t-grados b{color:var(--teca);font-size:1.12rem}
+  .t-grados span{margin-left:7px}
+  .t-lluvia,.t-viento{font-size:.85rem;white-space:nowrap}
+  .t-pie{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:.82rem;color:var(--tinta2);margin-bottom:16px}
+  #tiempoSello.al-dia::before{content:'● ';color:var(--verde)}
+  @media(max-width:680px){
+    .t-dia{grid-template-columns:1fr 34px 74px;grid-template-areas:'cuando icono grados' 'cielo cielo cielo' 'll ll vv';
+      row-gap:4px}
+    .t-cuando{grid-area:cuando} .t-icono{grid-area:icono} .t-grados{grid-area:grados;text-align:right}
+    .t-cielo{grid-area:cielo} .t-lluvia{grid-area:ll} .t-viento{grid-area:vv;text-align:right}
+  }
 
   /* créditos de fotos en el pie */
   .creditos{margin-top:16px;font-family:-apple-system,'Segoe UI',sans-serif;font-size:.82rem}
