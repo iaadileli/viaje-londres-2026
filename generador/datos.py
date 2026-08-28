@@ -10,7 +10,7 @@ Las coordenadas se piden a Nominatim y se cachean en datos-fuente/coordenadas.js
 
 ZONAS = {
  'este':      ('Qué y dónde comer en Brick Lane y Shoreditch',
-               ['Beigel de salt beef', 'Brisket ahumado', 'Curry punyabí',
+               ['Beigel de salt beef', 'Brisket ahumado', 'Curry punyabí', 'Hamburguesa',
                 'Fish and chips', 'Bacon naan', 'Desayuno inglés']),
  'kingscross':('Qué y dónde comer en King’s Cross',
                ['Desayuno indio', 'Roti canai', 'Brunch', 'Tacos']),
@@ -91,6 +91,15 @@ SITIOS = [
      'comunes. Es la solución cuando cada uno quiere una cosa distinta, que con niños pasa siempre.',
    p='Cada uno lo suyo y a la misma mesa. El puesto de <b>Crunch</b>, de sándwiches de brioche, es el que tiene más cola y se la merece',
    d='🕐 todos los días, en general 10:00–18:00 · 💷 8–14 £ el plato · el domingo es el día grande'),
+ dict(z='este', n='Bleecker Burger', s=['amigo','barato'],
+   dir='Old Spitalfields Market, Lamb Street, E1 6EA · un mostrador dentro del mercado',
+   geo='Bleecker Burger, Old Spitalfields Market, London',
+   t='La hamburguesa de Spitalfields, y para mucha gente <b>la mejor de Londres</b>. La montó una '
+     'abogada de Nueva York que dejó el despacho, se compró una furgoneta en 2012 y acabó plantando '
+     'un mostrador en el mercado. No hay carta larga ni florituras: carne buena, pan y poco más, '
+     'servido por una ventanilla. La <i>Bleecker Black</i>, con salsa de queso azul, es la famosa.',
+   p='La <b>cheeseburger doble</b> si queréis lo clásico, o la <b>Bleecker Black</b> si os gusta el queso azul. Y las <i>angry fries</i> para compartir',
+   d='🕐 desde las 11:30 hasta la noche, todos los días · 💷 10–15 £ por persona · se come de pie en el mercado o en las mesas comunes'),
  dict(z='este', n='Dishoom Shoreditch', s=[],
    dir='7 Boundary Street, E2 7JE',
    geo='Dishoom Shoreditch, 7 Boundary Street, London',

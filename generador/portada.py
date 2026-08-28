@@ -21,8 +21,8 @@ capa = Image.new('RGB', (W, H), (6, 26, 38))
 im = Image.composite(capa, im, grad.resize((W, H)))
 
 d = ImageDraw.Draw(im)
-d.text((64, 372), 'UNA SEMANA · DESDE EL 29 DE AGOSTO',
-       font=ImageFont.truetype(SANS_B, 25), fill=(214, 231, 240))
+d.text((64, 372), 'PARA EDU, SARA Y JULIA · DESDE EL 29 DE AGOSTO',
+       font=ImageFont.truetype(SANS_B, 22), fill=(214, 231, 240))
 d.text((60, 414), 'Londres, a vuestro aire',
        font=ImageFont.truetype(SERIF, 76), fill='white')
 d.text((64, 522), 'Dónde comer, qué hacer con la niña y por dónde pasear',

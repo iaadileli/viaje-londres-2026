@@ -40,6 +40,7 @@ def maps(consulta):
 # Nominatim no tiene estos tres locales; van a mano, a pie de portal (error < 50 m)
 MANUAL = {
  'Poppies Fish and Chips, 6 Hanbury Street, London': [51.519930, -0.074130, 0],
+ 'Bleecker Burger, Old Spitalfields Market, London': [51.519650, -0.075330, 0],
  'Dishoom Shoreditch, 7 Boundary Street, London':      [51.524499, -0.076825, 0],
  'Dishoom Kings Cross, 5 Stable Street, London':     [51.535420, -0.126380, 0],
 }
